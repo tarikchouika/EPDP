@@ -6,6 +6,7 @@ import { HowItWorks, Faq } from "@/components/epdp/sections";
 import { About, Legal } from "@/components/epdp/about-legal";
 import { Footer } from "@/components/epdp/footer";
 import { Chatbot } from "@/components/epdp/chatbot";
+import { DocumentAssistant } from "@/components/epdp/document-assistant";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
         <Hero />
         <Stats />
         <Services />
+        <DocumentAssistant />
         <OfficialLinks />
         <HowItWorks />
         <Faq />

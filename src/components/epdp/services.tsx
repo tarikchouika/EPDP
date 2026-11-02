@@ -4,8 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import { useI18n } from "@/lib/i18n/context";
 import type { Locale } from "@/lib/i18n/types";
 import { categories, type CategoryId } from "@/lib/data/categories";
-import { documents, type DocumentItem } from "@/lib/data/documents";
-import { templates } from "@/lib/data/templates";
+import { allDocuments, getTemplate, type DocumentItem } from "@/lib/data/registry";
 import { getLink } from "@/lib/data/official-links";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -23,6 +22,7 @@ import {
   Search, Star, FileText, Download, Copy, Check, ExternalLink, MapPin, ListChecks,
   Mail, Scale, BadgeCheck, FileSignature, Handshake, Stamp, Home, ArrowLeftRight,
   Briefcase, HeartHandshake, Users, HardHat, Receipt, Landmark, CreditCard, ClipboardList, X,
+  FileX, Sparkles,
 } from "lucide-react";
 
 const catIcons: Record<CategoryId, React.ComponentType<{ className?: string }>> = {
@@ -42,6 +42,7 @@ const catIcons: Record<CategoryId, React.ComponentType<{ className?: string }>> 
   mahkama: Landmark,
   bank: CreditCard,
   ijraat: ClipboardList,
+  "naulat-fasikh": FileX,
 };
 
 function downloadWord(title: string, content: string, rtl: boolean) {
@@ -79,7 +80,7 @@ export function Services() {
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
-    return documents.filter((d) => {
+    return allDocuments.filter((d) => {
       if (cat === "popular" && !d.popular) return false;
       if (cat !== "all" && cat !== "popular" && d.cat !== cat) return false;
       if (!q) return true;
@@ -206,7 +207,7 @@ function FilterChip({
 function DocCard({ doc, onOpen }: { doc: DocumentItem; onOpen: () => void }) {
   const { dict, locale } = useI18n();
   const Icon = catIcons[doc.cat];
-  const hasTemplate = Boolean(doc.templateId && templates[doc.templateId]);
+  const hasTemplate = Boolean(getTemplate(doc.templateId));
   return (
     <article className="group relative flex flex-col rounded-2xl border border-border/80 bg-card p-5 shadow-sm transition-all hover:-translate-y-0.5 hover:border-gold hover:shadow-md">
       <div className="flex items-start justify-between gap-2">
@@ -258,7 +259,7 @@ function DocDialog({ doc, onClose }: { doc: DocumentItem | null; onClose: () => 
   const [lang, setLang] = useState<"ar" | "fr">("ar");
 
   if (!doc) return null;
-  const tpl = doc.templateId ? templates[doc.templateId] : null;
+  const tpl = getTemplate(doc.templateId);
   const authority = doc.authority ? getLink(doc.authority) : null;
 
   const copyText = (text: string, key: string) => {
@@ -337,6 +338,17 @@ function DocDialog({ doc, onClose }: { doc: DocumentItem | null; onClose: () => 
                     </Button>
                   </div>
                 </div>
+
+                <button
+                  onClick={() => {
+                    window.dispatchEvent(new CustomEvent("epdp-open-filler", { detail: doc.id }));
+                    onClose();
+                  }}
+                  className="mt-3 flex w-full items-center justify-center gap-2 rounded-xl border border-primary/30 bg-primary/5 px-4 py-3 text-sm font-bold text-primary transition-colors hover:bg-primary/10"
+                >
+                  <Sparkles className="h-4 w-4 text-gold" />
+                  {dict.filler.ctaCard}
+                </button>
 
                 <pre
                   dir={lang === "ar" ? "rtl" : "ltr"}

@@ -12,9 +12,10 @@
 
 <div dir="rtl">
 
-- **66 وثيقة ونموذجاً إدارياً** في 16 فئة (طلبات، شكايات، عقود كراء وبيع، وكالات، تصاريح بالشرف، عمل وتوظيف…)
-- **21 نموذجاً كاملاً** بالنص الكامل بالعربية والفرنسية — تحميل Word ونسخ مجاناً
-- **دليل 33 موقعاً رسمياً** للإدارات والخدمات الرقمية العمومية المغربية (نطاقات gov.ma ومؤسسات عمومية موثقة)
+- **128 وثيقة ونموذجاً إدارياً** في 17 فئة (طلبات، شكايات، عقود كراء وبيع وتنازل وفسخ، وكالات، تصاريح بالشرف، عمل وتوظيف…)
+- **97 نموذجاً كاملاً** بالنص الكامل بالعربية والفرنسية — تحميل Word ونسخ مجاناً
+- **مساعد آلي لملء وتحرير الوثائق (جديد):** يسأل بياناتك حقلًا حقلًا مع التحقق من صحتها، ثم يحرر الوثيقة بشكل احترافي — طباعة/PDF ونسخ وتحميل Word، وجميع البيانات تُعالج محلياً في المتصفح دون أي خادم
+- **دليل 38 موقعاً رسمياً** للإدارات والخدمات الرقمية العمومية المغربية (نطاقات رسمية ومؤسسات عمومية موثقة)
 - **مساعد ذكي** بقاعدة معرفة مبنية حصراً على المصادر الرسمية — بدون توليد روابط وبدون هلوسة، مع مصدر رسمي لكل جواب
 - **7 لغات:** العربية (RTL كامل)، English، Français، Español، Italiano، Deutsch، Русский
 - **الوضعان المشع والقاتم** مع هوية بصرية مغربية (الأخضر والأحمر والذهبي وزخرفة الزليج)
@@ -24,8 +25,8 @@
 
 </div>
 
-- **66 administrative documents** across 16 categories with **21 full templates** (Arabic + French, Word download)
-- **Directory of 33 verified official Moroccan government websites**
+- **128 administrative documents** across 17 categories with **97 full templates** (Arabic + French, Word download) and an **AI document assistant** that asks for your data and professionally drafts your document — local, private, print/PDF ready
+- **Directory of 38 verified official Moroccan government websites**
 - **Grounded smart assistant** — answers exclusively from a curated knowledge base of official sources, zero hallucination, official source attached to every answer
 - **7 languages** incl. full RTL Arabic, **light/dark modes**, authentic Moroccan visual identity
 - **Full legal pages** and **advanced SEO** (JSON-LD, sitemap, robots, hreflang)
@@ -47,7 +48,11 @@ bun run dev        # http://localhost:3000
 ## 📦 البناء والنشر | Build & Deploy
 
 ```bash
-bun run build      # static export → out/
+# static export → out/
+cp next.config.ts next.config.dev.bak.ts
+cp scripts/export-next.config.ts next.config.ts
+bunx next build
+mv next.config.dev.bak.ts next.config.ts
 ```
 
 النشر يتم تلقائياً إلى Cloudflare Pages عند كل push على الفرع `main`
@@ -61,7 +66,7 @@ bun run build      # static export → out/
 ```
 src/
 ├── app/                 # صفحة واحدة (layout + page + globals.css)
-├── components/epdp/     # Header, Hero, Services, Links, FAQ, Legal, Chatbot…
+├── components/epdp/     # Header, Hero, Services, DocumentAssistant, Links, FAQ, Legal, Chatbot…
 ├── lib/
 │   ├── i18n/            # 7 قواميس لغات + مزوّد اللغة (RTL/LTR)
 │   ├── data/            # الوثائق، الفئات، الروابط الرسمية، الأسئلة الشائعة، النماذج

@@ -106,10 +106,10 @@ export const officialLinks: OfficialLink[] = [
   // ─── Government portals ───────────────────────────────────────────
   {
     id: "gov-ma",
-    url: "https://www.gov.ma/",
-    domain: "gov.ma",
+    url: "https://www.maroc.ma/",
+    domain: "maroc.ma",
     cat: "gov",
-    name: { ar: "البوابة الرسمية للحكومة المغربية", fr: "Portail officiel du Gouvernement marocain", en: "Official portal of the Moroccan Government" },
+    name: { ar: "البوابة الوطنية للمملكة المغربية", fr: "Portail national du Royaume du Maroc", en: "National portal of the Kingdom of Morocco" },
     desc: D(
       "المدخل الرسمي لموقع الحكومة المغربية ووزاراتها ومؤسساتها.",
       "Official gateway to the Moroccan government, its ministries and institutions.",
@@ -121,19 +121,19 @@ export const officialLinks: OfficialLink[] = [
     ),
   },
   {
-    id: "services-publics",
-    url: "https://www.services-publics.ma/",
-    domain: "services-publics.ma",
+    id: "idarati",
+    url: "https://idarati.ma/",
+    domain: "idarati.ma",
     cat: "gov",
-    name: { ar: "بوابة الخدمات العمومية الرقمية", fr: "Portail des services publics numériques", en: "Digital public services portal" },
+    name: { ar: "بوابة إدارة الوطنية", fr: "Portail national Idarati", en: "National Idarati portal" },
     desc: D(
-      "البوابة الوطنية المغربية للخدمات والإجراءات الإدارية الرقمية.",
-      "Moroccan national portal for digital services and administrative procedures.",
-      "Portail national marocain des services et démarches administratives numériques.",
-      "Portal nacional marroquí de servicios y trámites administrativos digitales.",
-      "Portale nazionale marocchino di servizi e procedure amministrative digitali.",
-      "Marokkanisches Nationalportal für digitale Verwaltungsdienste.",
-      "Национальный портал Марокко для цифровых госуслуг и процедур."
+      "البوابة الوطنية للمساطر الإدارية: معلومات رسمية موحدة عن كل إجراء والوثائق المطلوبة له.",
+      "National portal of administrative procedures: unified official information for every formality.",
+      "Portail national des procédures administratives : informations officielles unifiées pour chaque démarche.",
+      "Portal nacional de procedimientos administrativos: información oficial unificada para cada trámite.",
+      "Portale nazionale delle procedure amministrative: informazioni ufficiali unificate per ogni pratica.",
+      "Nationale Portal der Verwaltungsverfahren: einheitliche offizielle Informationen je Vorgang.",
+      "Национальный портал административных процедур: единая официальная информация по каждому делу."
     ),
   },
   {
@@ -332,8 +332,8 @@ export const officialLinks: OfficialLink[] = [
   },
   {
     id: "simpl",
-    url: "https://www.simpl.gov.ma/",
-    domain: "simpl.gov.ma",
+    url: "https://simpl.tax.gov.ma/",
+    domain: "simpl.tax.gov.ma",
     cat: "digital",
     name: { ar: "منصة سيمبل", fr: "Plateforme SIMPL", en: "SIMPL platform" },
     desc: D(
@@ -411,6 +411,55 @@ export const officialLinks: OfficialLink[] = [
     ),
   },
 
+  {
+    id: "cnie",
+    url: "https://www.cnie.ma/",
+    domain: "cnie.ma",
+    cat: "digital",
+    name: { ar: "بوابة البطاقة الوطنية للتعريف الإلكترونية", fr: "Portail de la Carte Nationale d'Identité Électronique", en: "Electronic National ID Card portal" },
+    desc: D(
+      "الحجز الإلكتروني لمواعيد طلب أو تجديد البطاقة الوطنية للتعريف (الشرطة الوطنية).",
+      "Online appointment booking for ID card requests or renewals (DGSN).",
+      "Prise de rendez-vous en ligne pour la demande ou le renouvellement de la CIN (DGSN).",
+      "Cita en línea para solicitar o renovar el DNI marroquí (DGSN).",
+      "Prenotazione online per la richiesta o il rinnovo della CIN (DGSN).",
+      "Online-Terminbuchung für Personalausweis-Anträge oder -Erneuerung (DGSN).",
+      "Онлайн-запись на получение или обмен удостоверения личности (DGSN)."
+    ),
+  },
+  {
+    id: "chikaya",
+    url: "https://chikaya.ma/",
+    domain: "chikaya.ma",
+    cat: "digital",
+    name: { ar: "البوابة الوطنية للشكايات", fr: "Portail national des réclamations", en: "National complaints portal" },
+    desc: D(
+      "إيداع الشكايات الموجهة للإدارات العمومية وتتبع معالجتها إلكترونياً.",
+      "Filing complaints to public administrations and tracking their processing online.",
+      "Dépôt de réclamations aux administrations publiques et suivi en ligne.",
+      "Presentación de reclamaciones a la administración y seguimiento en línea.",
+      "Presentazione di reclami alle amministrazioni e tracciamento online.",
+      "Einreichung von Beschwerden an Behörden und Online-Verfolgung.",
+      "Подача жалоб в госведомства и отслеживание их рассмотрения онлайн."
+    ),
+  },
+  {
+    id: "casier-judiciaire",
+    url: "https://casierjudiciaire.justice.gov.ma/",
+    domain: "casierjudiciaire.justice.gov.ma",
+    cat: "digital",
+    name: { ar: "السجل العدلي الإلكتروني", fr: "Casier judiciaire en ligne", en: "Online criminal record" },
+    desc: D(
+      "طلب السجل العدلي (النشرة رقم 3) إلكترونياً واستلامه دون تنقل.",
+      "Requesting the criminal record bulletin (B3) online and receiving it remotely.",
+      "Demande du bulletin n°3 du casier judiciaire en ligne et réception à distance.",
+      "Solicitud del certificado de antecedentes penales (B3) en línea.",
+      "Richiesta online del casellario giudiziale (B3) e ricezione a distanza.",
+      "Online-Antragung des Führungszeugnisses (B3) und Empfang aus der Ferne.",
+      "Онлайн-запрос справки о судимости (B3) и удалённое получение."
+    ),
+  },
+
   // ─── Social protection & health ──────────────────────────────────
   {
     id: "cnss",
@@ -446,8 +495,8 @@ export const officialLinks: OfficialLink[] = [
   },
   {
     id: "cnops",
-    url: "https://www.cnops.org.ma/",
-    domain: "cnops.org.ma",
+    url: "https://www.cnops.ma/",
+    domain: "cnops.ma",
     cat: "social",
     name: { ar: "صندوق دعم التغطية الصحية — CNOPS", fr: "CNOPS — Caisse Nationale des Organismes de Prévoyance Sociale", en: "National Fund for Social Provident Institutions (CNOPS)" },
     desc: D(
@@ -477,43 +526,27 @@ export const officialLinks: OfficialLink[] = [
     ),
   },
   {
-    id: "rsu",
-    url: "https://www.rsu.ma/",
-    domain: "rsu.ma",
+    id: "cnss-rdv",
+    url: "https://cnss.rdv.gov.ma/",
+    domain: "cnss.rdv.gov.ma",
     cat: "social",
-    name: { ar: "السجل الاجتماعي الموحد — RSU", fr: "Registre Social Unifié — RSU", en: "Unified Social Register (RSU)" },
+    name: { ar: "منصة مواعيد CNSS", fr: "Plateforme de rendez-vous CNSS", en: "CNSS appointment platform" },
     desc: D(
-      "تسجيل الأسرة وحساب مؤشر الاستحقاق للدعم الاجتماعي المباشر.",
-      "Family registration and eligibility index for direct social aid.",
-      "Enregistrement des familles et indice d'éligibilité à l'aide sociale directe.",
-      "Registro de familias e índice de elegibilidad para la ayuda social directa.",
-      "Registrazione delle famiglie e indice di idoneità agli aiuti sociali.",
-      "Familienregistrierung und Anspruch index für direkte Sozialhilfe.",
-      "Регистрация семей и индекс права на прямую соцпомощь."
-    ),
-  },
-  {
-    id: "rnp",
-    url: "https://www.rnp.ma/",
-    domain: "rnp.ma",
-    cat: "social",
-    name: { ar: "السجل الوطني للسكان — RNP", fr: "Registre National de la Population — RNP", en: "National Population Register (RNP)" },
-    desc: D(
-      "التسجيل في السجل الوطني للسكان والحصول على المعرف الرقمي.",
-      "National population registration and digital ID number.",
-      "Inscription au registre national de la population et identifiant numérique.",
-      "Registro nacional de población e identificador digital.",
-      "Registrazione al registro nazionale della popolazione e ID digitale.",
-      "Registrierung im nationalen Bevölkerungsregister und digitale ID.",
-      "Регистрация в национальном реестре населения и цифровой ID."
+      "الحجز الإلكتروني لمواعيد وكالات الضمان الاجتماعي قبل زيارتها.",
+      "Online appointment booking at CNSS agencies before your visit.",
+      "Prise de rendez-vous en ligne dans les agences CNSS avant votre visite.",
+      "Reserva de cita en línea en las agencias de la CNSS.",
+      "Prenotazione online negli uffici CNSS prima della visita.",
+      "Online-Terminbuchung in CNSS-Agenturen vor dem Besuch.",
+      "Онлайн-запись в агентства CNSS перед визитом."
     ),
   },
 
   // ─── Employment & training ───────────────────────────────────────
   {
     id: "anapec",
-    url: "https://www.anapec.org/",
-    domain: "anapec.org",
+    url: "https://www.anapec.ma/",
+    domain: "anapec.ma",
     cat: "employment",
     name: { ar: "الوكالة الوطنية لإنعاش التشغيل — ANAPEC", fr: "ANAPEC — Agence Nationale de Promotion de l'Emploi", en: "National Agency for Employment Promotion (ANAPEC)" },
     desc: D(
@@ -574,6 +607,55 @@ export const officialLinks: OfficialLink[] = [
       "Statistiche ufficiali e studi economici e demografici.",
       "Amtliche Statistiken und Wirtschafts-/Demografiestudien.",
       "Официальная статистика и экономико-демографические исследования."
+    ),
+  },
+
+  {
+    id: "tgr",
+    url: "https://www.tgr.gov.ma/",
+    domain: "tgr.gov.ma",
+    cat: "economy",
+    name: { ar: "الخزينة العامة للمملكة — TGR", fr: "TGR — Trésorerie Générale du Royaume", en: "General Treasury of the Kingdom (TGR)" },
+    desc: D(
+      "الأداء الإلكتروني للرسوم والضرائب المحلية والوثائق الإدارية المسددة للخزينة.",
+      "Online payment of local taxes and fees settled through the Treasury.",
+      "Paiement en ligne des taxes locales et redevances via la Trésorerie.",
+      "Pago en línea de tasas locales y gravámenes vía Tesorería.",
+      "Pagamento online di tasse locali e tributi via Tesoreria.",
+      "Online-Zahlung lokaler Steuern und Abgaben über die Trésorerie.",
+      "Онлайн-оплата местных налогов и сборов через Казначейство."
+    ),
+  },
+  {
+    id: "douane",
+    url: "https://www.douane.gov.ma/",
+    domain: "douane.gov.ma",
+    cat: "economy",
+    name: { ar: "إدارة الجمارك والضرائب غير المباشرة", fr: "Administration des Douanes et Impôts Indirects", en: "Customs and Indirect Taxes Administration" },
+    desc: D(
+      "الاستيراد والتصدير ورسوم الجمارك وخدمات المسافرين الإلكترونية.",
+      "Import/export, customs duties and traveler e-services.",
+      "Import/export, droits de douane et services en ligne pour les voyageurs.",
+      "Importación/exportación, aranceles y servicios en línea para viajeros.",
+      "Import/export, dazi e servizi online per i viaggiatori.",
+      "Import/Export, Zölle und Online-Dienste für Reisende.",
+      "Импорт/экспорт, таможенные пошлины и онлайн-услуги для путешественников."
+    ),
+  },
+  {
+    id: "opendata",
+    url: "https://www.data.gov.ma/",
+    domain: "data.gov.ma",
+    cat: "economy",
+    name: { ar: "بوابة المعطيات المفتوحة", fr: "Portail Open Data", en: "Open Data portal" },
+    desc: D(
+      "المعطيات العمومية المفتوحة للوزارات والمؤسسات المغربية.",
+      "Open public data of Moroccan ministries and institutions.",
+      "Données publiques ouvertes des ministères et institutions marocains.",
+      "Datos públicos abiertos de ministerios e instituciones marroquíes.",
+      "Dati pubblici aperti di ministeri e istituzioni marocchine.",
+      "Offene Verwaltungsdaten marokkanischer Ministerien und Institutionen.",
+      "Открытые государственные данные марокканских ведомств."
     ),
   },
 

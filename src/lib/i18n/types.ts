@@ -130,6 +130,50 @@ export interface Dict {
     madeIn: string;
   };
 
+  filler: {
+    badge: string;
+    title: string;
+    subtitle: string;
+    ctaCard: string;
+    privacy: string;
+    pickTitle: string;
+    pickHint: string;
+    pickNone: string;
+    open: string;
+    idleIntro: string;
+    docLang: string;
+    docLangAr: string;
+    docLangFr: string;
+    optional: string;
+    skip: string;
+    send: string;
+    editAnswer: string;
+    editAnswers: string;
+    answered: string;
+    of: string;
+    questions: string;
+    reviewTitle: string;
+    reviewHint: string;
+    remaining: string;
+    remainingHint: string;
+    generate: string;
+    regenerate: string;
+    doneTitle: string;
+    doneHint: string;
+    print: string;
+    copy: string;
+    word: string;
+    another: string;
+    validation: {
+      required: string;
+      cin: string;
+      phone: string;
+      email: string;
+      date: string;
+      short: string;
+    };
+  };
+
   theme: { light: string; dark: string; system: string; toggle: string };
   language: { label: string };
   common: { close: string; menu: string; top: string };

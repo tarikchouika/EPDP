@@ -23,7 +23,7 @@ export function Footer() {
     label: d.title,
   }));
 
-  const portals = ["gov-ma", "services-publics", "tax", "cnss", "passeport", "minhaty"]
+  const portals = ["gov-ma", "idarati", "cnie", "tax", "cnss", "chikaya"]
     .map((id) => officialLinks.find((l) => l.id === id))
     .filter(Boolean)
     .slice(0, 6);

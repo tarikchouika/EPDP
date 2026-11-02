@@ -5,13 +5,14 @@ import { useI18n } from "@/lib/i18n/context";
 import { chatIntents, findIntent } from "@/lib/chatbot/knowledge";
 import { getLink } from "@/lib/data/official-links";
 import { Button } from "@/components/ui/button";
-import { Bot, Send, X, Landmark, MessageCircle, ExternalLink } from "lucide-react";
+import { Bot, Send, X, Landmark, MessageCircle, ExternalLink, Sparkles } from "lucide-react";
 
 interface Message {
   role: "user" | "bot";
   text: string;
   sources?: string[]; // official link ids
   suggestions?: string[];
+  action?: "open-filler";
 }
 
 const initialSuggestions = ["carte-nationale", "passeport", "amo-tadamon", "acte-naissance", "cnss"];
@@ -53,6 +54,7 @@ export function Chatbot() {
               text: intent.answer[locale],
               sources: intent.sources,
               suggestions: intent.suggestions,
+              action: intent.id === "fill-document" ? "open-filler" : undefined,
             }
           : { role: "bot", text: dict.chat.fallback, suggestions: ["official-links", "documents"] };
         setTyping(false);
@@ -120,6 +122,19 @@ export function Chatbot() {
                   >
                     {m.text}
                   </div>
+
+                  {m.action === "open-filler" && (
+                    <button
+                      onClick={() => {
+                        document.getElementById("assistant")?.scrollIntoView({ behavior: "smooth" });
+                        window.dispatchEvent(new CustomEvent("epdp-open-filler", { detail: "" }));
+                      }}
+                      className="mt-2 inline-flex items-center gap-2 rounded-xl border border-primary/40 bg-primary/10 px-3.5 py-2 text-xs font-bold text-primary transition-colors hover:bg-primary/20"
+                    >
+                      <Sparkles className="h-4 w-4 text-gold" />
+                      {dict.filler.title}
+                    </button>
+                  )}
 
                   {m.sources && m.sources.length > 0 && (
                     <div className="mt-2 space-y-1.5">

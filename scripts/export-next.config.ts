@@ -3,6 +3,7 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   // Static export for Cloudflare Pages (epdp.pages.dev)
   output: "export",
+  distDir: ".next-export",
   images: { unoptimized: true },
   trailingSlash: false,
   typescript: {

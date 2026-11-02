@@ -5,6 +5,8 @@ import { useI18n } from "@/lib/i18n/context";
 import { Button } from "@/components/ui/button";
 import { FileText, Landmark, Search, Sparkles, ShieldCheck, Globe2, BadgeCheck } from "lucide-react";
 import { documents, docCount } from "@/lib/data/documents";
+import { allDocuments, docTotal } from "@/lib/data/registry";
+import { categories } from "@/lib/data/categories";
 import { officialLinks } from "@/lib/data/official-links";
 
 export function Hero() {
@@ -110,10 +112,10 @@ export function Hero() {
 export function Stats() {
   const { dict, locale } = useI18n();
   const items = [
-    { icon: FileText, value: `${docCount}+`, label: dict.stats.documents },
+    { icon: FileText, value: `${docTotal}+`, label: dict.stats.documents },
     { icon: Landmark, value: `${officialLinks.length}+`, label: dict.stats.official },
     { icon: Globe2, value: "7", label: dict.stats.languages },
-    { icon: BadgeCheck, value: "16", label: dict.stats.categories },
+    { icon: BadgeCheck, value: `${categories.length}`, label: dict.stats.categories },
   ];
   return (
     <section className="border-b border-border/60 bg-muted/40" aria-label="stats">

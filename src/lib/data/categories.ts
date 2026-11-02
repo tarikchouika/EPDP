@@ -16,7 +16,8 @@ export type CategoryId =
   | "muqawalat"
   | "mahkama"
   | "bank"
-  | "ijraat";
+  | "ijraat"
+  | "naulat-fasikh";
 
 export type L = Record<Locale, string>;
 
@@ -250,6 +251,20 @@ export const categories: Category[] = [
       it: "Procedure carta d'identità, passaporto, RSU, AMO Tadamon e borse di studio.",
       de: "Verfahren für Ausweis, Pass, RSU, AMO Tadamon und Stipendien.",
       ru: "Процедуры: удостоверение личности, паспорт, RSU, AMO Tadamon и стипендии.",
+    },
+  },
+  {
+    id: "naulat-fasikh",
+    icon: "file-x",
+    name: { ar: "تنازلات وفسخ", fr: "Cessions et résiliations" },
+    desc: {
+      ar: "نماذج التنازل عن العقود والمركبات والمستحقات وفسخ العقود بالتراضي.",
+      en: "Templates for waiving contracts, vehicles and dues, and amicable rescissions.",
+      fr: "Modèles de cession de contrats, véhicules et créances, et résiliations à l'amiable.",
+      es: "Modelos de cesión de contratos, vehículos y derechos, y resoluciones amistosas.",
+      it: "Modelli di cessione di contratti, veicoli e crediti, e risoluzioni consensuali.",
+      de: "Vorlagen für die Übertragung von Verträgen, Fahrzeugen und Ansprüchen sowie einvernehmliche Kündigungen.",
+      ru: "Шаблоны уступки договоров, автомобилей и прав, а также расторжения по соглашению.",
     },
   },
 ];

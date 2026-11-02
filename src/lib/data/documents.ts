@@ -1190,7 +1190,7 @@ export const documents: DocumentItem[] = [
       "Шаги регистрации семьи в RSU."
     ),
     where: { ar: "عبر البوابة الرسمية أو بمراكز خدمات المواطنين والملحقات", fr: "En ligne ou dans les centres de services aux citoyens" },
-    authority: "rsu",
+    authority: "amotadamon",
     popular: true,
     keywords: ["RSU", "السجل الاجتماعي", "registre social", "social register", "الدعم المباشر", "aide directe"],
   },
