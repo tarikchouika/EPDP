@@ -155,7 +155,7 @@ export function Chatbot() {
                             >
                               <Landmark className="h-3 w-3" />
                               <span dir="auto">
-                                {locale === "fr" ? link.name.fr : link.name.en}
+                                {link.name[locale]}
                               </span>
                               <ExternalLink className="h-2.5 w-2.5" />
                             </a>

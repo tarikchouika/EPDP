@@ -2,6 +2,8 @@ import type { Locale } from "@/lib/i18n/types";
 
 export type CategoryId =
   | "demandes"
+  | "dgi"
+  | "cnss"
   | "chikayat"
   | "ichhadat"
   | "tasarih"
@@ -24,15 +26,27 @@ export type L = Record<Locale, string>;
 export interface Category {
   id: CategoryId;
   icon: string; // lucide icon name key
-  name: { ar: string; fr: string };
+  name: L;
   desc: L;
 }
+
+const N = (ar: string, fr: string, en: string, es: string, it: string, de: string, ru: string): L => ({
+  ar, fr, en, es, it, de, ru,
+});
 
 export const categories: Category[] = [
   {
     id: "demandes",
     icon: "mail",
-    name: { ar: "طلبات رسمية", fr: "Demandes officielles" },
+    name: N(
+      "طلبات رسمية",
+      "Demandes officielles",
+      "Official requests",
+      "Solicitudes oficiales",
+      "Richieste ufficiali",
+      "Offizielle Anträge",
+      "Официальные заявления"
+    ),
     desc: {
       ar: "نماذج طلبات موجهة للإدارات والجماعات والمؤسسات العمومية.",
       en: "Request templates addressed to administrations, communes and public institutions.",
@@ -44,9 +58,61 @@ export const categories: Category[] = [
     },
   },
   {
+    id: "dgi",
+    icon: "coins",
+    name: N(
+      "ضرائب DGI",
+      "Impôts (DGI)",
+      "Taxes (DGI)",
+      "Impuestos (DGI)",
+      "Imposte (DGI)",
+      "Steuern (DGI)",
+      "Налоги (DGI)"
+    ),
+    desc: {
+      ar: "التصريحات والطلبات الضريبية: TVA وIR وIS، الإعفاءات، شهادات الذمة والتظلمات لدى المديرية العامة للضرائب.",
+      en: "Tax filings and requests: VAT, IR, corporate tax, exemptions, clearance certificates and claims at the DGI.",
+      fr: "Déclarations et demandes fiscales : TVA, IR, IS, exonérations, attestations et réclamations auprès de la DGI.",
+      es: "Declaraciones y solicitudes fiscales: IVA, IR, IS, exenciones, certificados y reclamaciones ante la DGI.",
+      it: "Dichiarazioni e richieste fiscali: IVA, IR, imposte societarie, esenzioni, certificati e reclami alla DGI.",
+      de: "Steuererklärungen und Anträge: MwSt, ESt, KSt, Befreiungen, Bescheinigungen und Einsprüche bei der DGI.",
+      ru: "Налоговые декларации и заявления: НДС, НДФЛ, налог на прибыль, освобождения, справки и возражения в DGI.",
+    },
+  },
+  {
+    id: "cnss",
+    icon: "heart-pulse",
+    name: N(
+      "الضمان الاجتماعي CNSS",
+      "Sécurité sociale (CNSS)",
+      "Social security (CNSS)",
+      "Seguridad social (CNSS)",
+      "Previdenza sociale (CNSS)",
+      "Sozialversicherung (CNSS)",
+      "Соцобеспечение (CNSS)"
+    ),
+    desc: {
+      ar: "نماذج CNSS وAMO وCNOPS: التسجيل، التصريحات، التعويضات العائلية والصحية ومعاشات التقاعد.",
+      en: "CNSS, AMO and CNOPS forms: registration, filings, family and health benefits, pensions.",
+      fr: "Formulaires CNSS, AMO et CNOPS : immatriculation, déclarations, prestations familiales et santé, retraites.",
+      es: "Formularios de CNSS, AMO y CNOPS: registro, declaraciones, prestaciones familiares y de salud, pensiones.",
+      it: "Moduli CNSS, AMO e CNOPS: iscrizione, denunce, prestazioni familiari e sanitarie, pensioni.",
+      de: "CNSS-, AMO- und CNOPS-Formulare: Anmeldung, Meldungen, Familien- und Gesundheitsleistungen, Renten.",
+      ru: "Формы CNSS, AMO и CNOPS: регистрация, отчётность, семейные и медицинские выплаты, пенсии.",
+    },
+  },
+  {
     id: "chikayat",
     icon: "scale",
-    name: { ar: "شكايات وتظلمات", fr: "Plaintes et réclamations" },
+    name: N(
+      "شكايات وتظلمات",
+      "Plaintes et réclamations",
+      "Complaints & grievances",
+      "Quejas y reclamaciones",
+      "Reclami e lamentele",
+      "Beschwerden",
+      "Жалобы и претензии"
+    ),
     desc: {
       ar: "نماذج شكايات وتظلمات موجهة للإدارات والمصالح المختصة.",
       en: "Complaint and grievance templates for the competent administrations.",
@@ -60,7 +126,15 @@ export const categories: Category[] = [
   {
     id: "ichhadat",
     icon: "badge-check",
-    name: { ar: "إشهادات وشهادات", fr: "Attestations et certificats" },
+    name: N(
+      "إشهادات وشهادات",
+      "Attestations et certificats",
+      "Attestations & certificates",
+      "Constancias y certificados",
+      "Attestati e certificati",
+      "Bescheinigungen",
+      "Справки и свидетельства"
+    ),
     desc: {
       ar: "شهادات العمل والسكنى والدخل وسائر الإشهادات الإدارية.",
       en: "Work, residence, income certificates and other administrative attestations.",
@@ -74,7 +148,15 @@ export const categories: Category[] = [
   {
     id: "tasarih",
     icon: "file-signature",
-    name: { ar: "تصاريح", fr: "Déclarations" },
+    name: N(
+      "تصاريح",
+      "Déclarations",
+      "Declarations",
+      "Declaraciones",
+      "Dichiarazioni",
+      "Erklärungen",
+      "Декларации"
+    ),
     desc: {
       ar: "تصاريح بالشرف وتصاريح إدارية رسمية متنوعة.",
       en: "Sworn declarations and various official administrative statements.",
@@ -88,7 +170,15 @@ export const categories: Category[] = [
   {
     id: "iltizamat",
     icon: "handshake",
-    name: { ar: "التزامات", fr: "Engagements" },
+    name: N(
+      "التزامات",
+      "Engagements",
+      "Commitments",
+      "Compromisos",
+      "Impegni",
+      "Verpflichtungen",
+      "Обязательства"
+    ),
     desc: {
       ar: "التزامات مكتوبة بالسكن والضمان والتسديد والكفالة.",
       en: "Written commitments for housing, guarantee, payment and sponsorship.",
@@ -102,7 +192,15 @@ export const categories: Category[] = [
   {
     id: "wakalat",
     icon: "stamp",
-    name: { ar: "وكالات وتفويضات", fr: "Procurations" },
+    name: N(
+      "وكالات وتفويضات",
+      "Procurations",
+      "Powers of attorney",
+      "Poderes",
+      "Procure",
+      "Vollmachten",
+      "Доверенности"
+    ),
     desc: {
       ar: "وكالات وتفويضات للاستلام ومتابعة الملفات والإجراءات البسيطة.",
       en: "Powers of attorney for collection, file follow-up and simple procedures.",
@@ -116,7 +214,15 @@ export const categories: Category[] = [
   {
     id: "uqud-kira",
     icon: "home",
-    name: { ar: "عقود الكراء", fr: "Contrats de bail" },
+    name: N(
+      "عقود الكراء",
+      "Contrats de bail",
+      "Lease contracts",
+      "Contratos de alquiler",
+      "Contratti di locazione",
+      "Mietverträge",
+      "Договоры аренды"
+    ),
     desc: {
       ar: "عقود كراء السكنى والمحلات المرفقة بوصولات الأداء.",
       en: "Residential and commercial lease contracts with payment receipts.",
@@ -130,7 +236,15 @@ export const categories: Category[] = [
   {
     id: "uqud-bay",
     icon: "arrow-left-right",
-    name: { ar: "عقود البيع والشراء", fr: "Contrats de vente" },
+    name: N(
+      "عقود البيع والشراء",
+      "Contrats de vente",
+      "Sale contracts",
+      "Contratos de venta",
+      "Contratti di vendita",
+      "Kaufverträge",
+      "Договоры купли-продажи"
+    ),
     desc: {
       ar: "عقود بيع السيارات والمنقولات والتنازل عن المحلات التجارية.",
       en: "Sale contracts for vehicles, movable property and business transfers.",
@@ -144,7 +258,15 @@ export const categories: Category[] = [
   {
     id: "amal",
     icon: "briefcase",
-    name: { ar: "عمل وتوظيف", fr: "Travail et emploi" },
+    name: N(
+      "عمل وتوظيف",
+      "Travail et emploi",
+      "Work & employment",
+      "Trabajo y empleo",
+      "Lavoro e impiego",
+      "Arbeit & Beschäftigung",
+      "Работа и трудоустройство"
+    ),
     desc: {
       ar: "السيرة الذاتية، رسائل التحفيز، عقود العمل والاستقالة.",
       en: "CVs, cover letters, employment contracts and resignations.",
@@ -158,7 +280,15 @@ export const categories: Category[] = [
   {
     id: "usra",
     icon: "heart-handshake",
-    name: { ar: "زواج وأسرة", fr: "Mariage et famille" },
+    name: N(
+      "زواج وأسرة",
+      "Mariage et famille",
+      "Marriage & family",
+      "Matrimonio y familia",
+      "Matrimonio e famiglia",
+      "Ehe & Familie",
+      "Брак и семья"
+    ),
     desc: {
       ar: "وثائق الأسرة: الإذن بالسفر، بلاغ الولادة، النفقة وغيرها.",
       en: "Family documents: travel consent, birth declaration, alimony and more.",
@@ -172,7 +302,15 @@ export const categories: Category[] = [
   {
     id: "jamaiyat",
     icon: "users",
-    name: { ar: "جمعيات وتعاونيات", fr: "Associations et coopératives" },
+    name: N(
+      "جمعيات وتعاونيات",
+      "Associations et coopératives",
+      "Associations & cooperatives",
+      "Asociaciones y cooperativas",
+      "Associazioni e cooperative",
+      "Vereine & Genossenschaften",
+      "Ассоциации и кооперативы"
+    ),
     desc: {
       ar: "ملفات تأسيس الجمعيات: الطلبات، المحاضر والقوانين الأساسية.",
       en: "Association founding files: requests, minutes and bylaws.",
@@ -186,7 +324,15 @@ export const categories: Category[] = [
   {
     id: "binaa",
     icon: "hard-hat",
-    name: { ar: "بناء وعمران", fr: "Construction et urbanisme" },
+    name: N(
+      "بناء وعمران",
+      "Construction et urbanisme",
+      "Construction & planning",
+      "Construcción y urbanismo",
+      "Costruzione e urbanistica",
+      "Bau & Stadtplanung",
+      "Строительство и градостроительство"
+    ),
     desc: {
       ar: "طلبات رخص البناء والتسييج والتصريح باكتمال الأشغال.",
       en: "Building permit, fencing and completion declaration requests.",
@@ -200,7 +346,15 @@ export const categories: Category[] = [
   {
     id: "muqawalat",
     icon: "receipt",
-    name: { ar: "مقاولات وفواتير", fr: "Entreprises et factures" },
+    name: N(
+      "مقاولات وفواتير",
+      "Entreprises et factures",
+      "Business & invoicing",
+      "Empresas y facturas",
+      "Imprese e fatture",
+      "Unternehmen & Rechnungen",
+      "Бизнес и счета"
+    ),
     desc: {
       ar: "الفواتير، عروض الأسعار، عقود الخدمات ووثائق المقاولين.",
       en: "Invoices, quotes, service contracts and business owner documents.",
@@ -214,7 +368,15 @@ export const categories: Category[] = [
   {
     id: "mahkama",
     icon: "landmark",
-    name: { ar: "قضاء وعدالة", fr: "Justice et tribunal" },
+    name: N(
+      "قضاء وعدالة",
+      "Justice et tribunal",
+      "Justice & courts",
+      "Justicia y tribunales",
+      "Giustizia e tribunali",
+      "Justiz & Gerichte",
+      "Суд и правосудие"
+    ),
     desc: {
       ar: "مساطر المحكمة: السجل العدلي، الشكايات للنيابة وطلب الأحكام.",
       en: "Court procedures: criminal record, complaints to the prosecution, judgments.",
@@ -228,7 +390,15 @@ export const categories: Category[] = [
   {
     id: "bank",
     icon: "credit-card",
-    name: { ar: "بنك وضمان اجتماعي", fr: "Banque et sécurité sociale" },
+    name: N(
+      "بنك وضمان اجتماعي",
+      "Banque et sécurité sociale",
+      "Banking & social security",
+      "Banca y seguridad social",
+      "Banca e previdenza",
+      "Bank & Sozialversicherung",
+      "Банк и соцстрахование"
+    ),
     desc: {
       ar: "طلبات فتح الحسابات، تحويل الأجور والتسجيل في الضمان الاجتماعي.",
       en: "Account opening, salary transfer and social security registration requests.",
@@ -242,13 +412,21 @@ export const categories: Category[] = [
   {
     id: "ijraat",
     icon: "clipboard-list",
-    name: { ar: "إجراءات إدارية", fr: "Procédures administratives" },
+    name: N(
+      "إجراءات إدارية",
+      "Procédures administratives",
+      "Administrative procedures",
+      "Trámites administrativos",
+      "Procedure amministrative",
+      "Verwaltungsverfahren",
+      "Административные процедуры"
+    ),
     desc: {
       ar: "مساطر البطاقة الوطنية، جواز السفر، RSU، AMO تضامن والمنح.",
       en: "ID card, passport, RSU, AMO Tadamon and scholarship procedures.",
       fr: "Procédures CIN, passeport, RSU, AMO Tadamon et bourses.",
       es: "Trámites del DNI, pasaporte, RSU, AMO Tadamon y becas.",
-      it: "Procedure carta d'identità, passaporto, RSU, AMO Tadamon e borse di studio.",
+      it: "Procedure carta d'identità, passaporto, RSU, AMO Tadamon e borse.",
       de: "Verfahren für Ausweis, Pass, RSU, AMO Tadamon und Stipendien.",
       ru: "Процедуры: удостоверение личности, паспорт, RSU, AMO Tadamon и стипендии.",
     },
@@ -256,7 +434,15 @@ export const categories: Category[] = [
   {
     id: "naulat-fasikh",
     icon: "file-x",
-    name: { ar: "تنازلات وفسخ", fr: "Cessions et résiliations" },
+    name: N(
+      "تنازلات وفسخ",
+      "Cessions et résiliations",
+      "Waivers & terminations",
+      "Cesiones y resoluciones",
+      "Cessioni e risoluzioni",
+      "Übertragungen & Kündigungen",
+      "Уступки и расторжения"
+    ),
     desc: {
       ar: "نماذج التنازل عن العقود والمركبات والمستحقات وفسخ العقود بالتراضي.",
       en: "Templates for waiving contracts, vehicles and dues, and amicable rescissions.",

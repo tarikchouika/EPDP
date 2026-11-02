@@ -20,7 +20,7 @@ export const en: Dict = {
     title: "Your administrative documents,",
     titleAccent: "ready in seconds",
     subtitle:
-      "The Digital Public Writer platform (EPDP) professionalizes public writer services: 125+ official administrative templates in Arabic and French — requests, complaints, lease and sale contracts, powers of attorney, sworn declarations, CVs — plus a complete directory of official Moroccan government websites, a smart assistant that answers only from verified official sources with zero hallucination, and an AI assistant that asks for your data and professionally drafts your document.",
+      "The Digital Public Writer platform (EPDP) professionalizes public writer services: {docs} official administrative forms and templates in Arabic and French — requests, complaints, lease and sale contracts, powers of attorney, sworn declarations, CVs — plus a complete directory of official Moroccan government websites, a smart assistant that answers only from verified official sources with zero hallucination, and an AI assistant that asks for your data and professionally drafts your document.",
     ctaPrimary: "Browse documents",
     ctaSecondary: "Official websites",
     trust: "Completely free · No sign-up · 7 languages · Grounded in official sources",
@@ -37,7 +37,7 @@ export const en: Dict = {
   services: {
     title: "Documents & Templates Library",
     subtitle:
-      "Browse by category or search directly. Every template is drafted in professional administrative wording, free to download and copy, with the receiving authority clearly indicated.",
+      "Browse by category or search directly. Every entry explains where to file it and its official source; ready-made templates are professionally drafted and free to download and copy.",
     search: "Search documents…",
     all: "All categories",
     popular: "Most requested",
@@ -58,6 +58,24 @@ export const en: Dict = {
     officialSource: "Official source",
     freeTag: "Free",
     note: "Note: templates are general guides; confirm requirements with the competent authority or its official website before filing.",
+  },
+
+  catalog: {
+    showing: "Showing {from}–{to} of {total} documents",
+    prev: "Previous",
+    next: "Next",
+    first: "First",
+    last: "Last",
+    pageAria: "Go to page {n}",
+    currentPage: "Page {page} of {pages}",
+    sortLabel: "Sort",
+    sortPopular: "Most requested",
+    sortAlpha: "Alphabetical",
+    officialTitle: "Official designation",
+    officialAr: "In Arabic",
+    officialFr: "In French",
+    filterAria: "Filter by category",
+    clearFilters: "Clear filters",
   },
 
   links: {
@@ -312,6 +330,11 @@ export const en: Dict = {
     open: "Start filling",
     idleIntro:
       "Hi! I'm the AI document assistant. Choose a document from the list; I'll ask you for its data one field at a time, validate each answer, then draft the full document professionally.",
+    startMsg: "Great! Let's fill in “{title}”. I have {n} questions for you; your data stays in your browser only.",
+    collectDoneMsg: "Thanks! I have everything I need. Here is the draft for review and editing.",
+    skipDoneMsg: "Noted. Here is the draft.",
+    editFieldMsg: "Let's edit this field: {label} (current value: {value})",
+    editSavedMsg: "Edit saved ✓. The draft has been updated.",
     docLang: "Document language",
     docLangAr: "Arabic",
     docLangFr: "French",

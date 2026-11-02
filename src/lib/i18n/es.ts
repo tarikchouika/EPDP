@@ -20,7 +20,7 @@ export const es: Dict = {
     title: "Tus documentos administrativos,",
     titleAccent: "listos en segundos",
     subtitle:
-      "La plataforma digital del escribano público (EPDP) digitaliza los servicios del katib público con profesionalismo: más de 125 plantillas y documentos oficiales en árabe y francés — solicitudes, reclamaciones, contratos de alquiler y venta, poderes, declaraciones juradas, currículums — además de un directorio completo de los sitios web oficiales de las administraciones marroquíes, un asistente inteligente que responde únicamente a partir de fuentes oficiales verificadas sin alucinaciones, y un asistente IA que recoge tus datos y redacta tu documento profesionalmente.",
+      "La plataforma digital del escribano público (EPDP) digitaliza los servicios del katib público con profesionalismo: {docs} plantillas y documentos oficiales en árabe y francés — solicitudes, reclamaciones, contratos de alquiler y venta, poderes, declaraciones juradas, currículums — además de un directorio completo de los sitios web oficiales de las administraciones marroquíes, un asistente inteligente que responde únicamente a partir de fuentes oficiales verificadas sin alucinaciones, y un asistente IA que recoge tus datos y redacta tu documento profesionalmente.",
     ctaPrimary: "Explorar documentos",
     ctaSecondary: "Sitios oficiales",
     trust: "Totalmente gratuito · Sin registro · 7 idiomas · Basado en fuentes oficiales",
@@ -37,7 +37,7 @@ export const es: Dict = {
   services: {
     title: "Biblioteca de documentos y plantillas",
     subtitle:
-      "Explora por categoría o busca directamente. Cada plantilla está redactada en un estilo administrativo profesional, disponible para descargar y copiar gratis, con la autoridad receptora claramente indicada.",
+      "Explora por categoría o busca directamente. Cada ficha indica la autoridad receptora y su fuente oficial; las plantillas listas están redactadas en estilo administrativo profesional, descargables y copiables gratis.",
     search: "Buscar documentos…",
     all: "Todas las categorías",
     popular: "Más solicitados",
@@ -58,6 +58,24 @@ export const es: Dict = {
     officialSource: "Fuente oficial",
     freeTag: "Gratis",
     note: "Nota: las plantillas son orientativas; confirma los requisitos con la autoridad competente o su sitio web oficial antes de presentar.",
+  },
+
+  catalog: {
+    showing: "Mostrando {from}–{to} de {total} documentos",
+    prev: "Anterior",
+    next: "Siguiente",
+    first: "Primera",
+    last: "Última",
+    pageAria: "Ir a la página {n}",
+    currentPage: "Página {page} de {pages}",
+    sortLabel: "Ordenar",
+    sortPopular: "Más solicitados",
+    sortAlpha: "Alfabético",
+    officialTitle: "Denominación oficial del documento",
+    officialAr: "En árabe",
+    officialFr: "En francés",
+    filterAria: "Filtrar por categoría",
+    clearFilters: "Borrar filtros",
   },
 
   links: {
@@ -312,6 +330,11 @@ export const es: Dict = {
     open: "Empezar",
     idleIntro:
       "¡Hola! Soy el asistente IA de documentos. Elige un documento; te haré las preguntas una a una con validación y luego redactaré el documento profesionalmente.",
+    startMsg: "¡Muy bien! Rellenemos «{title}». Tengo {n} preguntas; tus datos se quedan solo en tu navegador.",
+    collectDoneMsg: "¡Gracias! Ya tengo todo. Aquí está el borrador para revisar y editar.",
+    skipDoneMsg: "Anotado. Aquí está el borrador.",
+    editFieldMsg: "Editemos este dato: {label} (valor actual: {value})",
+    editSavedMsg: "Modificación guardada ✓. El borrador se ha actualizado.",
     docLang: "Idioma del documento",
     docLangAr: "Árabe",
     docLangFr: "Francés",

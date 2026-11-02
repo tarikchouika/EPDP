@@ -1,4 +1,7 @@
 import type { L } from "./categories";
+import type { Loc5, OptL5, LinkI18nOverlay } from "./forms-shared";
+import { linkI18n, linkCatI18n } from "./i18n-overlays";
+import type { ResolvedLink } from "./resolved-types";
 
 export type LinkCategoryId =
   | "gov"
@@ -13,11 +16,11 @@ export interface OfficialLink {
   url: string;
   domain: string;
   cat: LinkCategoryId;
-  name: { ar: string; fr: string; en: string };
+  name: { ar: string; fr: string; en: string } & OptL5;
   desc: L;
 }
 
-export const linkCategories: { id: LinkCategoryId; name: { ar: string; fr: string; en: string }; desc: L }[] = [
+export const linkCategories: { id: LinkCategoryId; name: { ar: string; fr: string; en: string } & OptL5; desc: L }[] = [
   {
     id: "gov",
     name: { ar: "بوابات حكومية", fr: "Portails gouvernementaux", en: "Government portals" },
@@ -726,4 +729,19 @@ export const officialLinks: OfficialLink[] = [
   },
 ];
 
-export const getLink = (id: string) => officialLinks.find((l) => l.id === id);
+export const getLink = (id: string): ResolvedLink | null => {
+  const l = officialLinks.find((x) => x.id === id);
+  if (!l) return null;
+  const o = linkI18n[id]?.name;
+  // Runtime completeness of all 7 locales is enforced by scripts/validate-forms.ts.
+  return o ? ({ ...l, name: { ...l.name, ...o } } as ResolvedLink) : (l as unknown as ResolvedLink);
+};
+
+export type { Loc5, LinkI18nOverlay };
+
+/** Link categories with names resolved in every UI locale. */
+export const resolvedLinkCategories: { id: LinkCategoryId; name: L; desc: L }[] =
+  linkCategories.map((c) => {
+    const o = linkCatI18n[c.id]?.name;
+    return o ? { ...c, name: { ...c.name, ...o } } : (c as unknown as { id: LinkCategoryId; name: L; desc: L });
+  });

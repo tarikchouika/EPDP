@@ -20,7 +20,7 @@ export const de: Dict = {
     title: "Ihre Verwaltungsdokumente,",
     titleAccent: "in Sekunden fertig",
     subtitle:
-      "Die digitale Plattform für öffentliche Schreiber (EPDP) digitalisiert die Dienste des Katib 'Am professionell: über 125 offizielle Vorlagen und Dokumente auf Arabisch und Französisch — Anträge, Beschwerden, Miet- und Kaufverträge, Vollmachten, eidesstattliche Erklärungen, Lebensläufe — dazu ein vollständiges Verzeichnis der offiziellen Websites marokkanischer Behörden, ein intelligenter Assistent, der ausschließlich aus verifizierten offiziellen Quellen antwortet ohne Halluzinationen, sowie ein KI-Assistent, der Ihre Daten abfragt und Ihr Dokument professionell verfasst.",
+      "Die digitale Plattform für öffentliche Schreiber (EPDP) digitalisiert die Dienste des Katib 'Am professionell: {docs} offizielle Vorlagen und Dokumente auf Arabisch und Französisch — Anträge, Beschwerden, Miet- und Kaufverträge, Vollmachten, eidesstattliche Erklärungen, Lebensläufe — dazu ein vollständiges Verzeichnis der offiziellen Websites marokkanischer Behörden, ein intelligenter Assistent, der ausschließlich aus verifizierten offiziellen Quellen antwortet ohne Halluzinationen, sowie ein KI-Assistent, der Ihre Daten abfragt und Ihr Dokument professionell verfasst.",
     ctaPrimary: "Dokumente durchsuchen",
     ctaSecondary: "Offizielle Websites",
     trust: "Vollständig kostenlos · Ohne Registrierung · 7 Sprachen · Auf offiziellen Quellen basierend",
@@ -37,7 +37,7 @@ export const de: Dict = {
   services: {
     title: "Dokumenten- und Vorlagenbibliothek",
     subtitle:
-      "Nach Kategorie stöbern oder direkt suchen. Jede Vorlage ist in professionellem Verwaltungsdeutsch bzw. -arabisch verfasst, kostenlos herunterlad- und kopierbar, mit klar angegebener zuständiger Behörde.",
+      "Nach Kategorie stöbern oder direkt suchen. Jeder Eintrag nennt die zuständige Behörde und die offizielle Quelle; fertige Vorlagen sind professionell verfasst, kostenlos herunterlad- und kopierbar.",
     search: "Dokumente suchen…",
     all: "Alle Kategorien",
     popular: "Meistgefragt",
@@ -58,6 +58,24 @@ export const de: Dict = {
     officialSource: "Offizielle Quelle",
     freeTag: "Kostenlos",
     note: "Hinweis: Die Vorlagen sind allgemeine Orientierungshilfen; bestätigen Sie die Anforderungen bei der zuständigen Behörde oder auf deren offizieller Website vor der Einreichung.",
+  },
+
+  catalog: {
+    showing: "Zeige {from}–{to} von {total} Dokumenten",
+    prev: "Zurück",
+    next: "Weiter",
+    first: "Erste",
+    last: "Letzte",
+    pageAria: "Zur Seite {n}",
+    currentPage: "Seite {page} von {pages}",
+    sortLabel: "Sortieren",
+    sortPopular: "Am häufigsten",
+    sortAlpha: "Alphabetisch",
+    officialTitle: "Offizielle Bezeichnung des Dokuments",
+    officialAr: "Auf Arabisch",
+    officialFr: "Auf Französisch",
+    filterAria: "Nach Kategorie filtern",
+    clearFilters: "Filter zurücksetzen",
   },
 
   links: {
@@ -312,6 +330,11 @@ export const de: Dict = {
     open: "Ausfüllen beginnen",
     idleIntro:
       "Hallo! Ich bin der KI-Dokumentenassistent. Wählen Sie ein Dokument aus; ich stelle die Fragen einzeln mit Validierung und verfasse dann das Dokument professionell.",
+    startMsg: "Sehr gut! Füllen wir „{title}“ aus. Ich habe {n} Fragen; Ihre Daten bleiben nur in Ihrem Browser.",
+    collectDoneMsg: "Danke! Ich habe alles. Hier ist der Entwurf zur Prüfung und Bearbeitung.",
+    skipDoneMsg: "Notiert. Hier ist der Entwurf.",
+    editFieldMsg: "Bearbeiten wir dieses Feld: {label} (aktueller Wert: {value})",
+    editSavedMsg: "Änderung gespeichert ✓. Der Entwurf wurde aktualisiert.",
     docLang: "Dokumentsprache",
     docLangAr: "Arabisch",
     docLangFr: "Französisch",

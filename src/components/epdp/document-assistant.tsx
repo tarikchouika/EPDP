@@ -87,17 +87,15 @@ export function DocumentAssistant() {
       setEditingKey(null);
       setPhase("collect");
       setMessages([]);
-      const title = locale === "fr" ? d.title.fr : d.title.ar;
+      const title = d.title[locale];
       botSay(
-        locale === "fr"
-          ? `Très bien ! Remplissons « ${title} ». J'ai ${p.length} questions à vous poser. Vos données restent dans votre navigateur.`
-          : `ممتاز! لنملأ «${title}». لديّ ${p.length} أسئلة. بياناتك تبقى في متصفحك فقط.`
+        f.startMsg.replace("{title}", title).replace("{n}", String(p.length))
       );
       botSay(`${p[0].label[locale]}${p[0].required ? "" : ` (${f.optional})`}`);
       setDocLang("ar");
       setTimeout(() => inputRef.current?.focus(), 200);
     },
-    [locale, f.optional, botSay]
+    [locale, f.startMsg, f.optional, botSay]
   );
 
   /** External opener: epdp-open-filler event (from chatbot / doc dialog). */
@@ -162,11 +160,7 @@ export function DocumentAssistant() {
     setAnswers(next);
     const isLast = step + 1 >= plan.length;
     if (isLast) {
-      botSay(
-        locale === "fr"
-          ? "Merci ! J'ai tout ce qu'il faut. Voici la version préliminaire pour vérification et retouche."
-          : "شكراً! اكتملت البيانات. هذه مسودة الوثيقة للمراجعة والتحرير."
-      );
+      botSay(f.collectDoneMsg);
       generate(docLang, next);
     } else {
       setStep(step + 1);
@@ -180,11 +174,7 @@ export function DocumentAssistant() {
     setMessages((m) => [...m, { role: "user", text: `— ${f.skip} —` }]);
     const isLast = step + 1 >= plan.length;
     if (isLast) {
-      botSay(
-        locale === "fr"
-          ? "C'est noté. Voici la version préliminaire."
-          : "تم التسجيل. إليك المسودة."
-      );
+      botSay(f.skipDoneMsg);
       generate(docLang, answers);
     } else {
       setStep(step + 1);
@@ -200,9 +190,9 @@ export function DocumentAssistant() {
     setPhase("collect");
     setStep(idx);
     botSay(
-      locale === "fr"
-        ? `Modifions cette donnée : ${plan[idx].label[locale]} (la valeur actuelle : ${answers[key] ?? "—"})`
-        : `لنعدّل هذه البيانات: ${plan[idx].label[locale]} (القيمة الحالية: ${answers[key] ?? "—"})`
+      f.editFieldMsg
+        .replace("{label}", plan[idx].label[locale])
+        .replace("{value}", answers[key] ?? "—")
     );
   };
 
@@ -220,11 +210,7 @@ export function DocumentAssistant() {
     setAnswers(next);
     setMessages((m) => [...m, { role: "user", text }]);
     setEditingKey(null);
-    botSay(
-      locale === "fr"
-        ? "Modification enregistrée ✓. La version préliminaire est mise à jour."
-        : "تم التعديل ✓. تم تحديث المسودة."
-    );
+    botSay(f.editSavedMsg);
     generate(docLang, next);
   };
 
@@ -320,8 +306,8 @@ export function DocumentAssistant() {
                             : "border-border/70 bg-card hover:border-gold hover:bg-muted/40"
                         }`}
                       >
-                        <p className="text-sm font-bold leading-6" dir="rtl">{d.title.ar}</p>
-                        <p className="text-[11px] font-semibold text-muted-foreground" dir="ltr">{d.title.fr}</p>
+                        <p className="text-sm font-bold leading-6">{d.title[locale]}</p>
+                        <p className="text-[11px] font-semibold leading-5 text-muted-foreground line-clamp-1">{d.desc[locale]}</p>
                         <span
                           className={`mt-1.5 inline-flex items-center gap-1 text-[11px] font-bold ${
                             active ? "text-primary" : "text-muted-foreground"
@@ -349,8 +335,8 @@ export function DocumentAssistant() {
                 </span>
                 <div className="min-w-0">
                   <p className="font-display text-sm font-bold leading-tight">{f.title}</p>
-                  <p className="text-[11px] opacity-85" dir="rtl">
-                    {doc ? doc.title.ar : f.badge}
+                  <p className="text-[11px] opacity-85" dir="auto">
+                    {doc ? doc.title[locale] : f.badge}
                   </p>
                 </div>
               </div>

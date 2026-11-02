@@ -71,6 +71,24 @@ export interface Dict {
     note: string;
   };
 
+  catalog: {
+    showing: string;
+    prev: string;
+    next: string;
+    first: string;
+    last: string;
+    pageAria: string;
+    currentPage: string;
+    sortLabel: string;
+    sortPopular: string;
+    sortAlpha: string;
+    officialTitle: string;
+    officialAr: string;
+    officialFr: string;
+    filterAria: string;
+    clearFilters: string;
+  };
+
   links: {
     title: string;
     subtitle: string;
@@ -141,6 +159,11 @@ export interface Dict {
     pickNone: string;
     open: string;
     idleIntro: string;
+    startMsg: string;
+    collectDoneMsg: string;
+    skipDoneMsg: string;
+    editFieldMsg: string;
+    editSavedMsg: string;
     docLang: string;
     docLangAr: string;
     docLangFr: string;

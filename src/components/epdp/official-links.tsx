@@ -1,7 +1,8 @@
 "use client";
 
 import { useI18n } from "@/lib/i18n/context";
-import { linkCategories, officialLinks, type LinkCategoryId } from "@/lib/data/official-links";
+import { officialLinks, getLink, resolvedLinkCategories } from "@/lib/data/official-links";
+import type { L } from "@/lib/data/categories";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
@@ -9,7 +10,7 @@ import {
   ExternalLink, ShieldCheck, Landmark, Copy, Check, Globe,
 } from "lucide-react";
 
-const catIcons: Record<LinkCategoryId, React.ComponentType<{ className?: string }>> = {
+const catIcons: Record<string, React.ComponentType<{ className?: string }>> = {
   gov: Landmark,
   digital: Globe,
   social: ShieldCheck,
@@ -38,22 +39,22 @@ export function OfficialLinks() {
         </div>
 
         <div className="mt-12 space-y-10">
-          {linkCategories.map((cat) => {
+          {resolvedLinkCategories.map((cat) => {
             const links = officialLinks.filter((l) => l.cat === cat.id);
             if (!links.length) return null;
             return (
               <div key={cat.id}>
                 <div className="mb-4 flex items-baseline justify-between gap-3 border-b border-border/70 pb-2">
                   <h3 className="font-display text-lg sm:text-xl font-bold text-primary">
-                    {locale === "fr" ? cat.name.fr : cat.name.ar}
+                    {cat.name[locale]}
                   </h3>
                   <p className="hidden sm:block text-xs text-muted-foreground">
-                    {locale === "ar" ? cat.name.fr : cat.name.en} · {links.length}
+                    {links.length}
                   </p>
                 </div>
                 <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
                   {links.map((link) => (
-                    <LinkCard key={link.id} url={link.url} domain={link.domain} name={link.name} desc={link.desc[locale]} visitLabel={dict.links.visit} official={dict.links.officialBadge} copyUrl={dict.links.copyUrl} copiedUrl={dict.links.copiedUrl} />
+                    <LinkCard key={link.id} url={link.url} domain={link.domain} name={getLink(link.id)!.name} desc={link.desc[locale]} visitLabel={dict.links.visit} official={dict.links.officialBadge} copyUrl={dict.links.copyUrl} copiedUrl={dict.links.copiedUrl} />
                   ))}
                 </div>
               </div>
@@ -82,7 +83,7 @@ function LinkCard({
 }: {
   url: string;
   domain: string;
-  name: { ar: string; fr: string; en: string };
+  name: L;
   desc: string;
   visitLabel: string;
   official: string;
@@ -91,7 +92,7 @@ function LinkCard({
 }) {
   const { locale } = useI18n();
   const { toast } = useToast();
-  const displayName = locale === "fr" ? name.fr : locale === "en" ? name.en : name.ar;
+  const displayName = name[locale];
 
   return (
     <article className="group flex flex-col rounded-2xl border border-border/80 bg-card p-5 shadow-sm transition-all hover:-translate-y-0.5 hover:border-primary/50 hover:shadow-md">

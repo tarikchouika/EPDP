@@ -1,16 +1,25 @@
 import type { CategoryId, L } from "./categories";
 
+/**
+ * Bilingual core (official languages of Morocco) + optional extra locales.
+ * Extra locales are completed at runtime through `docI18n` overlays
+ * (see i18n-overlays.ts) so every rendered string always follows the
+ * selected UI language — no mixed-language content.
+ */
+export type Bi = { ar: string; fr: string };
+export type Opt5 = Partial<Record<"en" | "es" | "it" | "de" | "ru", string>>;
+
 export interface DocumentItem {
   id: string;
   cat: CategoryId;
-  title: { ar: string; fr: string };
+  title: Bi & Opt5;
   desc: L;
-  where: { ar: string; fr: string };
+  where: Bi & Opt5;
   authority?: string; // official link id
   popular?: boolean;
   keywords: string[];
   templateId?: string;
-  fields?: { ar: string[]; fr: string[]; en: string[] };
+  fields?: { ar: string[]; fr: string[]; en: string[] } & Partial<Record<"es" | "it" | "de" | "ru", string[]>>;
 }
 
 const D = (ar: string, en: string, fr: string, es: string, it: string, de: string, ru: string): L => ({

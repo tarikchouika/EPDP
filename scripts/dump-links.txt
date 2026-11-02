@@ -1,0 +1,42 @@
+LINK IDS: gov-ma, idarati, interieur, justice, adala, finances, sante, men, enssup, agriculture, mcinet, passeport, consulat, tax, simpl, emploi-public, ompic, ancfcc, minhaty, cnie, chikaya, casier-judiciaire, cnss, macnss, cnops, amotadamon, cnss-rdv, anapec, ofppt, bkam, hcp, tgr, douane, opendata, one, oncf, poste, cndh
+
+gov-ma | maroc.ma | Portail national du Royaume du Maroc
+idarati | idarati.ma | Portail national Idarati
+interieur | interieur.gov.ma | Ministère de l'Intérieur
+justice | justice.gov.ma | Ministère de la Justice
+adala | adala.justice.gov.ma | Portail Adala des textes juridiques
+finances | finances.gov.ma | Ministère de l'Économie et des Finances
+sante | sante.gov.ma | Ministère de la Santé et de la Protection sociale
+men | men.gov.ma | Ministère de l'Éducation nationale
+enssup | enssup.gov.ma | Ministère de l'Enseignement supérieur
+agriculture | agriculture.gov.ma | Ministère de l'Agriculture et de la Pêche maritime
+mcinet | mcinet.gov.ma | Ministère de l'Industrie et du Commerce
+passeport | passeport.ma | Portail du passeport biométrique
+consulat | consulat.ma | Portail des services consulaires
+tax | tax.gov.ma | Direction Générale des Impôts
+simpl | simpl.tax.gov.ma | Plateforme SIMPL
+emploi-public | emploi-public.ma | Portail de l'emploi public
+ompic | ompic.ma | OMPIC — Office Marocain de la Propriété Industrielle et Commerciale
+ancfcc | ancfcc.ma | ANCFCC — Conservation foncière
+minhaty | minhaty.ma | Portail Minhaty
+cnie | cnie.ma | Portail de la Carte Nationale d'Identité Électronique
+chikaya | chikaya.ma | Portail national des réclamations
+casier-judiciaire | casierjudiciaire.justice.gov.ma | Casier judiciaire en ligne
+cnss | cnss.ma | CNSS — Caisse Nationale de Sécurité Sociale
+macnss | macnss.ma | Portail numérique MaCNSS
+cnops | cnops.ma | CNOPS — Caisse Nationale des Organismes de Prévoyance Sociale
+amotadamon | amotadamon.ma | Portail AMO Tadamon
+cnss-rdv | cnss.rdv.gov.ma | Plateforme de rendez-vous CNSS
+anapec | anapec.ma | ANAPEC — Agence Nationale de Promotion de l'Emploi
+ofppt | ofppt.ma | OFPPT — Office de la Formation Professionnelle
+bkam | bkam.ma | Bank Al-Maghrib
+hcp | hcp.ma | HCP — Haut-Commissariat au Plan
+tgr | tgr.gov.ma | TGR — Trésorerie Générale du Royaume
+douane | douane.gov.ma | Administration des Douanes et Impôts Indirects
+opendata | data.gov.ma | Portail Open Data
+one | one.org.ma | ONEE — Office National de l'Électricité et de l'Eau potable
+oncf | oncf.ma | ONCF — Office National des Chemins de Fer
+poste | poste.ma | Barid Al-Maghrib / Barid Bank
+cndh | cndh.ma | CNDH — Conseil National des Droits de l'Homme
+
+LINK CATS: gov(بوابات حكومية/Portails gouvernementaux), digital(خدمات رقمية عمومية/Services publics numériques), social(الحماية الاجتماعية والصحة/Protection sociale et santé), employment(تشغيل وتكوين/Emploi et formation), economy(اقتصاد ومالية/Économie et finances), utilities(مرافق عمومية/Services publics essentiels)

@@ -20,7 +20,7 @@ export const it: Dict = {
     title: "I tuoi documenti amministrativi,",
     titleAccent: "pronti in pochi secondi",
     subtitle:
-      "La piattaforma digitale dello scrivano pubblico (EPDP) digitalizza i servizi del katib pubblico con professionalità: oltre 125 modelli e documenti ufficiali in arabo e francese — richieste, reclami, contratti di locazione e vendita, procure, dichiarazioni giurate, curriculum — oltre a una guida completa dei siti ufficiali delle amministrazioni marocchine, un assistente intelligente che risponde solo da fonti ufficiali verificate senza allucinazioni, e un assistente IA che raccoglie i tuoi dati e redige il documento professionalmente.",
+      "La piattaforma digitale dello scrivano pubblico (EPDP) digitalizza i servizi del katib pubblico con professionalità: {docs} modelli e documenti ufficiali in arabo e francese — richieste, reclami, contratti di locazione e vendita, procure, dichiarazioni giurate, curriculum — oltre a una guida completa dei siti ufficiali delle amministrazioni marocchine, un assistente intelligente che risponde solo da fonti ufficiali verificate senza allucinazioni, e un assistente IA che raccoglie i tuoi dati e redige il documento professionalmente.",
     ctaPrimary: "Sfoglia i documenti",
     ctaSecondary: "Siti ufficiali",
     trust: "Completamente gratuito · Senza registrazione · 7 lingue · Basato su fonti ufficiali",
@@ -37,7 +37,7 @@ export const it: Dict = {
   services: {
     title: "Libreria di documenti e modelli",
     subtitle:
-      "Sfoglia per categoria o cerca direttamente. Ogni modello è redatto in un linguaggio amministrativo professionale, scaricabile e copiabile gratuitamente, con l'autorità di presentazione chiaramente indicata.",
+      "Sfoglia per categoria o cerca direttamente. Ogni scheda indica l'autorità di presentazione e la fonte ufficiale; i modelli pronti sono redatti in linguaggio amministrativo professionale, scaricabili e copiabili gratuitamente.",
     search: "Cerca documenti…",
     all: "Tutte le categorie",
     popular: "Più richiesti",
@@ -58,6 +58,24 @@ export const it: Dict = {
     officialSource: "Fonte ufficiale",
     freeTag: "Gratuito",
     note: "Nota: i modelli sono indicativi; conferma i requisiti con l'autorità competente o sul suo sito ufficiale prima di presentare.",
+  },
+
+  catalog: {
+    showing: "Visualizzazione di {from}–{to} su {total} documenti",
+    prev: "Precedente",
+    next: "Successiva",
+    first: "Prima",
+    last: "Ultima",
+    pageAria: "Vai alla pagina {n}",
+    currentPage: "Pagina {page} di {pages}",
+    sortLabel: "Ordina",
+    sortPopular: "Più richiesti",
+    sortAlpha: "Alfabetico",
+    officialTitle: "Denominazione ufficiale del documento",
+    officialAr: "In arabo",
+    officialFr: "In francese",
+    filterAria: "Filtra per categoria",
+    clearFilters: "Cancella filtri",
   },
 
   links: {
@@ -312,6 +330,11 @@ export const it: Dict = {
     open: "Inizia",
     idleIntro:
       "Ciao! Sono l'assistente IA per i documenti. Scegli un documento; ti farò le domande una alla volta con convalida, poi redigerò il documento professionalmente.",
+    startMsg: "Perfetto! Compiliamo «{title}». Ho {n} domande; i tuoi dati restano solo nel tuo browser.",
+    collectDoneMsg: "Grazie! Ho tutto il necessario. Ecco la bozza per revisione e modifica.",
+    skipDoneMsg: "Annotato. Ecco la bozza.",
+    editFieldMsg: "Modifichiamo questo dato: {label} (valore attuale: {value})",
+    editSavedMsg: "Modifica salvata ✓. La bozza è stata aggiornata.",
     docLang: "Lingua del documento",
     docLangAr: "Arabo",
     docLangFr: "Francese",

@@ -1,0 +1,128 @@
+demandes | طلب إداري عام | Demande administrative générale [TPL]
+demandes | طلب نسخة من رسم الولادة | Demande de copie d'acte de naissance [TPL]
+demandes | طلب شهادة مدرسية | Demande de certificat de scolarité
+demandes | طلب ربط بالكهرباء والماء | Demande de branchement eau et électricité
+demandes | طلب تحويل ملف طبي | Demande de transfert de dossier médical
+demandes | طلب كشف حساب بنكي | Demande de relevé de compte bancaire
+chikayat | شكاية عامة | Plainte générale [TPL]
+chikayat | شكاية إزعاج جار | Plainte contre un voisin
+chikayat | تظلم لدى الضرائب | Réclamation fiscale
+chikayat | شكاية إهمال الأسرة (النفقة) | Plainte pour abandon de famille
+chikayat | شكاية لدى مفتشية الشغل | Plainte auprès de l'inspection du travail
+ichhadat | شهادة العمل | Attestation de travail [TPL]
+ichhadat | شهادة السكنى | Attestation de résidence [TPL]
+ichhadat | شهادة عدم العمل | Attestation de non-emploi [TPL]
+ichhadat | شهادة الدخل | Attestation de revenu
+ichhadat | شهادة الحياة | Certificat de vie
+tasarih | تصريح بالشرف | Déclaration sur l'honneur [TPL]
+tasarih | تصريح بالشرف بعدم العمل | Déclaration sur l'honneur de non-emploi [TPL]
+tasarih | تصريح بالشرف بالسكنى | Déclaration sur l'honneur de résidence
+tasarih | تصريح بالشرف بمتابعة الدراسة | Déclaration de poursuite d'études
+iltizamat | التزام بالسكن | Engagement de logement [TPL]
+iltizamat | التزام بالكفالة والضمان | Engagement de prise en charge
+iltizamat | التزام بالتسديد | Engagement de paiement
+wakalat | وكالة (نموذج مبسط) | Procuration (modèle simplifié) [TPL]
+wakalat | تفويض لاستلام وثيقة أو مستحقات | Autorisation de retrait [TPL]
+wakalat | تفويض لمتابعة ملف إداري | Procuration pour suivi de dossier
+wakalat | تفويض بالتصرف في حساب بنكي/بريدي | Procuration bancaire
+uqud-kira | عقد كراء سكني | Contrat de bail d'habitation [TPL]
+uqud-kira | عقد كراء محل تجاري | Contrat de bail commercial
+uqud-kira | عقد كراء مفروش | Contrat de location meublée
+uqud-kira | وصل أداء الكراء | Quittance de loyer [TPL]
+uqud-bay | عقد بيع سيارة | Contrat de vente de véhicule [TPL]
+uqud-bay | عقد بيع منقولات وأثاث | Contrat de vente de meubles
+uqud-bay | عقد تنازل عن محل تجاري | Acte de cession de fonds de commerce
+amal | نموذج سيرة ذاتية | Modèle de CV [TPL]
+amal | رسالة تحفيزية | Lettre de motivation [TPL]
+amal | طلب توظيف (ترشح تلقائي) | Demande d'emploi (candidature spontanée)
+amal | طلب استقالة | Demande de démission [TPL]
+amal | عقد عمل محدد المدة (CDD) | Contrat de travail à durée déterminée (CDD) [TPL]
+amal | طلب تدريب | Demande de stage [TPL]
+amal | شهادة خبرة مهنية | Attestation d'expérience professionnelle
+usra | إذن أبوي بسفر قاصر | Autorisation parentale de voyage [TPL]
+usra | بلاغ الولادة | Déclaration de naissance
+usra | التزام بأداء النفقة | Engagement de pension alimentaire
+usra | طلب نسخة من عقد الزواج | Demande de copie d'acte de mariage
+jamaiyat | طلب تأسيس جمعية | Demande de création d'association
+jamaiyat | محضر الجمع العام التأسيسي | Procès-verbal de l'AG constitutive
+jamaiyat | نموذج قانون أساسي لجمعية | Modèle de statuts d'association
+binaa | طلب رخصة البناء | Demande de permis de construire
+binaa | طلب ترخيص التسييج | Demande d'autorisation de clôture
+binaa | تصريح باكتمال الأشغال | Déclaration d'achèvement des travaux
+muqawalat | نموذج فاتورة | Modèle de facture [TPL]
+muqawalat | نموذج عرض سعر | Modèle de devis
+muqawalat | عقد تقديم خدمات | Contrat de prestation de services
+muqawalat | وصل استلام مبلغ | Reçu de paiement
+mahkama | طلب السجل العدلي | Demande d'extrait de casier judiciaire
+mahkama | شكاية إلى النيابة العامة | Plainte auprès du parquet
+mahkama | طلب نسخة من حكم | Demande de copie de jugement
+bank | طلب فتح حساب بنكي/بريدي | Demande d'ouverture de compte
+bank | طلب تحويل الأجر إلى الحساب | Demande de domiciliation de salaire
+bank | التسجيل في CNSS والتصريح بالأجير | Affiliation CNSS et déclaration d'employé
+ijraat | مسطرة البطاقة الوطنية البيومترية | Procédure de la carte nationale biométrique
+ijraat | مسطرة جواز السفر البيومتري | Procédure du passeport biométrique
+ijraat | التسجيل في السجل الاجتماعي الموحد | Inscription au Registre Social Unifié
+ijraat | التسجيل في AMO تضامن | Inscription à l'AMO Tadamon
+ijraat | طلب المنحة عبر بوابة منحتي | Demande de bourse via Minhaty
+demandes | طلب الحصول على جواز السفر | Demande de passeport [TPL]
+demandes | طلب البطاقة الرمادية (نقل الملكية) | Demande de carte grise (transfert) [TPL]
+demandes | طلب رخصة السياقة | Demande de permis de conduire [TPL]
+demandes | طلب منحة دراسية | Demande de bourse d'études [TPL]
+demandes | طلب نسخة من دبلوم | Demande de copie de diplôme [TPL]
+demandes | طلب استرجاع أشياء محجوزة | Demande de restitution d'objets saisis [TPL]
+demandes | طلب تسجيل مدرسي | Demande d'inscription scolaire [TPL]
+chikayat | شكاية للوكالة الوطنية للسلامة الطرقية | Réclamation à l'Agence Nationale de la Sécurité Routière [TPL]
+chikayat | شكاية مزود خدمات الإنترنت | Réclamation auprès d'un fournisseur d'accès [TPL]
+chikayat | شكاية مؤسسة تجارية (حماية المستهلك) | Réclamation commerciale (protection du consommateur) [TPL]
+chikayat | شكاية شيك بدون رصيد | Plainte pour chèque sans provision [TPL]
+ichhadat | شهادة الأجر | Attestation de salaire [TPL]
+ichhadat | شهادة تكفل (للتأشيرة) | Attestation de prise en charge (visa) [TPL]
+ichhadat | شهادة استضافة | Attestation d'hébergement [TPL]
+ichhadat | إشهاد بالحياة الفردية (عزوبة) | Attestation de célibat [TPL]
+ichhadat | شهادة تدريب | Attestation de stage [TPL]
+tasarih | تصريح بالشرف بضياع البطاقة الوطنية | Déclaration de perte de la CIN [TPL]
+tasarih | تصريح بضياع وثيقة إدارية | Déclaration de perte d'un document [TPL]
+tasarih | تصريح بالشرف بالإعالة | Déclaration de prise en charge familiale [TPL]
+tasarih | تصريح بالشرف بظروف حادث | Déclaration des circonstances d'un accident [TPL]
+tasarih | تصريح بتغيير الوضعية العائلية | Déclaration de changement de situation familiale [TPL]
+iltizamat | التزام تحمل مسؤولية المركبة | Engagement de responsabilité du véhicule [TPL]
+iltizamat | التزام محل غذائي بالنظافة | Engagement d'établissement alimentaire [TPL]
+wakalat | وكالة لبيع سيارة | Procuration pour vendre un véhicule [TPL]
+wakalat | وكالة عقارية | Procuration immobilière [TPL]
+wakalat | وكالة لاستلام رخصة السياقة | Procuration pour retirer le permis [TPL]
+uqud-kira | حالة الأماكن (دخول/خروج) | État des lieux (entrée/sortie) [TPL]
+uqud-bay | عقد وعد بالبيع العقاري | Promesse de vente immobilière [TPL]
+uqud-bay | عقد بيع عقار | Acte de vente immobilier [TPL]
+uqud-bay | وصل بيع دراجة نارية | Vente de motocycle [TPL]
+amal | رسالة توصية | Lettre de recommandation [TPL]
+amal | طلب استفادة من رخصة | Demande de congé [TPL]
+amal | إنذار أداء مستحقات نهاية العمل (STC) | Mise en demeure de paiement (STC) [TPL]
+amal | عقد عمل غير محدد المدة (CDI) | Contrat de travail à durée indéterminée [TPL]
+amal | عقد عمل لخادم(ة) منزلية | Contrat de travail domestique [TPL]
+usra | طلب مراجعة النفقة | Demande de révision de la pension alimentaire [TPL]
+usra | طلب نسخة من رسم الوفاة | Demande d'acte de décès [TPL]
+jamaiyat | محضر جمع عام عادي | PV d'assemblée générale ordinaire [TPL]
+jamaiyat | طلب دعم مالي لجمعية | Demande de subvention pour association [TPL]
+jamaiyat | نظام أساسي لتعاونية | Statuts d'une coopérative [TPL]
+binaa | التزام بالبناء وفق الرخصة | Engagement de construire selon le permis [TPL]
+binaa | طلب تسوية بناء غير قانوني | Demande de régularisation de construction [TPL]
+muqawalat | إقرار بالدين | Reconnaissance de dette [TPL]
+muqawalat | إعلان قانوني (تأسيس/تعديل شركة) | Avis légal (constitution/modification) [TPL]
+muqawalat | ورقة حضور العمال (البوانتاج) | Feuille de pointage des ouvriers [TPL]
+muqawalat | تصريح بالشرف للمفوتر الذاتي | Déclaration sur l'honneur (auto-entrepreneur) [TPL]
+muqawalat | نموذج ورقة الأجر (Bulletin de paie) | Modèle de bulletin de paie [TPL]
+bank | طلب الاستفادة من ALD (مرض مزمن) | Demande ALD (maladie chronique) [TPL]
+bank | ورقة العلاج (تصريح بالمصاريف) | Feuille de soins (déclaration) [TPL]
+bank | طلب معاش الشيخوخة (CNSS) | Demande de pension de retraite (CNSS) [TPL]
+bank | طلب تعويضات عائلية (إضافة مولود) | Demande de prestations familiales [TPL]
+bank | طلب إضافة ذوي الحقوق (CNOPS) | Demande d'ajout d'ayants droit (CNOPS) [TPL]
+ijraat | مسطرة أداء رسوم السيارة (الفيينيت) | Procédure de paiement de la vignette [TPL]
+ijraat | مسطرة تأسيس شركة (السجل التجاري) | Procédure de création de société [TPL]
+ijraat | السجل العدلي للمغاربة بالخارج (B3 عن بعد) | Casier judiciaire des MRE (B3 à distance) [TPL]
+naulat-fasikh | فسخ عقد كراء بالتراضي | Résiliation amiable du bail [TPL]
+naulat-fasikh | فسخ عقد عمل بالتراضي | Rupture conventionnelle du contrat [TPL]
+naulat-fasikh | فسخ عقد تأمين | Résiliation de contrat d'assurance [TPL]
+naulat-fasikh | فسخ اشتراك الإنترنت/الاتصالات | Résiliation d'abonnement internet/télécom [TPL]
+naulat-fasikh | تنازل عن مركبة | Cession d'un véhicule [TPL]
+naulat-fasikh | تنازل عن عقد كراء | Cession du bail [TPL]
+naulat-fasikh | تنازل عن مستحقات (نفقة/طلاق) | Renonciation à des droits (pension/divorce) [TPL]

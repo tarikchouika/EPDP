@@ -20,7 +20,7 @@ export const fr: Dict = {
     title: "Vos documents administratifs,",
     titleAccent: "prêts en quelques secondes",
     subtitle:
-      "La plateforme numérique du katib public (EPDP) numérise les services du kâtib el 'âm avec professionnalisme : plus de 125 modèles et documents officiels en arabe et en français — demandes, réclamations, contrats de bail et de vente, procurations, déclarations sur l'honneur, CV — avec un répertoire complet des sites officiels des administrations marocaines, un assistant intelligent qui répond uniquement à partir de sources officielles vérifiées sans hallucination, et un assistant IA qui recueille vos données et rédige votre document professionnellement.",
+      "La plateforme numérique du katib public (EPDP) numérise les services du kâtib el 'âm avec professionnalisme : {docs} modèles et documents officiels en arabe et en français — demandes, réclamations, contrats de bail et de vente, procurations, déclarations sur l'honneur, CV — avec un répertoire complet des sites officiels des administrations marocaines, un assistant intelligent qui répond uniquement à partir de sources officielles vérifiées sans hallucination, et un assistant IA qui recueille vos données et rédige votre document professionnellement.",
     ctaPrimary: "Parcourir les documents",
     ctaSecondary: "Sites officiels",
     trust: "Entièrement gratuit · Sans inscription · 7 langues · Sources officielles vérifiées",
@@ -37,7 +37,7 @@ export const fr: Dict = {
   services: {
     title: "Bibliothèque de documents et modèles",
     subtitle:
-      "Parcourez par catégorie ou recherchez directement. Chaque modèle est rédigé dans un style administratif professionnel, téléchargeable et copiable gratuitement, avec l'autorité de dépôt clairement indiquée.",
+      "Parcourez par catégorie ou recherchez directement. Chaque fiche indique l'autorité de dépôt et sa source officielle ; les modèles prêts à l'emploi sont rédigés dans un style administratif professionnel, téléchargeables et copiables gratuitement.",
     search: "Rechercher un document…",
     all: "Toutes les catégories",
     popular: "Les plus demandés",
@@ -58,6 +58,24 @@ export const fr: Dict = {
     officialSource: "Source officielle",
     freeTag: "Gratuit",
     note: "Remarque : les modèles sont indicatifs ; confirmez les exigences auprès de l'autorité compétente ou de son site officiel avant tout dépôt.",
+  },
+
+  catalog: {
+    showing: "Affichage de {from}–{to} sur {total} documents",
+    prev: "Précédent",
+    next: "Suivant",
+    first: "Première",
+    last: "Dernière",
+    pageAria: "Aller à la page {n}",
+    currentPage: "Page {page} sur {pages}",
+    sortLabel: "Tri",
+    sortPopular: "Les plus demandés",
+    sortAlpha: "Alphabétique",
+    officialTitle: "Désignation officielle du document",
+    officialAr: "En arabe",
+    officialFr: "En français",
+    filterAria: "Filtrer par catégorie",
+    clearFilters: "Réinitialiser les filtres",
   },
 
   links: {
@@ -312,6 +330,11 @@ export const fr: Dict = {
     open: "Commencer",
     idleIntro:
       "Bonjour ! Je suis l'assistant IA de remplissage. Choisissez un document ; je vous poserai les questions une par une avec validation, puis je rédigerai le document professionnellement.",
+    startMsg: "Très bien ! Remplissons « {title} ». J'ai {n} questions à vous poser ; vos données restent dans votre navigateur.",
+    collectDoneMsg: "Merci ! J'ai tout ce qu'il faut. Voici la version préliminaire pour vérification et retouche.",
+    skipDoneMsg: "C'est noté. Voici la version préliminaire.",
+    editFieldMsg: "Modifions cette donnée : {label} (valeur actuelle : {value})",
+    editSavedMsg: "Modification enregistrée ✓. La version préliminaire est mise à jour.",
     docLang: "Langue du document",
     docLangAr: "Arabe",
     docLangFr: "Français",

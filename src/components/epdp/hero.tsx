@@ -42,7 +42,7 @@ export function Hero() {
             </h1>
 
             <p className="mx-auto lg:mx-0 mt-5 max-w-2xl text-sm sm:text-base leading-7 text-muted-foreground">
-              {dict.hero.subtitle}
+              {dict.hero.subtitle.replace("{docs}", String(docTotal))}
             </p>
 
             <form onSubmit={submit} className="mx-auto lg:mx-0 mt-7 flex max-w-xl gap-2">

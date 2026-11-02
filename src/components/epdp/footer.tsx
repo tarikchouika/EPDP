@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useI18n } from "@/lib/i18n/context";
-import { officialLinks } from "@/lib/data/official-links";
+import { officialLinks, getLink, type ResolvedLink } from "@/lib/data/official-links";
 import { Logo } from "./header";
 import { Heart } from "lucide-react";
 
@@ -23,9 +23,9 @@ export function Footer() {
     label: d.title,
   }));
 
-  const portals = ["gov-ma", "idarati", "cnie", "tax", "cnss", "chikaya"]
-    .map((id) => officialLinks.find((l) => l.id === id))
-    .filter(Boolean)
+  const portals: ResolvedLink[] = ["gov-ma", "idarati", "cnie", "tax", "cnss", "chikaya"]
+    .map((id) => getLink(id))
+    .filter((x): x is ResolvedLink => Boolean(x))
     .slice(0, 6);
 
   return (
@@ -75,15 +75,15 @@ export function Footer() {
             <h3 className="mb-3 font-bold text-sm">{dict.footer.officialTitle}</h3>
             <ul className="space-y-2">
               {portals.map((p) => (
-                <li key={p!.id}>
+                <li key={p.id}>
                   <a
-                    href={p!.url}
+                    href={p.url}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-xs text-muted-foreground hover:text-primary transition-colors"
                     dir="auto"
                   >
-                    {locale === "fr" ? p!.name.fr : p!.name.ar}
+                    {p.name[locale]}
                   </a>
                 </li>
               ))}
