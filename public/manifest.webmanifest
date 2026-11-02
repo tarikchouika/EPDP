@@ -1,0 +1,19 @@
+{
+  "name": "EPDP — منصة الكاتب العمومي الرقمية",
+  "short_name": "EPDP",
+  "description": "رقمنة خدمات الكاتب العمومي المغربي: نماذج ووثائق إدارية مجانية، دليل المواقع الرسمية، ومساعد ذكي موثق.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#faf8f2",
+  "theme_color": "#006233",
+  "lang": "ar",
+  "dir": "rtl",
+  "icons": [
+    {
+      "src": "/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

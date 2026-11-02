@@ -1,0 +1,194 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: "Cairo", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-display: "Noto Kufi Arabic", "Cairo", "Segoe UI", sans-serif;
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-gold: var(--gold);
+  --color-gold-foreground: var(--gold-foreground);
+  --color-moroccan-red: var(--moroccan-red);
+  --color-moroccan-green: var(--moroccan-green);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  --radius: 0.75rem;
+
+  /* Moroccan identity — ivory paper, Atlas green, flag red, zellige gold */
+  --background: #faf8f2;
+  --foreground: #1d241f;
+  --card: #ffffff;
+  --card-foreground: #1d241f;
+  --popover: #ffffff;
+  --popover-foreground: #1d241f;
+  --primary: #006233;
+  --primary-foreground: #fdfbf7;
+  --secondary: #c1272d;
+  --secondary-foreground: #fdfbf7;
+  --muted: #f0ebdd;
+  --muted-foreground: #6f6a58;
+  --accent: #f4ecd6;
+  --accent-foreground: #3a3119;
+  --destructive: #b3261e;
+  --border: #e6dfcc;
+  --input: #ddd5bf;
+  --ring: #006233;
+  --gold: #a8821f;
+  --gold-foreground: #fdfbf7;
+  --moroccan-red: #c1272d;
+  --moroccan-green: #006233;
+  --sidebar: #faf8f2;
+  --sidebar-foreground: #1d241f;
+  --sidebar-primary: #006233;
+  --sidebar-primary-foreground: #fdfbf7;
+  --sidebar-accent: #f0ebdd;
+  --sidebar-accent-foreground: #1d241f;
+  --sidebar-border: #e6dfcc;
+  --sidebar-ring: #006233;
+}
+
+.dark {
+  --background: #0d1512;
+  --foreground: #ece9dd;
+  --card: #131e18;
+  --card-foreground: #ece9dd;
+  --popover: #16221c;
+  --popover-foreground: #ece9dd;
+  --primary: #2ea86b;
+  --primary-foreground: #06130c;
+  --secondary: #e0605f;
+  --secondary-foreground: #1c0a0a;
+  --muted: #1a251e;
+  --muted-foreground: #a5a292;
+  --accent: #1f2c23;
+  --accent-foreground: #e5dfc8;
+  --destructive: #f27b73;
+  --border: #26332b;
+  --input: #2c3b31;
+  --ring: #2ea86b;
+  --gold: #d9b94a;
+  --gold-foreground: #201a05;
+  --moroccan-red: #e0605f;
+  --moroccan-green: #2ea86b;
+  --sidebar: #0d1512;
+  --sidebar-foreground: #ece9dd;
+  --sidebar-primary: #2ea86b;
+  --sidebar-primary-foreground: #06130c;
+  --sidebar-accent: #1a251e;
+  --sidebar-accent-foreground: #ece9dd;
+  --sidebar-border: #26332b;
+  --sidebar-ring: #2ea86b;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5.5rem;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Cairo", "Segoe UI", system-ui, -apple-system, sans-serif;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+  ::selection {
+    background: #c9a22766;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: "Noto Kufi Arabic", "Cairo", "Segoe UI", sans-serif;
+  }
+  /* Moroccan zellige-inspired 8-point star pattern */
+  .bg-zellige {
+    background-image: url("data:image/svg+xml,%3Csvg width='64' height='64' viewBox='0 0 64 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23006233' stroke-opacity='0.10' stroke-width='1'%3E%3Cpath d='M32 4 L38 20 L54 16 L46 30 L60 36 L46 42 L54 56 L38 52 L32 68 L26 52 L10 56 L18 42 L4 36 L18 30 L10 16 L26 20 Z'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: 64px 64px;
+  }
+  .bg-zellige-gold {
+    background-image: url("data:image/svg+xml,%3Csvg width='64' height='64' viewBox='0 0 64 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23a8821f' stroke-opacity='0.16' stroke-width='1'%3E%3Cpath d='M32 4 L38 20 L54 16 L46 30 L60 36 L46 42 L54 56 L38 52 L32 68 L26 52 L10 56 L18 42 L4 36 L18 30 L10 16 L26 20 Z'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: 64px 64px;
+  }
+  .dark .bg-zellige {
+    background-image: url("data:image/svg+xml,%3Csvg width='64' height='64' viewBox='0 0 64 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%232ea86b' stroke-opacity='0.08' stroke-width='1'%3E%3Cpath d='M32 4 L38 20 L54 16 L46 30 L60 36 L46 42 L54 56 L38 52 L32 68 L26 52 L10 56 L18 42 L4 36 L18 30 L10 16 L26 20 Z'/%3E%3C/g%3E%3C/svg%3E");
+  }
+  .text-gradient-moroccan {
+    background: linear-gradient(120deg, #006233 0%, #a8821f 55%, #c1272d 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .dark .text-gradient-moroccan {
+    background: linear-gradient(120deg, #2ea86b 0%, #d9b94a 55%, #e0605f 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .border-gold {
+    border-color: color-mix(in srgb, var(--gold) 45%, transparent);
+  }
+  .gold-divider {
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    height: 2px;
+  }
+  /* Custom scrollbar */
+  .scroll-moroccan::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  .scroll-moroccan::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .scroll-moroccan::-webkit-scrollbar-thumb {
+    background: color-mix(in srgb, var(--gold) 55%, transparent);
+    border-radius: 8px;
+  }
+  .scroll-moroccan::-webkit-scrollbar-thumb:hover {
+    background: var(--gold);
+  }
+}
+
+/* Chatbot typing dots */
+@keyframes epdp-dot {
+  0%, 60%, 100% { transform: translateY(0); opacity: 0.4; }
+  30% { transform: translateY(-4px); opacity: 1; }
+}
+.epdp-dot {
+  animation: epdp-dot 1.2s infinite ease-in-out;
+}
+.epdp-dot:nth-child(2) { animation-delay: 0.15s; }
+.epdp-dot:nth-child(3) { animation-delay: 0.3s; }

@@ -1,0 +1,5 @@
+# robots.txt — EPDP Digital Public Writer Platform
+User-agent: *
+Allow: /
+
+Sitemap: https://epdp.pages.dev/sitemap.xml
