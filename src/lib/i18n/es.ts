@@ -396,6 +396,7 @@ export const es: Dict = {
 
   brand: {
     name: "EPDP",
+    shortTagline: "Escribano digital",
     tagline: "Tu escribano público digital",
   },
 

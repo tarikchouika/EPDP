@@ -35,6 +35,8 @@ export interface Dict {
   brand: {
     name: string;
     tagline: string;
+    /** Compact tagline for narrow (mobile) headers — never truncates mid-word. */
+    shortTagline: string;
   };
 
   meta: {

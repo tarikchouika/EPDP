@@ -396,6 +396,7 @@ export const ar: Dict = {
 
   brand: {
     name: "EPDP",
+    shortTagline: "كاتبك الرقمي",
     tagline: "كاتبك الرقمي",
   },
 

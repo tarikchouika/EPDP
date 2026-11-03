@@ -396,6 +396,7 @@ export const ru: Dict = {
 
   brand: {
     name: "EPDP",
+    shortTagline: "Цифровой писарь",
     tagline: "Ваш цифровой писарь",
   },
 
