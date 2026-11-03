@@ -66,8 +66,13 @@ export function BrandText() {
   const { dict } = useI18n();
   return (
     <span className="flex min-w-0 flex-col leading-tight">
-      <span className="sr-only">EPDP — </span>
-      <span className="truncate font-display text-sm font-bold text-primary sm:text-base">
+      <span className="sr-only">EPDP — {dict.brand.tagline}</span>
+      {/* Mobile: short brand name (never truncates mid-word) */}
+      <span className="truncate font-display text-sm font-bold text-primary sm:hidden">
+        {dict.brand.name}
+      </span>
+      {/* Tablet/desktop: full brand tagline */}
+      <span className="hidden truncate font-display text-sm font-bold text-primary sm:inline sm:text-base">
         {dict.brand.tagline}
       </span>
     </span>
