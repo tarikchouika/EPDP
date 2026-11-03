@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { useI18n } from "@/lib/i18n/context";
 import { chatIntents, findIntent } from "@/lib/chatbot/knowledge";
 import { getLink } from "@/lib/data/official-links";
@@ -21,6 +22,7 @@ const initialSuggestions = ["carte-nationale", "passeport", "amo-tadamon", "acte
 
 export function Chatbot() {
   const { dict, locale } = useI18n();
+  const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");
@@ -75,6 +77,10 @@ export function Chatbot() {
 
   const lastBot = [...messages].reverse().find((m) => m.role === "bot");
   const chips = typing ? [] : lastBot?.suggestions ?? initialSuggestions;
+
+  // Focus mode on the app download page: the floating capsule must never sit
+  // over the primary APK download buttons on phones.
+  if (pathname === "/app") return null;
 
   return (
     <>
