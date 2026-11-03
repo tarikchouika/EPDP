@@ -18,10 +18,10 @@ export function HowItWorks() {
     <section id="how" className="py-14 sm:py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-bold">
+          <h2 className="font-display text-2xl font-bold sm:text-3xl lg:text-4xl">
             {dict.how.title}
           </h2>
-          <p className="mt-4 text-sm sm:text-base leading-7 text-muted-foreground">
+          <p className="mt-4 text-sm leading-7 text-muted-foreground sm:text-base">
             {dict.how.subtitle}
           </p>
         </div>
@@ -46,8 +46,9 @@ export function HowItWorks() {
   );
 }
 
-export function Faq() {
-  const { dict, locale } = useI18n();
+/** FAQ accordion (JSON-LD included) — composed inside pages under a PageHeader. */
+export function FaqAccordion() {
+  const { locale } = useI18n();
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -60,40 +61,31 @@ export function Faq() {
   };
 
   return (
-    <section id="faq" className="border-y border-border/60 bg-muted/30 py-14 sm:py-20">
+    <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <div className="mx-auto max-w-3xl px-4 sm:px-6">
-        <div className="text-center">
-          <span className="inline-flex items-center gap-2 rounded-full border border-gold bg-card px-4 py-1.5 text-xs font-bold text-primary">
-            <HelpCircle className="h-3.5 w-3.5 text-gold" />
-            FAQ
-          </span>
-          <h2 className="mt-4 font-display text-2xl sm:text-3xl lg:text-4xl font-bold">
-            {dict.faq.title}
-          </h2>
-          <p className="mt-4 text-sm sm:text-base leading-7 text-muted-foreground">
-            {dict.faq.subtitle}
-          </p>
-        </div>
-
-        <Accordion type="single" collapsible className="mt-10">
-          {faqItems.map((item, i) => (
-            <AccordionItem key={item.id} value={item.id} className="border-border/70">
-              <AccordionTrigger className="text-start font-bold text-sm sm:text-[15px] hover:text-primary hover:no-underline py-4">
-                <span className="flex items-center gap-2.5">
-                  <span className="inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-primary/10 text-[11px] font-bold text-primary">
-                    {i + 1}
-                  </span>
-                  {item.q[locale]}
-                </span>
-              </AccordionTrigger>
-              <AccordionContent className="text-sm leading-7 text-muted-foreground pb-4">
-                {item.a[locale]}
-              </AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
+      <div className="mb-8 text-center">
+        <span className="inline-flex items-center gap-2 rounded-full border border-gold bg-card px-4 py-1.5 text-xs font-bold text-primary">
+          <HelpCircle className="h-3.5 w-3.5 text-gold" />
+          FAQ
+        </span>
       </div>
-    </section>
+      <Accordion type="single" collapsible className="mx-auto max-w-3xl">
+        {faqItems.map((item, i) => (
+          <AccordionItem key={item.id} value={item.id} className="border-border/70">
+            <AccordionTrigger className="py-4 text-start text-sm font-bold hover:text-primary hover:no-underline sm:text-[15px]">
+              <span className="flex items-center gap-2.5">
+                <span className="inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-primary/10 text-[11px] font-bold text-primary">
+                  {i + 1}
+                </span>
+                {item.q[locale]}
+              </span>
+            </AccordionTrigger>
+            <AccordionContent className="pb-4 text-sm leading-7 text-muted-foreground">
+              {item.a[locale]}
+            </AccordionContent>
+          </AccordionItem>
+        ))}
+      </Accordion>
+    </div>
   );
 }

@@ -2,10 +2,13 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { useTheme } from "next-themes";
 import { useI18n } from "@/lib/i18n/context";
 import { localeMeta } from "@/lib/i18n";
 import type { Locale } from "@/lib/i18n/types";
+import { categories } from "@/lib/data/categories";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -14,42 +17,58 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
-import { Moon, Sun, Languages, Menu, Globe } from "lucide-react";
+import {
+  Moon, Sun, Menu, Globe, ChevronDown, LayoutGrid, Home,
+  Mail, Scale, BadgeCheck, FileSignature, Handshake, Stamp, ArrowLeftRight,
+  Briefcase, HeartHandshake, Users, HardHat, Receipt, Landmark, CreditCard,
+  ClipboardList, FileX, Coins, HeartPulse,
+} from "lucide-react";
 
-export function Logo({ size = 40 }: { size?: number }) {
+export const navCatIcons: Record<string, React.ComponentType<{ className?: string }>> = {
+  demandes: Mail,
+  dgi: Coins,
+  cnss: HeartPulse,
+  chikayat: Scale,
+  ichhadat: BadgeCheck,
+  tasarih: FileSignature,
+  iltizamat: Handshake,
+  wakalat: Stamp,
+  "uqud-kira": Home,
+  "uqud-bay": ArrowLeftRight,
+  amal: Briefcase,
+  usra: HeartHandshake,
+  jamaiyat: Users,
+  binaa: HardHat,
+  muqawalat: Receipt,
+  mahkama: Landmark,
+  bank: CreditCard,
+  ijraat: ClipboardList,
+  "naulat-fasikh": FileX,
+};
+
+/** Brand mark — the official EPDP logo artwork (transparent PNG, 840×346). */
+const LOGO_AR = 840 / 346;
+
+export function Logo({ size = 38, priority = false }: { size?: number; priority?: boolean }) {
   return (
-    <svg
-      width={size}
+    <Image
+      src="/logo.png"
+      alt="EPDP"
+      width={Math.round(size * LOGO_AR)}
       height={size}
-      viewBox="0 0 64 64"
-      role="img"
-      aria-label="EPDP"
-      className="shrink-0"
-    >
-      <rect width="64" height="64" rx="14" className="fill-primary" />
-      <path
-        d="M32 8 L37.5 22.5 L52 18 L43 32 L52 46 L37.5 41.5 L32 56 L26.5 41.5 L12 46 L21 32 L12 18 L26.5 22.5 Z"
-        className="fill-background"
-        opacity="0.95"
-      />
-      <path
-        d="M32 18 L34.8 26.2 L43 24 L37.5 32 L43 40 L34.8 37.8 L32 46 L29.2 37.8 L21 40 L26.5 32 L21 24 L29.2 26.2 Z"
-        className="fill-gold"
-      />
-      <circle cx="32" cy="32" r="3" className="fill-secondary" />
-    </svg>
+      priority={priority}
+      className="shrink-0 select-none"
+    />
   );
 }
 
 export function BrandText() {
-  const { dict, locale } = useI18n();
+  const { dict } = useI18n();
   return (
-    <span className="flex flex-col leading-tight">
-      <span className="font-display font-bold text-base sm:text-lg text-primary">
-        {locale === "ar" ? "الكاتب العمومي الرقمي" : locale === "fr" ? "Katib Public Numérique" : "EPDP"}
-      </span>
-      <span className="text-[11px] sm:text-xs text-muted-foreground tracking-wide">
-        {locale === "ar" ? "EPDP · منصة مغربية مجانية" : locale === "fr" ? "Plateforme marocaine gratuite" : dict.hero.badge}
+    <span className="flex min-w-0 flex-col leading-tight">
+      <span className="sr-only">EPDP — </span>
+      <span className="truncate font-display text-sm font-bold text-primary sm:text-base">
+        {dict.brand.tagline}
       </span>
     </span>
   );
@@ -58,47 +77,90 @@ export function BrandText() {
 export function Header() {
   const { dict, locale, setLocale } = useI18n();
   const { theme, setTheme } = useTheme();
+  const pathname = usePathname();
   const [open, setOpen] = useState(false);
 
   const navItems = [
-    { href: "#services", label: dict.nav.services },
-    { href: "#links", label: dict.nav.links },
-    { href: "#how", label: dict.nav.how },
-    { href: "#faq", label: dict.nav.faq },
-    { href: "#about", label: dict.nav.about },
-    { href: "#legal", label: dict.nav.legal },
+    { href: "/forms", label: dict.nav.services },
+    { href: "/assistant", label: dict.nav.assistant },
+    { href: "/portals", label: dict.nav.portals },
+    { href: "/links", label: dict.nav.links },
+    { href: "/faq", label: dict.nav.faq },
+    { href: "/about", label: dict.nav.about },
   ];
+
+  const isActive = (href: string) =>
+    pathname === href || pathname.startsWith(`${href}/`);
+
+  const catsActive = pathname.startsWith("/forms/");
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/70 bg-background/85 backdrop-blur-md supports-[backdrop-filter]:bg-background/70">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <div className="flex h-16 items-center justify-between gap-2">
-          <Link href="#top" className="flex items-center gap-2.5 min-w-0" aria-label="EPDP">
-            <Logo size={38} />
+          <Link href="/" className="flex min-w-0 items-center gap-2.5" aria-label="EPDP">
+            <Logo size={34} priority />
             <BrandText />
           </Link>
 
-          <nav className="hidden lg:flex items-center gap-1" aria-label="main">
+          <nav className="hidden items-center gap-1 lg:flex" aria-label="main">
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <button
+                  className={`inline-flex items-center gap-1.5 rounded-md px-3 py-2 text-sm font-semibold transition-colors ${
+                    catsActive
+                      ? "bg-accent text-primary"
+                      : "text-foreground/80 hover:bg-accent hover:text-primary"
+                  }`}
+                >
+                  <LayoutGrid className="h-4 w-4" />
+                  {dict.nav.categories}
+                  <ChevronDown className="h-3.5 w-3.5 opacity-70" />
+                </button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="start" className="max-h-[70vh] w-64 overflow-y-auto scroll-moroccan">
+                {categories.map((c) => {
+                  const Icon = navCatIcons[c.id];
+                  return (
+                    <DropdownMenuItem key={c.id} asChild>
+                      <Link
+                        href={`/forms/${c.id}`}
+                        className={`flex cursor-pointer items-center gap-2.5 ${
+                          pathname === `/forms/${c.id}` ? "bg-accent font-bold text-primary" : ""
+                        }`}
+                      >
+                        <Icon className="h-4 w-4 text-primary" />
+                        <span className="truncate">{c.name[locale]}</span>
+                      </Link>
+                    </DropdownMenuItem>
+                  );
+                })}
+              </DropdownMenuContent>
+            </DropdownMenu>
+
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.href}
                 href={item.href}
-                className="rounded-md px-3 py-2 text-sm font-semibold text-foreground/80 hover:text-primary hover:bg-accent transition-colors"
+                className={`rounded-md px-3 py-2 text-sm font-semibold transition-colors ${
+                  isActive(item.href)
+                    ? "bg-accent text-primary"
+                    : "text-foreground/80 hover:bg-accent hover:text-primary"
+                }`}
               >
                 {item.label}
-              </a>
+              </Link>
             ))}
           </nav>
 
           <div className="flex items-center gap-1.5 sm:gap-2">
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button variant="outline" size="sm" className="gap-1.5 h-9" aria-label={dict.language.label}>
-                  <Languages className="h-4 w-4 text-primary" />
-                  <span className="hidden sm:inline text-xs font-bold">
+                <Button variant="outline" size="sm" className="h-9 gap-1.5" aria-label={dict.language.label}>
+                  <Globe className="h-4 w-4 text-primary" />
+                  <span className="hidden text-xs font-bold sm:inline">
                     {localeMeta.find((l) => l.code === locale)?.native}
                   </span>
-                  <Globe className="h-3.5 w-3.5 text-gold" />
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end" className="w-44">
@@ -133,22 +195,59 @@ export function Header() {
                   <Menu className="h-4 w-4" />
                 </Button>
               </SheetTrigger>
-              <SheetContent side={locale === "ar" ? "right" : "left"} className="w-72 overflow-y-auto">
+              <SheetContent side={locale === "ar" ? "right" : "left"} className="w-72 overflow-y-auto scroll-moroccan">
                 <SheetTitle className="flex items-center gap-2 border-b pb-3">
-                  <Logo size={32} />
-                  <span className="font-display font-bold text-primary">EPDP</span>
+                  <Logo size={28} />
+                  <span className="font-display font-bold text-primary">{dict.brand.tagline}</span>
                 </SheetTitle>
                 <nav className="mt-4 flex flex-col gap-1" aria-label="mobile">
+                  <Link
+                    href="/"
+                    onClick={() => setOpen(false)}
+                    className={`flex items-center gap-2.5 rounded-lg px-3 py-2.5 text-sm font-semibold transition-colors hover:bg-accent hover:text-primary ${
+                      pathname === "/" ? "bg-accent text-primary" : ""
+                    }`}
+                  >
+                    <Home className="h-4 w-4" />
+                    {dict.nav.home}
+                  </Link>
                   {navItems.map((item) => (
-                    <a
+                    <Link
                       key={item.href}
                       href={item.href}
                       onClick={() => setOpen(false)}
-                      className="rounded-lg px-3 py-2.5 text-sm font-semibold hover:bg-accent hover:text-primary transition-colors"
+                      className={`rounded-lg px-3 py-2.5 text-sm font-semibold transition-colors hover:bg-accent hover:text-primary ${
+                        isActive(item.href) ? "bg-accent text-primary" : ""
+                      }`}
                     >
                       {item.label}
-                    </a>
+                    </Link>
                   ))}
+
+                  <div className="mt-4 border-t pt-4">
+                    <p className="px-3 pb-2 text-xs font-bold text-muted-foreground">
+                      {dict.nav.categories}
+                    </p>
+                    <div className="grid grid-cols-1 gap-1">
+                      {categories.map((c) => {
+                        const Icon = navCatIcons[c.id];
+                        return (
+                          <Link
+                            key={c.id}
+                            href={`/forms/${c.id}`}
+                            onClick={() => setOpen(false)}
+                            className={`flex items-center gap-2.5 rounded-lg px-3 py-2 text-xs font-semibold transition-colors hover:bg-accent hover:text-primary ${
+                              pathname === `/forms/${c.id}` ? "bg-accent text-primary" : ""
+                            }`}
+                          >
+                            <Icon className="h-3.5 w-3.5 text-primary" />
+                            {c.name[locale]}
+                          </Link>
+                        );
+                      })}
+                    </div>
+                  </div>
+
                   <div className="mt-4 border-t pt-4">
                     <p className="px-3 pb-2 text-xs font-bold text-muted-foreground">{dict.language.label}</p>
                     <div className="grid grid-cols-2 gap-1">

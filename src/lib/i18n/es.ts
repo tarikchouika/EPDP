@@ -13,6 +13,10 @@ export const es: Dict = {
     faq: "Preguntas frecuentes",
     about: "Acerca de",
     legal: "Legal",
+    assistant: "Asistente de datos",
+    portals: "Portales oficiales",
+    docsIndex: "Índice de documentos",
+    categories: "Categorías",
   },
 
   hero: {
@@ -81,12 +85,25 @@ export const es: Dict = {
   links: {
     title: "Directorio de sitios oficiales marroquíes",
     subtitle:
-      "Enlaces oficiales verificados a los departamentos gubernamentales y servicios públicos digitales de Marruecos, revisados con cuidado y actualizados regularmente.",
+      "Enlaces oficiales verificados de los organismos e instituciones públicas marroquíes (seguridad social, empleo, economía y finanzas, servicios), revisados con cuidado y actualizados regularmente.",
     visit: "Visitar sitio",
     officialBadge: "Oficial",
     verifiedNote: "Todos los enlaces pertenecen a dominios oficiales (gov.ma) o a instituciones públicas marroquíes reconocidas.",
+    count: "{n} enlaces",
     copyUrl: "Copiar enlace",
     copiedUrl: "Enlace copiado",
+  },
+
+  portals: {
+    title: "Portales oficiales",
+    subtitle:
+      "Portales gubernamentales y plataformas digitales públicas oficiales para realizar tus trámites a distancia, verificados y actualizados regularmente.",
+  },
+
+  docsIndex: {
+    title: "Índice de documentos",
+    subtitle:
+      "Índice completo de todos los modelos y documentos administrativos por categoría, con enlace directo a cada documento.",
   },
 
   how: {
@@ -113,12 +130,12 @@ export const es: Dict = {
   },
 
   faq: {
-    title: "Preguntas frecuentes",
+    title: "Cómo funciona — Preguntas frecuentes",
     subtitle: "Respuestas verificadas a las preguntas más comunes sobre documentos y trámites administrativos en Marruecos.",
   },
 
   about: {
-    title: "Acerca de la plataforma digital del escribano público",
+    title: "Sobre EPDP — tu escribano público digital",
     paragraphs: [
       "La plataforma digital del escribano público (EPDP) es un proyecto marroquí que busca digitalizar los servicios del katib público y ponerlos a disposición de todos los ciudadanos y residentes, en móvil y ordenador, en siete idiomas, con una identidad visual marroquí auténtica.",
       "La plataforma ofrece una biblioteca rica de plantillas administrativas redactadas en un estilo oficial profesional en árabe y francés, un directorio completo de los sitios oficiales marroquíes y un asistente inteligente que guía a los usuarios exclusivamente a partir de fuentes oficiales.",
@@ -334,7 +351,7 @@ export const es: Dict = {
     collectDoneMsg: "¡Gracias! Ya tengo todo. Aquí está el borrador para revisar y editar.",
     skipDoneMsg: "Anotado. Aquí está el borrador.",
     editFieldMsg: "Editemos este dato: {label} (valor actual: {value})",
-    editSavedMsg: "Modificación guardada ✓. El borrador se ha actualizado.",
+    editSavedMsg: "Modificación guardada. El borrador se ha actualizado.",
     docLang: "Idioma del documento",
     docLangAr: "Árabe",
     docLangFr: "Francés",
@@ -376,4 +393,30 @@ export const es: Dict = {
   },
   language: { label: "Idioma" },
   common: { close: "Cerrar", menu: "Menú", top: "Volver arriba" },
+
+  brand: {
+    name: "EPDP",
+    tagline: "Tu escribano público digital",
+  },
+
+  pages: {
+    related: "Páginas relacionadas",
+    breadcrumb: "Ruta de navegación",
+    categoriesTitle: "Explorar categorías administrativas",
+    categoriesSubtitle: "19 categorías que cubren todas tus necesidades de documentos oficiales: desde impuestos y seguridad social hasta contratos, reclamaciones y declaraciones.",
+    popularTitle: "Documentos más solicitados",
+    popularSubtitle: "Los documentos más buscados por los ciudadanos, listos para descargar y usar de inmediato.",
+    viewAll: "Ver todo",
+    openCategory: "Explorar categoría",
+    docsCount: "{n} documentos",
+    relatedDocs: "Documentos relacionados",
+    notFoundTitle: "Página no encontrada",
+    notFoundDesc: "Lo sentimos, la página que buscas no está disponible o ha sido movida. Vuelve a la página de inicio o explora la biblioteca de documentos.",
+    notFoundCta: "Volver al inicio",
+    fillWithAssistant: "Rellenar este documento automáticamente con el asistente",
+    assistantCtaTitle: "Deja que el asistente redacte tu documento",
+    assistantCtaDesc: "Responde preguntas sencillas una a una y el asistente redactará tu documento con tus datos, listo para imprimir y descargar — tus datos nunca salen de tu navegador.",
+    tryAssistant: "Probar el asistente",
+    keywordsLabel: "Palabras clave",
+  },
 };

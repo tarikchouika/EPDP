@@ -5,6 +5,7 @@ import {
   useCallback,
   useContext,
   useEffect,
+  useLayoutEffect,
   useMemo,
   useState,
 } from "react";
@@ -20,54 +21,61 @@ const LanguageContext = createContext<LanguageCtx | null>(null);
 
 const STORAGE_KEY = "epdp-lang";
 
+/**
+ * On the server (and the hydration render) this is useEffect — a no-op during
+ * SSR. In the browser it becomes useLayoutEffect, which fires synchronously
+ * after the hydration commit and BEFORE the browser paints. That way the
+ * user's saved locale replaces the SSR default without a visible flash of
+ * mixed-language content.
+ */
+const useIsoLayoutEffect = typeof window !== "undefined" ? useLayoutEffect : useEffect;
+
+function applyDocument(l: Locale) {
+  const dict = dictionaries[l];
+  const el = document.documentElement;
+  el.lang = l;
+  el.dir = dict.dir;
+  el.dataset.locale = l;
+}
+
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
+  // First render is always "ar" to match the server HTML exactly (no
+  // hydration mismatch). The pre-paint layout effect below then swaps to
+  // the persisted/URL locale before anything is painted.
   const [locale, setLocaleState] = useState<Locale>("ar");
 
-  const applyDocument = useCallback((l: Locale) => {
-    const dict = dictionaries[l];
-    document.documentElement.lang = l;
-    document.documentElement.dir = dict.dir;
-  }, []);
-
-  useEffect(() => {
-    // Mount-time initialization from URL/localStorage (client only).
-    // setState is intentional here: first render is always SSR-safe ('ar'),
-    // then the user's saved preference is applied — standard i18n hydration pattern.
+  useIsoLayoutEffect(() => {
     try {
       const url = new URL(window.location.href);
       const q = url.searchParams.get("lang") || "";
+      let target: Locale | null = null;
       if (isLocale(q)) {
-        // eslint-disable-next-line react-hooks/set-state-in-effect
-        setLocaleState(q);
+        target = q;
         localStorage.setItem(STORAGE_KEY, q);
-        applyDocument(q);
-        return;
+      } else {
+        const saved = localStorage.getItem(STORAGE_KEY);
+        if (saved && isLocale(saved)) target = saved;
       }
-      const saved = localStorage.getItem(STORAGE_KEY);
-      if (saved && isLocale(saved)) {
-        setLocaleState(saved);
-        applyDocument(saved);
-      }
+      if (target && target !== locale) setLocaleState(target);
+      if (target) applyDocument(target);
     } catch {
       /* ignore */
     }
-  }, [applyDocument]);
+     
+  }, []);
 
-  const setLocale = useCallback(
-    (l: Locale) => {
-      setLocaleState(l);
-      try {
-        localStorage.setItem(STORAGE_KEY, l);
-        const url = new URL(window.location.href);
-        url.searchParams.set("lang", l);
-        window.history.replaceState(null, "", url.toString());
-      } catch {
-        /* ignore */
-      }
-      applyDocument(l);
-    },
-    [applyDocument]
-  );
+  const setLocale = useCallback((l: Locale) => {
+    setLocaleState(l);
+    try {
+      localStorage.setItem(STORAGE_KEY, l);
+      const url = new URL(window.location.href);
+      url.searchParams.set("lang", l);
+      window.history.replaceState(null, "", url.toString());
+    } catch {
+      /* ignore */
+    }
+    applyDocument(l);
+  }, []);
 
   const value = useMemo(
     () => ({ locale, dict: dictionaries[locale], setLocale }),

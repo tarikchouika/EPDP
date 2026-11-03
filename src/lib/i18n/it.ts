@@ -13,6 +13,10 @@ export const it: Dict = {
     faq: "FAQ",
     about: "Chi siamo",
     legal: "Note legali",
+    assistant: "Assistente dati",
+    portals: "Portali ufficiali",
+    docsIndex: "Indice dei documenti",
+    categories: "Categorie",
   },
 
   hero: {
@@ -81,12 +85,25 @@ export const it: Dict = {
   links: {
     title: "Guida ai siti ufficiali marocchini",
     subtitle:
-      "Link ufficiali verificati di dipartimenti governativi e servizi pubblici digitali del Marocco, esaminati con cura e aggiornati regolarmente.",
+      "Collegamenti ufficiali verificati agli organismi e istituti pubblici marocchini (previdenza, lavoro, economia e finanze, servizi), esaminati con cura e aggiornati regolarmente.",
     visit: "Visita il sito",
     officialBadge: "Ufficiale",
     verifiedNote: "Tutti i link appartengono a domini ufficiali (gov.ma) o a note istituzioni pubbliche marocchine.",
+    count: "{n} collegamenti",
     copyUrl: "Copia link",
     copiedUrl: "Link copiato",
+  },
+
+  portals: {
+    title: "Portali ufficiali",
+    subtitle:
+      "Portali governativi e piattaforme digitali pubbliche ufficiali per svolgere le pratiche a distanza, verificati e aggiornati regolarmente.",
+  },
+
+  docsIndex: {
+    title: "Indice dei documenti",
+    subtitle:
+      "Indice completo di tutti i moduli e documenti amministrativi per categoria, con collegamento diretto a ciascun documento.",
   },
 
   how: {
@@ -113,12 +130,12 @@ export const it: Dict = {
   },
 
   faq: {
-    title: "Domande frequenti",
+    title: "Come funziona — Domande frequenti",
     subtitle: "Risposte verificate alle domande più comuni su documenti e procedure amministrative in Marocco.",
   },
 
   about: {
-    title: "La piattaforma digitale dello scrivano pubblico",
+    title: "Su EPDP — il tuo scrivano pubblico digitale",
     paragraphs: [
       "La piattaforma digitale dello scrivano pubblico (EPDP) è un progetto marocchino che mira a digitalizzare i servizi dello scrivano pubblico e renderli disponibili a tutti i cittadini e residenti, su mobile e desktop, in sette lingue, con un'identità visiva marocchina autentica.",
       "La piattaforma offre una ricca libreria di modelli amministrativi redatti in un linguaggio ufficiale professionale in arabo e francese, una guida completa dei siti ufficiali marocchini e un assistente intelligente che orienta gli utenti esclusivamente sulla base di fonti ufficiali.",
@@ -334,7 +351,7 @@ export const it: Dict = {
     collectDoneMsg: "Grazie! Ho tutto il necessario. Ecco la bozza per revisione e modifica.",
     skipDoneMsg: "Annotato. Ecco la bozza.",
     editFieldMsg: "Modifichiamo questo dato: {label} (valore attuale: {value})",
-    editSavedMsg: "Modifica salvata ✓. La bozza è stata aggiornata.",
+    editSavedMsg: "Modifica salvata. La bozza è stata aggiornata.",
     docLang: "Lingua del documento",
     docLangAr: "Arabo",
     docLangFr: "Francese",
@@ -376,4 +393,30 @@ export const it: Dict = {
   },
   language: { label: "Lingua" },
   common: { close: "Chiudi", menu: "Menu", top: "Torna su" },
+
+  brand: {
+    name: "EPDP",
+    tagline: "Il tuo scrivano pubblico digitale",
+  },
+
+  pages: {
+    related: "Pagine correlate",
+    breadcrumb: "Percorso di navigazione",
+    categoriesTitle: "Sfoglia le categorie amministrative",
+    categoriesSubtitle: "19 categorie che coprono ogni esigenza di documenti ufficiali: dalle tasse e dalla previdenza sociale ai contratti, reclami e dichiarazioni.",
+    popularTitle: "Documenti più richiesti",
+    popularSubtitle: "I documenti più cercati dai cittadini, pronti da scaricare e usare subito.",
+    viewAll: "Vedi tutto",
+    openCategory: "Sfoglia categoria",
+    docsCount: "{n} documenti",
+    relatedDocs: "Documenti correlati",
+    notFoundTitle: "Pagina non trovata",
+    notFoundDesc: "Spiacenti, la pagina che cerchi non è disponibile o è stata spostata. Torna alla home o sfoglia la biblioteca dei documenti.",
+    notFoundCta: "Torna alla home",
+    fillWithAssistant: "Compila questo documento automaticamente con l'assistente",
+    assistantCtaTitle: "Lascia che l'assistente rediga il tuo documento",
+    assistantCtaDesc: "Rispondi a semplici domande, una alla volta, e l'assistente redigerà il tuo documento con i tuoi dati, pronto per la stampa e il download — i tuoi dati restano nel tuo browser.",
+    tryAssistant: "Prova l'assistente",
+    keywordsLabel: "Parole chiave",
+  },
 };

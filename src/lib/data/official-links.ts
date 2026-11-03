@@ -738,10 +738,16 @@ export const getLink = (id: string): ResolvedLink | null => {
 };
 
 export type { Loc5, LinkI18nOverlay };
+export type { ResolvedLink } from "./resolved-types";
 
 /** Link categories with names resolved in every UI locale. */
 export const resolvedLinkCategories: { id: LinkCategoryId; name: L; desc: L }[] =
   linkCategories.map((c) => {
     const o = linkCatI18n[c.id]?.name;
-    return o ? { ...c, name: { ...c.name, ...o } } : (c as unknown as { id: LinkCategoryId; name: L; desc: L });
+    // Runtime completeness of all 7 locales is enforced by scripts/validate-forms.ts.
+    return (o ? { ...c, name: { ...c.name, ...o } } : c) as unknown as {
+      id: LinkCategoryId;
+      name: L;
+      desc: L;
+    };
   });

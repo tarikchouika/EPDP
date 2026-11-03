@@ -1,15 +1,16 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import Image from "next/image";
 import { useI18n } from "@/lib/i18n/context";
-import { allDocuments, getTemplate, type DocumentItem } from "@/lib/data/registry";
+import { allDocuments, getTemplate, type ResolvedDocument } from "@/lib/data/registry";
 import { getPlan, type Answers, type WizardField } from "@/lib/wizard/fields";
 import { fillTemplate, validateAnswer, type FillResult } from "@/lib/wizard/fill";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 import {
-  Bot, Search, Sparkles, Send, Check, Copy, Printer, Download,
-  PencilLine, RefreshCw, RotateCcw, FileText, Lock,
+  Search, Send, Check, Copy, Printer, Download,
+  PencilLine, RefreshCw, RotateCcw, FileText,
 } from "lucide-react";
 
 interface Msg {
@@ -25,7 +26,7 @@ export function DocumentAssistant() {
   const f = dict.filler;
 
   const [query, setQuery] = useState("");
-  const [doc, setDoc] = useState<DocumentItem | null>(null);
+  const [doc, setDoc] = useState<ResolvedDocument | null>(null);
   const [phase, setPhase] = useState<Phase>("idle");
   const [plan, setPlan] = useState<WizardField[]>([]);
   const [step, setStep] = useState(0);
@@ -38,7 +39,6 @@ export function DocumentAssistant() {
   const [finalText, setFinalText] = useState("");
 
   const listRef = useRef<HTMLDivElement>(null);
-  const sectionRef = useRef<HTMLElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
   const rtl = locale === "ar";
@@ -76,7 +76,7 @@ export function DocumentAssistant() {
 
   /** Start a document. */
   const startDoc = useCallback(
-    (d: DocumentItem) => {
+    (d: ResolvedDocument) => {
       const p = getPlan(d);
       setDoc(d);
       setPlan(p);
@@ -98,25 +98,20 @@ export function DocumentAssistant() {
     [locale, f.startMsg, f.optional, botSay]
   );
 
-  /** External opener: epdp-open-filler event (from chatbot / doc dialog). */
+  /** Deep link: /assistant?doc=<id> preselects a fillable document. */
   useEffect(() => {
-    const handler = (e: Event) => {
-      const id = ((e as CustomEvent).detail ?? "") as string;
-      if (!id) {
-        // No specific document: scroll here and nudge the user.
-        if (phase === "idle" && messages.length === 0) {
-          botSay(dict.filler.idleIntro);
-        }
-        return;
-      }
+    try {
+      const id = new URLSearchParams(window.location.search).get("doc") || "";
+      if (!id) return;
       const d = allDocuments.find((x) => x.id === id);
       if (!d || !getTemplate(d.templateId)) return;
-      sectionRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+      // Mount-time deep-link initialization — intentional setState in effect.
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       startDoc(d);
-    };
-    window.addEventListener("epdp-open-filler", handler);
-    return () => window.removeEventListener("epdp-open-filler", handler);
-  }, [startDoc, phase, messages.length, botSay, dict.filler.idleIntro]);
+    } catch {
+      /* ignore */
+    }
+  }, []);
 
   const askCurrent = useCallback(
     (idx: number) => {
@@ -152,7 +147,7 @@ export function DocumentAssistant() {
     if (!field) return;
     const err = validateAnswer(field, text);
     if (err) {
-      botSay(`⚠️ ${f.validation[err === "required" ? "required" : err]}`);
+      botSay(f.validation[err === "required" ? "required" : err]);
       askCurrent(step);
       return;
     }
@@ -202,7 +197,7 @@ export function DocumentAssistant() {
     const field = plan[step];
     const err = validateAnswer(field, text);
     if (err) {
-      botSay(`⚠️ ${f.validation[err]}`);
+      botSay(f.validation[err]);
       return;
     }
     setInput("");
@@ -216,7 +211,7 @@ export function DocumentAssistant() {
 
   const regenerate = () => {
     generate(docLang, answers);
-    toast({ description: f.regenerate + " ✓" });
+    toast({ description: f.regenerate });
   };
 
   const switchLang = (lang: "ar" | "fr") => {
@@ -252,25 +247,9 @@ export function DocumentAssistant() {
   const progress = plan.length ? Math.round((answeredCount / plan.length) * 100) : 0;
 
   return (
-    <section id="assistant" ref={sectionRef} className="border-y border-border/60 bg-muted/30 py-14 sm:py-20">
+    <div className="py-10 sm:py-14">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
-        {/* Heading */}
-        <div className="mx-auto max-w-2xl text-center">
-          <span className="inline-flex items-center gap-2 rounded-full border border-gold bg-card px-4 py-1.5 text-xs font-bold text-primary">
-            <Sparkles className="h-3.5 w-3.5 text-gold" />
-            {f.badge}
-          </span>
-          <h2 className="mt-4 font-display text-2xl sm:text-3xl lg:text-4xl font-bold">
-            {f.title}
-          </h2>
-          <p className="mt-4 text-sm sm:text-base leading-7 text-muted-foreground">{f.subtitle}</p>
-          <p className="mt-3 inline-flex items-center gap-2 rounded-xl border border-primary/25 bg-primary/5 px-3 py-1.5 text-[11px] font-semibold text-primary">
-            <Lock className="h-3.5 w-3.5" />
-            {f.privacy}
-          </p>
-        </div>
-
-        <div className="mt-10 grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
+        <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
           {/* ── Doc picker ── */}
           <div className="flex max-h-[640px] flex-col rounded-2xl border border-border bg-card shadow-sm">
             <div className="border-b border-border/70 px-4 py-3">
@@ -314,7 +293,7 @@ export function DocumentAssistant() {
                           }`}
                         >
                           {active ? <Check className="h-3 w-3" /> : null}
-                          {active ? f.answered + " ✓" : f.open}
+                          {active ? f.answered : f.open}
                         </span>
                       </button>
                     </li>
@@ -329,9 +308,15 @@ export function DocumentAssistant() {
             {/* header */}
             <div className="flex items-center justify-between gap-2 border-b border-border/70 bg-primary px-4 py-3 text-primary-foreground">
               <div className="flex items-center gap-3">
-                <span className="relative inline-flex h-10 w-10 items-center justify-center rounded-xl bg-primary-foreground/15">
-                  <Bot className="h-6 w-6" />
-                  <span className="absolute -bottom-0.5 -end-0.5 h-3 w-3 rounded-full border-2 border-primary bg-emerald-400" />
+                <span className="relative inline-flex h-10 items-center justify-center rounded-xl bg-primary-foreground/15 px-1.5">
+                  <Image
+                    src="/logo.png"
+                    alt="EPDP"
+                    width={58}
+                    height={24}
+                    className="h-6 w-auto"
+                  />
+                  <span className="absolute -bottom-0.5 -end-0.5 h-3 w-3 rounded-full border-2 border-primary bg-gold" />
                 </span>
                 <div className="min-w-0">
                   <p className="font-display text-sm font-bold leading-tight">{f.title}</p>
@@ -548,6 +533,6 @@ export function DocumentAssistant() {
           {finalText}
         </div>
       )}
-    </section>
+    </div>
   );
 }

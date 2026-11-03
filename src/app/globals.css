@@ -45,70 +45,71 @@
 :root {
   --radius: 0.75rem;
 
-  /* Moroccan identity — ivory paper, Atlas green, flag red, zellige gold */
-  --background: #faf8f2;
-  --foreground: #1d241f;
+  /* EPDP identity — petrol teal + antique gold, derived from the EPDP logo
+     artwork (deep #1f4e6b / mid #4b95b0 / light #8bcdde + muted gold). */
+  --background: #eef4f5;
+  --foreground: #16323f;
   --card: #ffffff;
-  --card-foreground: #1d241f;
+  --card-foreground: #16323f;
   --popover: #ffffff;
-  --popover-foreground: #1d241f;
-  --primary: #006233;
-  --primary-foreground: #fdfbf7;
-  --secondary: #c1272d;
-  --secondary-foreground: #fdfbf7;
-  --muted: #f0ebdd;
-  --muted-foreground: #6f6a58;
-  --accent: #f4ecd6;
-  --accent-foreground: #3a3119;
+  --popover-foreground: #16323f;
+  --primary: #245a72;
+  --primary-foreground: #f2f8f9;
+  --secondary: #4b95b0;
+  --secondary-foreground: #f2f8f9;
+  --muted: #e2ebee;
+  --muted-foreground: #527281;
+  --accent: #d9eaef;
+  --accent-foreground: #1f404e;
   --destructive: #b3261e;
-  --border: #e6dfcc;
-  --input: #ddd5bf;
-  --ring: #006233;
+  --border: #d4e2e7;
+  --input: #c5d7dd;
+  --ring: #245a72;
   --gold: #a8821f;
   --gold-foreground: #fdfbf7;
-  --moroccan-red: #c1272d;
-  --moroccan-green: #006233;
-  --sidebar: #faf8f2;
-  --sidebar-foreground: #1d241f;
-  --sidebar-primary: #006233;
-  --sidebar-primary-foreground: #fdfbf7;
-  --sidebar-accent: #f0ebdd;
-  --sidebar-accent-foreground: #1d241f;
-  --sidebar-border: #e6dfcc;
-  --sidebar-ring: #006233;
+  --moroccan-red: #4b95b0;
+  --moroccan-green: #245a72;
+  --sidebar: #eef4f5;
+  --sidebar-foreground: #16323f;
+  --sidebar-primary: #245a72;
+  --sidebar-primary-foreground: #f2f8f9;
+  --sidebar-accent: #e2ebee;
+  --sidebar-accent-foreground: #16323f;
+  --sidebar-border: #d4e2e7;
+  --sidebar-ring: #245a72;
 }
 
 .dark {
-  --background: #0d1512;
-  --foreground: #ece9dd;
-  --card: #131e18;
-  --card-foreground: #ece9dd;
-  --popover: #16221c;
-  --popover-foreground: #ece9dd;
-  --primary: #2ea86b;
-  --primary-foreground: #06130c;
-  --secondary: #e0605f;
-  --secondary-foreground: #1c0a0a;
-  --muted: #1a251e;
-  --muted-foreground: #a5a292;
-  --accent: #1f2c23;
-  --accent-foreground: #e5dfc8;
+  --background: #0c1c26;
+  --foreground: #e7eef1;
+  --card: #122835;
+  --card-foreground: #e7eef1;
+  --popover: #152c3a;
+  --popover-foreground: #e7eef1;
+  --primary: #8bcdde;
+  --primary-foreground: #0c1c26;
+  --secondary: #4b95b0;
+  --secondary-foreground: #f2f8f9;
+  --muted: #1a3240;
+  --muted-foreground: #9db8c2;
+  --accent: #20404f;
+  --accent-foreground: #d7e8ee;
   --destructive: #f27b73;
-  --border: #26332b;
-  --input: #2c3b31;
-  --ring: #2ea86b;
+  --border: #254554;
+  --input: #2d5062;
+  --ring: #8bcdde;
   --gold: #d9b94a;
-  --gold-foreground: #201a05;
-  --moroccan-red: #e0605f;
-  --moroccan-green: #2ea86b;
-  --sidebar: #0d1512;
-  --sidebar-foreground: #ece9dd;
-  --sidebar-primary: #2ea86b;
-  --sidebar-primary-foreground: #06130c;
-  --sidebar-accent: #1a251e;
-  --sidebar-accent-foreground: #ece9dd;
-  --sidebar-border: #26332b;
-  --sidebar-ring: #2ea86b;
+  --gold-foreground: #1d1604;
+  --moroccan-red: #4b95b0;
+  --moroccan-green: #8bcdde;
+  --sidebar: #0c1c26;
+  --sidebar-foreground: #e7eef1;
+  --sidebar-primary: #8bcdde;
+  --sidebar-primary-foreground: #0c1c26;
+  --sidebar-accent: #1a3240;
+  --sidebar-accent-foreground: #e7eef1;
+  --sidebar-border: #254554;
+  --sidebar-ring: #8bcdde;
 }
 
 @layer base {
@@ -126,7 +127,7 @@
     -webkit-font-smoothing: antialiased;
   }
   ::selection {
-    background: #c9a22766;
+    background: #a8821f66;
   }
 }
 
@@ -134,9 +135,9 @@
   .font-display {
     font-family: "Noto Kufi Arabic", "Cairo", "Segoe UI", sans-serif;
   }
-  /* Moroccan zellige-inspired 8-point star pattern */
+  /* Zellige-inspired 8-point star pattern — petrol teal + antique gold */
   .bg-zellige {
-    background-image: url("data:image/svg+xml,%3Csvg width='64' height='64' viewBox='0 0 64 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23006233' stroke-opacity='0.10' stroke-width='1'%3E%3Cpath d='M32 4 L38 20 L54 16 L46 30 L60 36 L46 42 L54 56 L38 52 L32 68 L26 52 L10 56 L18 42 L4 36 L18 30 L10 16 L26 20 Z'/%3E%3C/g%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg width='64' height='64' viewBox='0 0 64 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23245a72' stroke-opacity='0.10' stroke-width='1'%3E%3Cpath d='M32 4 L38 20 L54 16 L46 30 L60 36 L46 42 L54 56 L38 52 L32 68 L26 52 L10 56 L18 42 L4 36 L18 30 L10 16 L26 20 Z'/%3E%3C/g%3E%3C/svg%3E");
     background-size: 64px 64px;
   }
   .bg-zellige-gold {
@@ -144,16 +145,21 @@
     background-size: 64px 64px;
   }
   .dark .bg-zellige {
-    background-image: url("data:image/svg+xml,%3Csvg width='64' height='64' viewBox='0 0 64 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%232ea86b' stroke-opacity='0.08' stroke-width='1'%3E%3Cpath d='M32 4 L38 20 L54 16 L46 30 L60 36 L46 42 L54 56 L38 52 L32 68 L26 52 L10 56 L18 42 L4 36 L18 30 L10 16 L26 20 Z'/%3E%3C/g%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg width='64' height='64' viewBox='0 0 64 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%238bcdde' stroke-opacity='0.08' stroke-width='1'%3E%3Cpath d='M32 4 L38 20 L54 16 L46 30 L60 36 L46 42 L54 56 L38 52 L32 68 L26 52 L10 56 L18 42 L4 36 L18 30 L10 16 L26 20 Z'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: 64px 64px;
+  }
+  .dark .bg-zellige-gold {
+    background-image: url("data:image/svg+xml,%3Csvg width='64' height='64' viewBox='0 0 64 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23d9b94a' stroke-opacity='0.14' stroke-width='1'%3E%3Cpath d='M32 4 L38 20 L54 16 L46 30 L60 36 L46 42 L54 56 L38 52 L32 68 L26 52 L10 56 L18 42 L4 36 L18 30 L10 16 L26 20 Z'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: 64px 64px;
   }
   .text-gradient-moroccan {
-    background: linear-gradient(120deg, #006233 0%, #a8821f 55%, #c1272d 100%);
+    background: linear-gradient(120deg, #245a72 0%, #a8821f 55%, #4b95b0 100%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
   }
   .dark .text-gradient-moroccan {
-    background: linear-gradient(120deg, #2ea86b 0%, #d9b94a 55%, #e0605f 100%);
+    background: linear-gradient(120deg, #8bcdde 0%, #d9b94a 55%, #4b95b0 100%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -201,6 +207,9 @@
 @media print {
   body * {
     visibility: hidden;
+  }
+  .epdp-watermark {
+    display: none;
   }
   #epdp-print,
   #epdp-print * {

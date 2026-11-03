@@ -26,6 +26,36 @@ export interface Dict {
     faq: string;
     about: string;
     legal: string;
+    assistant: string;
+    portals: string;
+    docsIndex: string;
+    categories: string;
+  };
+
+  brand: {
+    name: string;
+    tagline: string;
+  };
+
+  pages: {
+    related: string;
+    breadcrumb: string;
+    categoriesTitle: string;
+    categoriesSubtitle: string;
+    popularTitle: string;
+    popularSubtitle: string;
+    viewAll: string;
+    openCategory: string;
+    docsCount: string;
+    relatedDocs: string;
+    notFoundTitle: string;
+    notFoundDesc: string;
+    notFoundCta: string;
+    fillWithAssistant: string;
+    assistantCtaTitle: string;
+    assistantCtaDesc: string;
+    tryAssistant: string;
+    keywordsLabel: string;
   };
 
   hero: {
@@ -95,8 +125,19 @@ export interface Dict {
     visit: string;
     officialBadge: string;
     verifiedNote: string;
+    count: string;
     copyUrl: string;
     copiedUrl: string;
+  };
+
+  portals: {
+    title: string;
+    subtitle: string;
+  };
+
+  docsIndex: {
+    title: string;
+    subtitle: string;
   };
 
   how: {

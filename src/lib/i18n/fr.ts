@@ -13,6 +13,10 @@ export const fr: Dict = {
     faq: "FAQ",
     about: "À propos",
     legal: "Mentions légales",
+    assistant: "Assistant de saisie",
+    portals: "Portails officiels",
+    docsIndex: "Index des documents",
+    categories: "Catégories",
   },
 
   hero: {
@@ -81,12 +85,25 @@ export const fr: Dict = {
   links: {
     title: "Répertoire des sites officiels marocains",
     subtitle:
-      "Liens officiels vérifiés vers les départements gouvernementaux et services publics numériques marocains, soigneusement vérifiés et mis à jour régulièrement.",
+      "Liens officiels vérifiés des organismes et établissements publics marocains (sécurité sociale, emploi, économie et finances, services), soigneusement vérifiés et mis à jour régulièrement.",
     visit: "Visiter le site",
     officialBadge: "Officiel",
     verifiedNote: "Tous les liens appartiennent à des domaines officiels (gov.ma) ou à des institutions publiques marocaines reconnues.",
+    count: "{n} liens",
     copyUrl: "Copier le lien",
     copiedUrl: "Lien copié",
+  },
+
+  portals: {
+    title: "Portails officiels",
+    subtitle:
+      "Portails gouvernementaux et plateformes numériques publiques officiels pour accomplir vos démarches à distance, vérifiés et mis à jour régulièrement.",
+  },
+
+  docsIndex: {
+    title: "Index des documents",
+    subtitle:
+      "Index complet de tous les modèles et documents administratifs par catégorie, avec un lien direct vers chaque document.",
   },
 
   how: {
@@ -113,12 +130,12 @@ export const fr: Dict = {
   },
 
   faq: {
-    title: "Questions fréquentes",
+    title: "Comment ça marche — Questions fréquentes",
     subtitle: "Réponses vérifiées aux questions les plus courantes sur les documents et démarches administratifs au Maroc.",
   },
 
   about: {
-    title: "À propos de la plateforme numérique du katib public",
+    title: "À propos d’EPDP — votre écrivain public numérique",
     paragraphs: [
       "La plateforme numérique du katib public (EPDP) est un projet marocain visant à numériser les services du kâtib el 'âm et à les mettre à la disposition de tous les citoyens et résidents, sur mobile et ordinateur, en sept langues, avec une identité visuelle marocaine authentique.",
       "La plateforme met à disposition une riche bibliothèque de modèles administratifs rédigés dans un style officiel professionnel en arabe et en français, un répertoire complet des sites officiels marocains, et un assistant intelligent qui guide les utilisateurs exclusivement à partir des sources officielles.",
@@ -334,7 +351,7 @@ export const fr: Dict = {
     collectDoneMsg: "Merci ! J'ai tout ce qu'il faut. Voici la version préliminaire pour vérification et retouche.",
     skipDoneMsg: "C'est noté. Voici la version préliminaire.",
     editFieldMsg: "Modifions cette donnée : {label} (valeur actuelle : {value})",
-    editSavedMsg: "Modification enregistrée ✓. La version préliminaire est mise à jour.",
+    editSavedMsg: "Modification enregistrée. La version préliminaire est mise à jour.",
     docLang: "Langue du document",
     docLangAr: "Arabe",
     docLangFr: "Français",
@@ -376,4 +393,30 @@ export const fr: Dict = {
   },
   language: { label: "Langue" },
   common: { close: "Fermer", menu: "Menu", top: "Haut de page" },
+
+  brand: {
+    name: "EPDP",
+    tagline: "Votre écrivain public numérique",
+  },
+
+  pages: {
+    related: "Pages liées",
+    breadcrumb: "Fil d'Ariane",
+    categoriesTitle: "Parcourir les catégories administratives",
+    categoriesSubtitle: "19 catégories couvrant tous vos besoins en documents officiels : des impôts et de la sécurité sociale aux contrats, réclamations et déclarations.",
+    popularTitle: "Documents les plus demandés",
+    popularSubtitle: "Les documents les plus recherchés par les citoyens, prêts à télécharger et à utiliser immédiatement.",
+    viewAll: "Voir tout",
+    openCategory: "Parcourir la catégorie",
+    docsCount: "{n} documents",
+    relatedDocs: "Documents similaires",
+    notFoundTitle: "Page introuvable",
+    notFoundDesc: "Désolé, la page que vous recherchez est indisponible ou a été déplacée. Retournez à l'accueil ou parcourez la bibliothèque de documents.",
+    notFoundCta: "Retour à l'accueil",
+    fillWithAssistant: "Remplir ce document automatiquement avec l'assistant",
+    assistantCtaTitle: "Laissez l'assistant rédiger votre document",
+    assistantCtaDesc: "Répondez à des questions simples, une par une, et l'assistant rédigera votre document avec vos données, prêt à imprimer et à télécharger — vos données restent dans votre navigateur.",
+    tryAssistant: "Essayer l'assistant",
+    keywordsLabel: "Mots-clés",
+  },
 };

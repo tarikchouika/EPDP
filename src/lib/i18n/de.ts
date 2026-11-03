@@ -13,6 +13,10 @@ export const de: Dict = {
     faq: "FAQ",
     about: "Über uns",
     legal: "Rechtliches",
+    assistant: "Ausfüllassistent",
+    portals: "Offizielle Portale",
+    docsIndex: "Dokumentenindex",
+    categories: "Kategorien",
   },
 
   hero: {
@@ -81,12 +85,25 @@ export const de: Dict = {
   links: {
     title: "Verzeichnis offizieller marokkanischer Websites",
     subtitle:
-      "Verifizierte offizielle Links zu marokkanischen Ministerien und digitalen öffentlichen Diensten, sorgfältig geprüft und regelmäßig aktualisiert.",
+      "Verifizierte offizielle Links zu marokkanischen öffentlichen Institutionen und Einrichtungen (Sozialversicherung, Beschäftigung, Wirtschaft und Finanzen, Versorger), sorgfältig geprüft und regelmäßig aktualisiert.",
     visit: "Website besuchen",
     officialBadge: "Offiziell",
     verifiedNote: "Alle Links gehören zu offiziellen Domänen (gov.ma) oder bekannten marokkanischen öffentlichen Institutionen.",
+    count: "{n} Links",
     copyUrl: "Link kopieren",
     copiedUrl: "Link kopiert",
+  },
+
+  portals: {
+    title: "Offizielle Portale",
+    subtitle:
+      "Offizielle Regierungsportale und öffentliche digitale Plattformen, um Ihre Verwaltungsvorgänge aus der Ferne zu erledigen, geprüft und regelmäßig aktualisiert.",
+  },
+
+  docsIndex: {
+    title: "Dokumentenindex",
+    subtitle:
+      "Vollständiges Verzeichnis aller Verwaltungsvorlagen und -dokumente nach Kategorie, mit Direktlink zu jedem Dokument.",
   },
 
   how: {
@@ -113,12 +130,12 @@ export const de: Dict = {
   },
 
   faq: {
-    title: "Häufig gestellte Fragen",
+    title: "So funktioniert es — Häufig gestellte Fragen",
     subtitle: "Verifizierte Antworten auf die häufigsten Fragen zu Verwaltungsdokumenten und -verfahren in Marokko.",
   },
 
   about: {
-    title: "Über die digitale Plattform für öffentliche Schreiber",
+    title: "Über EPDP — dein digitales Schreibbüro",
     paragraphs: [
       "Die digitale Plattform für öffentliche Schreiber (EPDP) ist ein marokkanisches Projekt, das die Dienste des Katib 'Am digitalisieren und allen Bürgern und Einwohnern zugänglich machen will — mobil und am Desktop, in sieben Weltsprachen, mit authentischer marokkanischer visuellen Identität.",
       "Die Plattform bietet eine umfangreiche Bibliothek administrativer Vorlagen in professioneller offizieller Sprache auf Arabisch und Französisch, ein vollständiges Verzeichnis offizieller marokkanischer Websites sowie einen intelligenten Assistenten, der Nutzer ausschließlich auf Basis offizieller Quellen lenkt.",
@@ -334,7 +351,7 @@ export const de: Dict = {
     collectDoneMsg: "Danke! Ich habe alles. Hier ist der Entwurf zur Prüfung und Bearbeitung.",
     skipDoneMsg: "Notiert. Hier ist der Entwurf.",
     editFieldMsg: "Bearbeiten wir dieses Feld: {label} (aktueller Wert: {value})",
-    editSavedMsg: "Änderung gespeichert ✓. Der Entwurf wurde aktualisiert.",
+    editSavedMsg: "Änderung gespeichert. Der Entwurf wurde aktualisiert.",
     docLang: "Dokumentsprache",
     docLangAr: "Arabisch",
     docLangFr: "Französisch",
@@ -376,4 +393,30 @@ export const de: Dict = {
   },
   language: { label: "Sprache" },
   common: { close: "Schließen", menu: "Menü", top: "Nach oben" },
+
+  brand: {
+    name: "EPDP",
+    tagline: "Dein digitales Schreibbüro",
+  },
+
+  pages: {
+    related: "Verwandte Seiten",
+    breadcrumb: "Navigationspfad",
+    categoriesTitle: "Verwaltungskategorien entdecken",
+    categoriesSubtitle: "19 Kategorien decken alle Bedürfnisse an offiziellen Dokumenten ab: von Steuern und Sozialversicherung über Verträge bis zu Beschwerden und Erklärungen.",
+    popularTitle: "Meistgefragte Dokumente",
+    popularSubtitle: "Die am häufigsten gesuchten Dokumente der Bürger — sofort zum Herunterladen und Ausfüllen.",
+    viewAll: "Alle anzeigen",
+    openCategory: "Kategorie ansehen",
+    docsCount: "{n} Dokumente",
+    relatedDocs: "Ähnliche Dokumente",
+    notFoundTitle: "Seite nicht gefunden",
+    notFoundDesc: "Entschuldigung, die gesuchte Seite ist nicht verfügbar oder wurde verschoben. Kehren Sie zur Startseite zurück oder stöbern Sie in der Dokumentbibliothek.",
+    notFoundCta: "Zur Startseite",
+    fillWithAssistant: "Dieses Dokument automatisch mit dem Assistenten ausfüllen",
+    assistantCtaTitle: "Lassen Sie den Assistenten Ihr Dokument erstellen",
+    assistantCtaDesc: "Beantworten Sie einfache Fragen, eine nach der anderen — der Assistent erstellt Ihr Dokument mit Ihren Daten, druckfertig und zum Download bereit. Ihre Daten bleiben in Ihrem Browser.",
+    tryAssistant: "Assistent testen",
+    keywordsLabel: "Schlüsselwörter",
+  },
 };

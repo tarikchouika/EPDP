@@ -1,53 +1,49 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useI18n } from "@/lib/i18n/context";
 import { Button } from "@/components/ui/button";
 import { FileText, Landmark, Search, Sparkles, ShieldCheck, Globe2, BadgeCheck } from "lucide-react";
-import { documents, docCount } from "@/lib/data/documents";
-import { allDocuments, docTotal } from "@/lib/data/registry";
+import { docTotal } from "@/lib/data/registry";
 import { categories } from "@/lib/data/categories";
 import { officialLinks } from "@/lib/data/official-links";
 
 export function Hero() {
   const { dict } = useI18n();
+  const router = useRouter();
   const [q, setQ] = useState("");
 
   const submit = (e: React.FormEvent) => {
     e.preventDefault();
-    const params = q.trim() ? `?q=${encodeURIComponent(q.trim())}` : "";
-    window.location.hash = "#services";
-    if (q.trim()) {
-      window.dispatchEvent(new CustomEvent("epdp-search", { detail: q.trim() }));
-    }
-    const el = document.getElementById("services");
-    el?.scrollIntoView({ behavior: "smooth" });
+    router.push(q.trim() ? `/forms?q=${encodeURIComponent(q.trim())}` : "/forms");
   };
 
   return (
     <section id="top" className="relative overflow-hidden border-b border-border/60 bg-zellige">
-    <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/80 to-background" aria-hidden="true" />
-    <div className="absolute inset-x-0 top-0 h-1.5 gold-divider" aria-hidden="true" />
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 pt-14 pb-16 sm:pt-20 sm:pb-24">
-        <div className="grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
+      <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/80 to-background" aria-hidden="true" />
+      <div className="gold-divider absolute inset-x-0 top-0 h-1.5" aria-hidden="true" />
+      <div className="relative mx-auto max-w-7xl px-4 pb-16 pt-14 sm:px-6 sm:pb-24 sm:pt-20">
+        <div className="grid items-center gap-10 lg:grid-cols-[1.15fr_0.85fr]">
           <div className="text-center lg:text-start">
-            <span className="inline-flex items-center gap-2 rounded-full border border-gold bg-accent px-4 py-1.5 text-xs sm:text-sm font-bold text-primary">
+            <span className="inline-flex items-center gap-2 rounded-full border border-gold bg-accent px-4 py-1.5 text-xs font-bold text-primary sm:text-sm">
               <Sparkles className="h-4 w-4 text-gold" />
               {dict.hero.badge}
             </span>
 
-            <h1 className="mt-5 font-display text-3xl sm:text-4xl lg:text-5xl font-bold leading-[1.25] tracking-tight">
+            <h1 className="mt-5 font-display text-3xl font-bold leading-[1.25] tracking-tight sm:text-4xl lg:text-5xl">
               {dict.hero.title}{" "}
               <span className="text-gradient-moroccan">{dict.hero.titleAccent}</span>
             </h1>
 
-            <p className="mx-auto lg:mx-0 mt-5 max-w-2xl text-sm sm:text-base leading-7 text-muted-foreground">
+            <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-muted-foreground sm:text-base lg:mx-0">
               {dict.hero.subtitle.replace("{docs}", String(docTotal))}
             </p>
 
-            <form onSubmit={submit} className="mx-auto lg:mx-0 mt-7 flex max-w-xl gap-2">
+            <form onSubmit={submit} className="mx-auto mt-7 flex max-w-xl gap-2 lg:mx-0">
               <div className="relative flex-1">
-                <Search className="absolute top-1/2 start-3 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+                <Search className="absolute start-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
                 <input
                   value={q}
                   onChange={(e) => setQ(e.target.value)}
@@ -58,30 +54,28 @@ export function Hero() {
               </div>
               <Button type="submit" className="h-12 px-5 font-bold">
                 <Search className="h-4 w-4" />
-                <span className="hidden sm:inline">{dict.services.title.split(" ")[0]}</span>
+                <span className="hidden sm:inline">{dict.hero.ctaPrimary}</span>
               </Button>
             </form>
 
-            <div className="mt-6 flex flex-wrap items-center justify-center lg:justify-start gap-3">
-              <a href="#services">
-                <Button size="lg" className="font-bold px-6">
+            <div className="mt-6 flex flex-wrap items-center justify-center gap-3 lg:justify-start">
+              <Link href="/forms">
+                <Button size="lg" className="px-6 font-bold">
                   <FileText className="h-4 w-4" />
                   {dict.hero.ctaPrimary}
                 </Button>
-              </a>
-              <a href="#links">
-                <Button size="lg" variant="outline" className="font-bold px-6 border-gold">
+              </Link>
+              <Link href="/links">
+                <Button size="lg" variant="outline" className="border-gold px-6 font-bold">
                   <Landmark className="h-4 w-4 text-gold" />
                   {dict.hero.ctaSecondary}
                 </Button>
-              </a>
+              </Link>
             </div>
 
-            <div className="mt-6 flex flex-wrap items-center justify-center lg:justify-start gap-x-4 gap-y-2 text-[11px] sm:text-xs font-semibold text-muted-foreground">
-              <span className="inline-flex items-center gap-1"><BadgeCheck className="h-3.5 w-3.5 text-primary" /> {dict.services.freeTag}</span>
-              <span className="inline-flex items-center gap-1"><ShieldCheck className="h-3.5 w-3.5 text-primary" /> {dict.links.officialBadge}</span>
-              <span className="inline-flex items-center gap-1"><Globe2 className="h-3.5 w-3.5 text-primary" /> 7 {dict.stats.languages.split(" ")[0]}</span>
-            </div>
+            <p className="mt-6 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-[11px] font-semibold text-muted-foreground sm:text-xs lg:justify-start">
+              {dict.hero.trust}
+            </p>
           </div>
 
           {/* Moroccan ornament card */}
@@ -110,7 +104,7 @@ export function Hero() {
 }
 
 export function Stats() {
-  const { dict, locale } = useI18n();
+  const { dict } = useI18n();
   const items = [
     { icon: FileText, value: `${docTotal}+`, label: dict.stats.documents },
     { icon: Landmark, value: `${officialLinks.length}+`, label: dict.stats.official },
@@ -119,13 +113,13 @@ export function Stats() {
   ];
   return (
     <section className="border-b border-border/60 bg-muted/40" aria-label="stats">
-      <div className="mx-auto grid max-w-7xl grid-cols-2 divide-x divide-x-reverse divide-border/60 md:grid-cols-4">
+      <div className="mx-auto grid max-w-7xl grid-cols-2 divide-border/60 max-md:divide-y md:grid-cols-4 md:divide-x rtl:md:divide-x-reverse">
         {items.map(({ icon: Icon, value, label }) => (
           <div key={label} className="flex items-center justify-center gap-3 px-4 py-6 sm:py-8">
-            <Icon className="h-8 w-8 text-gold shrink-0" aria-hidden="true" />
+            <Icon className="h-8 w-8 shrink-0 text-gold" aria-hidden="true" />
             <div className="text-center sm:text-start">
-              <p className="font-display text-2xl sm:text-3xl font-bold text-primary leading-none">{value}</p>
-              <p className="mt-1 text-[11px] sm:text-xs font-semibold text-muted-foreground leading-tight">{label}</p>
+              <p className="font-display text-2xl font-bold leading-none text-primary sm:text-3xl">{value}</p>
+              <p className="mt-1 text-[11px] font-semibold leading-tight text-muted-foreground sm:text-xs">{label}</p>
             </div>
           </div>
         ))}

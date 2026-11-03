@@ -13,6 +13,10 @@ export const en: Dict = {
     faq: "FAQ",
     about: "About",
     legal: "Legal",
+    assistant: "Fill Assistant",
+    portals: "Official portals",
+    docsIndex: "Documents index",
+    categories: "Categories",
   },
 
   hero: {
@@ -81,12 +85,25 @@ export const en: Dict = {
   links: {
     title: "Official Moroccan Websites Directory",
     subtitle:
-      "Verified official links to Moroccan government departments and digital public services, carefully reviewed and regularly updated.",
+      "Verified official links to Moroccan public institutions and bodies (social security, employment, economy & finance, utilities), carefully reviewed and regularly updated.",
     visit: "Visit website",
     officialBadge: "Official",
     verifiedNote: "All links belong to official domains (gov.ma) or well-known Moroccan public institutions.",
+    count: "{n} links",
     copyUrl: "Copy link",
     copiedUrl: "Link copied",
+  },
+
+  portals: {
+    title: "Official portals",
+    subtitle:
+      "Official government portals and public digital platforms to complete your administrative procedures remotely, verified and regularly updated.",
+  },
+
+  docsIndex: {
+    title: "Documents index",
+    subtitle:
+      "Complete index of all administrative forms and documents by category, with a direct link to every document.",
   },
 
   how: {
@@ -113,12 +130,12 @@ export const en: Dict = {
   },
 
   faq: {
-    title: "Frequently Asked Questions",
+    title: "How It Works — FAQ",
     subtitle: "Verified answers to the most common questions about administrative documents and procedures in Morocco.",
   },
 
   about: {
-    title: "About the Digital Public Writer Platform",
+    title: "About EPDP — your digital public writer",
     paragraphs: [
       "The Digital Public Writer Platform (EPDP) is a Moroccan project aiming to digitize public writer services and make them available to all citizens and residents, on mobile and desktop, in seven world languages, with an authentic Moroccan visual identity.",
       "The platform provides a rich library of administrative templates drafted in official professional wording in Arabic and French, a complete directory of official Moroccan government and digital public service websites, and a smart assistant that guides users exclusively based on official sources.",
@@ -334,7 +351,7 @@ export const en: Dict = {
     collectDoneMsg: "Thanks! I have everything I need. Here is the draft for review and editing.",
     skipDoneMsg: "Noted. Here is the draft.",
     editFieldMsg: "Let's edit this field: {label} (current value: {value})",
-    editSavedMsg: "Edit saved ✓. The draft has been updated.",
+    editSavedMsg: "Edit saved. The draft has been updated.",
     docLang: "Document language",
     docLangAr: "Arabic",
     docLangFr: "French",
@@ -376,4 +393,30 @@ export const en: Dict = {
   },
   language: { label: "Language" },
   common: { close: "Close", menu: "Menu", top: "Back to top" },
+
+  brand: {
+    name: "EPDP",
+    tagline: "Your digital public writer",
+  },
+
+  pages: {
+    related: "Related pages",
+    breadcrumb: "Breadcrumb",
+    categoriesTitle: "Browse administrative categories",
+    categoriesSubtitle: "19 categories covering every official document need: from taxes and social security to contracts, complaints and declarations.",
+    popularTitle: "Most requested documents",
+    popularSubtitle: "Citizens' most searched picks, ready to download and use right away.",
+    viewAll: "View all",
+    openCategory: "Browse category",
+    docsCount: "{n} documents",
+    relatedDocs: "Related documents",
+    notFoundTitle: "Page not found",
+    notFoundDesc: "Sorry, the page you are looking for is unavailable or has been moved. Head back to the homepage or browse the document library.",
+    notFoundCta: "Back to homepage",
+    fillWithAssistant: "Fill this document automatically with the assistant",
+    assistantCtaTitle: "Let the assistant draft your document",
+    assistantCtaDesc: "Answer simple questions one by one and the assistant will edit your document with your data, professionally prepared for printing and download — your data never leaves your browser.",
+    tryAssistant: "Try the assistant",
+    keywordsLabel: "Keywords",
+  },
 };

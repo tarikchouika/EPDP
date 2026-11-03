@@ -1,19 +1,23 @@
 import type { Metadata, Viewport } from "next";
+import Image from "next/image";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 import { ThemeProvider } from "@/components/epdp/theme-provider";
 import { LanguageProvider } from "@/lib/i18n/context";
+import { Header } from "@/components/epdp/header";
+import { Footer } from "@/components/epdp/footer";
+import { Chatbot } from "@/components/epdp/chatbot";
 
 const SITE_URL = "https://epdp.pages.dev";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "منصة الكاتب العمومي الرقمية | EPDP — نماذج ووثائق إدارية مغربية مجانية",
+    default: "EPDP — كاتبك الرقمي | نماذج ووثائق إدارية مغربية مجانية",
     template: "%s | EPDP",
   },
   description:
-    "منصة مغربية رقمية لخدمات الكاتب العمومي: أكثر من 125 نموذجاً ووثيقة إدارية جاهزة (طلبات، شكايات، عقود كراء، وكالات، تصاريح بالشرف، سيرة ذاتية) بالعربية والفرنسية، مع دليل الروابط الرسمية للإدارات المغربية ومساعد آلي يملأ وثيقتك ببياناتك ويحررها بشكل احترافي. مجاني بالكامل.",
+    "منصة EPDP — كاتبك الرقمي: أكثر من 1180 نموذجاً ووثيقة إدارية مغربية مجانية (CNSS، DGI، طلبات، شكايات، عقود كراء وبيع، وكالات، تصاريح بالشرف، سيرة ذاتية) بالعربية والفرنسية، مع دليل بوابات وروابط رسمية للإدارات المغربية ومساعد رقمي يملأ وثيقتك ببياناتك ويحررها بشكل احترافي. مجاني بالكامل.",
   keywords: [
     "كاتب عمومي",
     "نماذج إدارية المغرب",
@@ -24,6 +28,8 @@ export const metadata: Metadata = {
     "عقد كراء",
     "وكالة",
     "سيرة ذاتية المغرب",
+    "نماذج CNSS",
+    "نماذج DGI",
     "katib public maroc",
     "documents administratifs maroc",
     "modèles de documents maroc",
@@ -32,11 +38,12 @@ export const metadata: Metadata = {
     "contrat de bail maroc",
     "procuration maroc",
     "Morocco administrative documents",
+    "formulaire CNSS",
     "CV maroc",
     "خدمات عمومية رقمية",
     "الروابط الرسمية المغرب",
   ],
-  authors: [{ name: "EPDP — منصة الكاتب العمومي الرقمية" }],
+  authors: [{ name: "EPDP — كاتبك الرقمي" }],
   creator: "EPDP",
   applicationName: "EPDP",
   category: "government",
@@ -58,16 +65,16 @@ export const metadata: Metadata = {
     locale: "ar_MA",
     alternateLocale: ["fr_MA", "en_US", "es_ES", "it_IT", "de_DE", "ru_RU"],
     url: SITE_URL,
-    siteName: "EPDP — منصة الكاتب العمومي الرقمية",
-    title: "منصة الكاتب العمومي الرقمية | EPDP",
+    siteName: "EPDP — كاتبك الرقمي",
+    title: "EPDP — كاتبك الرقمي",
     description:
-      "أكثر من 125 نموذجاً ووثيقة إدارية مغربية مجانية بالعربية والفرنسية، مع دليل المواقع الرسمية ومساعد آلي يملأ وثيقتك ويحررها بشكل احترافي. رقمنة خدمات الكاتب العمومي باحترافية.",
+      "أكثر من 1180 نموذجاً ووثيقة إدارية مغربية مجانية (CNSS، DGI، طلبات، شكايات، عقود) بالعربية والفرنسية، مع دليل البوابات والمواقع الرسمية ومساعد رقمي يملأ وثيقتك ويحررها. رقمنة خدمات الكاتب العمومي باحترافية.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "منصة الكاتب العمومي الرقمية | EPDP",
+    title: "EPDP — كاتبك الرقمي",
     description:
-      "نماذج ووثائق إدارية مغربية مجانية + دليل المواقع الرسمية + مساعد آلي يملأ وثيقتك ويحررها بشكل احترافي.",
+      "نماذج ووثائق إدارية مغربية مجانية + دليل البوابات والمواقع الرسمية + مساعد رقمي يملأ وثيقتك ويحررها.",
   },
   robots: {
     index: true,
@@ -81,16 +88,19 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: [{ url: "/logo.svg", type: "image/svg+xml" }],
-    apple: "/logo.svg",
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/logo-square.png", type: "image/png", sizes: "512x512" },
+    ],
+    apple: "/apple-touch-icon.png",
   },
   manifest: "/manifest.webmanifest",
 };
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#faf8f2" },
-    { media: "(prefers-color-scheme: dark)", color: "#0d1512" },
+    { media: "(prefers-color-scheme: light)", color: "#eef4f5" },
+    { media: "(prefers-color-scheme: dark)", color: "#0c1c26" },
   ],
   width: "device-width",
   initialScale: 1,
@@ -103,24 +113,24 @@ const jsonLd = {
     {
       "@type": "Organization",
       "@id": `${SITE_URL}/#org`,
-      name: "EPDP — منصة الكاتب العمومي الرقمية",
+      name: "EPDP — كاتبك الرقمي",
       url: SITE_URL,
-      logo: `${SITE_URL}/logo.svg`,
+      logo: `${SITE_URL}/logo.png`,
       description:
-        "منصة رقمية مغربية لخدمات الكاتب العمومي: نماذج ووثائق إدارية مجانية ودليل الروابط الرسمية.",
+        "كاتبك الرقمي: نماذج ووثائق إدارية مجانية ودليل البوابات والروابط الرسمية.",
       areaServed: "MA",
     },
     {
       "@type": "WebSite",
       "@id": `${SITE_URL}/#website`,
       url: SITE_URL,
-      name: "EPDP — منصة الكاتب العمومي الرقمية",
+      name: "EPDP — كاتبك الرقمي",
       inLanguage: ["ar", "fr", "en", "es", "it", "de", "ru"],
       publisher: { "@id": `${SITE_URL}/#org` },
     },
     {
       "@type": "Service",
-      name: "خدمات الكاتب العمومي الرقمية",
+      name: "EPDP — كاتبك الرقمي",
       serviceType: "Public writer / administrative document services",
       provider: { "@id": `${SITE_URL}/#org` },
       areaServed: { "@type": "Country", name: "Morocco" },
@@ -130,11 +140,18 @@ const jsonLd = {
         availableLanguage: ["ar", "fr", "en", "es", "it", "de", "ru"],
       },
       description:
-        "نماذج ووثائق إدارية مغربية جاهزة (طلبات، شكايات، عقود، وكالات، تصاريح، سيرة ذاتية)، دليل المواقع الرسمية، ومساعد ذكي للتوجيه الإداري.",
+        "نماذج ووثائق إدارية مجربية جاهزة (CNSS، DGI، طلبات، شكايات، عقود، وكالات، تصاريح، سيرة ذاتية)، دليل البوابات والمواقع الرسمية، ومساعد ذكي للتوجيه الإداري.",
       offers: { "@type": "Offer", price: "0", priceCurrency: "MAD" },
     },
   ],
 };
+
+/**
+ * Runs before first paint: applies the saved/URL locale to <html> so the
+ * direction (RTL/LTR) and language are correct from the very first frame —
+ * no flash of mixed-language content, ever.
+ */
+const localeBootstrapScript = `(function(){try{var q=new URLSearchParams(location.search).get('lang');var s=localStorage.getItem('epdp-lang');var ok=/^(ar|en|fr|es|it|de|ru)$/;var l=ok.test(q||'')?q:(ok.test(s||'')?s:'ar');var d=document.documentElement;d.lang=l;d.dir=l==='ar'?'rtl':'ltr';d.setAttribute('data-locale',l);}catch(e){}})();`;
 
 export default function RootLayout({
   children,
@@ -150,14 +167,37 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Noto+Kufi+Arabic:wght@500;600;700&display=swap"
           rel="stylesheet"
         />
+        <script dangerouslySetInnerHTML={{ __html: localeBootstrapScript }} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="antialiased bg-background text-foreground min-h-screen flex flex-col">
+      <body className="min-h-screen bg-background antialiased text-foreground">
+        {/* Brand watermark — fixed, non-interactive, above content, below chrome */}
+        <div
+          aria-hidden="true"
+          className="epdp-watermark pointer-events-none fixed inset-0 z-30 flex select-none items-center justify-center"
+        >
+          <Image
+            src="/logo.png"
+            alt=""
+            width={840}
+            height={346}
+            className="w-[68vmin] max-w-[680px] opacity-[0.06] dark:opacity-[0.08]"
+          />
+        </div>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
-          <LanguageProvider>{children}</LanguageProvider>
+          <LanguageProvider>
+            <div className="flex min-h-screen flex-col">
+              <Header />
+              <main id="main" className="flex-1">
+                {children}
+              </main>
+              <Footer />
+              <Chatbot />
+            </div>
+          </LanguageProvider>
         </ThemeProvider>
         <Toaster />
       </body>

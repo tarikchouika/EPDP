@@ -1,11 +1,13 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
 import { useI18n } from "@/lib/i18n/context";
 import { chatIntents, findIntent } from "@/lib/chatbot/knowledge";
 import { getLink } from "@/lib/data/official-links";
 import { Button } from "@/components/ui/button";
-import { Bot, Send, X, Landmark, MessageCircle, ExternalLink, Sparkles } from "lucide-react";
+import { Send, X, Landmark, ExternalLink, Sparkles } from "lucide-react";
 
 interface Message {
   role: "user" | "bot";
@@ -76,17 +78,27 @@ export function Chatbot() {
 
   return (
     <>
-      {/* Floating toggle */}
+      {/* Floating toggle — slim brand capsule with the EPDP logo */}
       <button
         onClick={() => setOpen((o) => !o)}
         aria-label={open ? dict.common.close : dict.chat.openLabel}
-        className={`fixed bottom-5 end-5 z-50 inline-flex h-14 w-14 items-center justify-center rounded-full shadow-xl transition-all ${
+        className={`fixed bottom-5 end-5 z-50 inline-flex h-12 items-center justify-center rounded-full px-2 shadow-xl transition-all ${
           open
-            ? "bg-secondary text-secondary-foreground rotate-0"
-            : "bg-primary text-primary-foreground hover:scale-105"
+            ? "bg-secondary text-secondary-foreground"
+            : "border-2 border-gold/50 bg-card hover:scale-105"
         }`}
       >
-        {open ? <X className="h-6 w-6" /> : <MessageCircle className="h-6 w-6" />}
+        {open ? (
+          <X className="h-5 w-5" />
+        ) : (
+          <Image
+            src="/logo.png"
+            alt="EPDP"
+            width={78}
+            height={32}
+            className="h-8 w-auto"
+          />
+        )}
       </button>
 
       {/* Panel */}
@@ -98,9 +110,15 @@ export function Chatbot() {
         >
           {/* Header */}
           <div className="flex items-center gap-3 border-b bg-primary px-4 py-3.5 text-primary-foreground">
-            <span className="relative inline-flex h-10 w-10 items-center justify-center rounded-xl bg-primary-foreground/15">
-              <Bot className="h-6 w-6" />
-              <span className="absolute -bottom-0.5 -end-0.5 h-3 w-3 rounded-full border-2 border-primary bg-emerald-400" />
+            <span className="relative inline-flex h-10 items-center justify-center rounded-xl bg-primary-foreground/15 px-1.5">
+              <Image
+                src="/logo.png"
+                alt="EPDP"
+                width={58}
+                height={24}
+                className="h-6 w-auto"
+              />
+              <span className="absolute -bottom-0.5 -end-0.5 h-3 w-3 rounded-full border-2 border-primary bg-gold" />
             </span>
             <div className="min-w-0">
               <p className="font-display font-bold text-sm leading-tight">{dict.chat.title}</p>
@@ -124,16 +142,14 @@ export function Chatbot() {
                   </div>
 
                   {m.action === "open-filler" && (
-                    <button
-                      onClick={() => {
-                        document.getElementById("assistant")?.scrollIntoView({ behavior: "smooth" });
-                        window.dispatchEvent(new CustomEvent("epdp-open-filler", { detail: "" }));
-                      }}
+                    <Link
+                      href="/assistant"
+                      onClick={() => setOpen(false)}
                       className="mt-2 inline-flex items-center gap-2 rounded-xl border border-primary/40 bg-primary/10 px-3.5 py-2 text-xs font-bold text-primary transition-colors hover:bg-primary/20"
                     >
                       <Sparkles className="h-4 w-4 text-gold" />
                       {dict.filler.title}
-                    </button>
+                    </Link>
                   )}
 
                   {m.sources && m.sources.length > 0 && (

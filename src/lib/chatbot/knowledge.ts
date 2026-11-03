@@ -486,6 +486,7 @@ export const chatIntents: ChatIntent[] = [
       "Moroccans abroad find consular services (civil status documents, registration, legalizations, passport...) via the official consular portal and the network of Moroccan consulates in their countries of residence.",
       "Les Marocains résidant à l'étranger trouvent les services consulaires (état civil, inscription, légalisations, passeport…) via le portail consulaire officiel et le réseau des consulats du Maroc.",
       "Los marroquíes en el extranjero encuentran los servicios consulares (estado civil, inscripción, legalizaciones, pasaporte…) vía el portal consular oficial y la red de consulados.",
+      "Marocchini all'estero trovano i servizi consolari (atti di stato civile, iscrizione, legalizzazioni, passaporto...) tramite il portale consolare ufficiale e la rete dei consolati del Marocco nei paesi di residenza.",
       "Marokkaner im Ausland finden konsularische Dienste (Standesamt, Anmeldung, Legalisierungen, Pass…) über das offizielle Konsularportal und das Netzwerk der marokkanischen Konsulate.",
       "Марокканцы за рубежом получают консульские услуги (акты гражданского состояния, регистрация, заверения, паспорт...) через официальный консульский портал и сеть консульств Марокко."
     ),

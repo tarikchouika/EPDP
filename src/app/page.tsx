@@ -1,30 +1,18 @@
-import { Header } from "@/components/epdp/header";
+"use client";
+
 import { Hero, Stats } from "@/components/epdp/hero";
-import { Services } from "@/components/epdp/services";
-import { OfficialLinks } from "@/components/epdp/official-links";
-import { HowItWorks, Faq } from "@/components/epdp/sections";
-import { About, Legal } from "@/components/epdp/about-legal";
-import { Footer } from "@/components/epdp/footer";
-import { Chatbot } from "@/components/epdp/chatbot";
-import { DocumentAssistant } from "@/components/epdp/document-assistant";
+import { CategoriesGrid, PopularDocs, HomeCta } from "@/components/epdp/home-sections";
+import { HowItWorks } from "@/components/epdp/sections";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen flex-col">
-      <Header />
-      <main className="flex-1">
-        <Hero />
-        <Stats />
-        <Services />
-        <DocumentAssistant />
-        <OfficialLinks />
-        <HowItWorks />
-        <Faq />
-        <About />
-        <Legal />
-      </main>
-      <Footer />
-      <Chatbot />
-    </div>
+    <>
+      <Hero />
+      <Stats />
+      <CategoriesGrid />
+      <PopularDocs />
+      <HowItWorks />
+      <HomeCta />
+    </>
   );
 }

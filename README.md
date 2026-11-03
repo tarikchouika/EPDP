@@ -12,8 +12,8 @@
 
 <div dir="rtl">
 
-- **128 وثيقة ونموذجاً إدارياً** في 17 فئة (طلبات، شكايات، عقود كراء وبيع وتنازل وفسخ، وكالات، تصاريح بالشرف، عمل وتوظيف…)
-- **97 نموذجاً كاملاً** بالنص الكامل بالعربية والفرنسية — تحميل Word ونسخ مجاناً
+- **1180 وثيقة ونموذجاً إدارياً** في 19 فئة (طلبات، شكايات، عقود كراء وبيع وتنازل وفسخ، وكالات، تصاريح بالشرف، CNSS، DGI، عمل وتوظيف…)
+- **83 نموذجاً كاملاً** بالنص الكامل بالعربية والفرنسية — تحميل Word ونسخ مجاناً
 - **مساعد آلي لملء وتحرير الوثائق (جديد):** يسأل بياناتك حقلًا حقلًا مع التحقق من صحتها، ثم يحرر الوثيقة بشكل احترافي — طباعة/PDF ونسخ وتحميل Word، وجميع البيانات تُعالج محلياً في المتصفح دون أي خادم
 - **دليل 38 موقعاً رسمياً** للإدارات والخدمات الرقمية العمومية المغربية (نطاقات رسمية ومؤسسات عمومية موثقة)
 - **مساعد ذكي** بقاعدة معرفة مبنية حصراً على المصادر الرسمية — بدون توليد روابط وبدون هلوسة، مع مصدر رسمي لكل جواب
@@ -21,11 +21,12 @@
 - **الوضعان المشع والقاتم** مع هوية بصرية مغربية (الأخضر والأحمر والذهبي وزخرفة الزليج)
 - **صفحات قانونية كاملة:** شروط الاستخدام، سياسة الخصوصية، سياسة الكوكيز، إخلاء المسؤولية
 - **SEO متقدم:** Metadata شاملة، JSON-LD (Organization/WebSite/Service/FAQPage)، sitemap.xml، robots.txt، hreflang
-- متجاوب كلياً مع الهواتف والحواسيب، ومجاني 100% بدون تسجيل
+- **بنية متعددة الصفحات:** الرئيسية، /forms (الكتالوج الكامل)، /forms/[فئة] (19 صفحة فئة مستقلة)، /documents/[وثيقة] (1180 صفحة تفصيلية)، /assistant، /links، /faq، /about، /legal — بهيدر وفوتر موحدين وهوية بصرية واحدة
+- متجاوب كلياً مع البورتريه للهواتف واللاندسكيب للتابلتس والحواسيب، ومجاني 100% بدون تسجيل
 
 </div>
 
-- **128 administrative documents** across 17 categories with **97 full templates** (Arabic + French, Word download) and an **AI document assistant** that asks for your data and professionally drafts your document — local, private, print/PDF ready
+- **1180 administrative documents** across 19 categories (dedicated page per category and per document) with **83 full templates** (Arabic + French, Word download) and an **AI document assistant** that asks for your data and professionally drafts your document — local, private, print/PDF ready
 - **Directory of 38 verified official Moroccan government websites**
 - **Grounded smart assistant** — answers exclusively from a curated knowledge base of official sources, zero hallucination, official source attached to every answer
 - **7 languages** incl. full RTL Arabic, **light/dark modes**, authentic Moroccan visual identity
