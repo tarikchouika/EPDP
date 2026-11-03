@@ -56,6 +56,8 @@ export const ru: Dict = {
     copy: "Копировать текст",
     copied: "Успешно скопировано",
     download: "Скачать Word",
+    downloadPdf: "Скачать PDF",
+    verifiedSource: "Шаблон проверен по источнику",
     arabicVersion: "Арабская версия",
     frenchVersion: "Французская версия",
     requiredInfo: "Необходимые данные",

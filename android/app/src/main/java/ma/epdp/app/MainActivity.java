@@ -3,16 +3,24 @@ package ma.epdp.app;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.DownloadManager;
+import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Environment;
+import android.print.PrintAttributes;
+import android.print.PrintDocumentAdapter;
+import android.print.PrintManager;
+import android.provider.MediaStore;
+import android.util.Base64;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowInsets;
 import android.view.WindowInsetsController;
+import android.webkit.JavascriptInterface;
 import android.webkit.WebChromeClient;
 import android.webkit.WebResourceRequest;
 import android.webkit.WebSettings;
@@ -21,9 +29,14 @@ import android.webkit.WebViewClient;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.Button;
+import android.widget.Toast;
 import androidx.core.view.WindowCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.core.view.WindowInsetsControllerCompat;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.OutputStream;
+import java.util.Locale;
 
 /**
  * EPDP — كاتبك الرقمي · Android shell.
@@ -34,6 +47,9 @@ import androidx.core.view.WindowInsetsControllerCompat;
  *  • Bundled offline fallback page (assets/offline.html).
  *  • External links & downloads handed to the system browser.
  *  • Back key walks WebView history.
+ *  • JS bridge (window.EPDPNative): real file exports — .docx bytes are saved
+ *    through MediaStore/Downloads (blob: URLs cannot go through DownloadManager),
+ *    and “Save as PDF” runs the platform print area through PrintManager.
  */
 public class MainActivity extends Activity {
 
@@ -143,6 +159,9 @@ public class MainActivity extends Activity {
 
         web.setWebChromeClient(new WebChromeClient());
 
+        // Native bridge for in-page exports (.docx bytes, print-to-PDF).
+        web.addJavascriptInterface(new NativeBridge(), "EPDPNative");
+
         // APK / file downloads → system DownloadManager
         web.setDownloadListener((url, userAgent, contentDisposition, mimeType, size) -> {
             try {
@@ -158,6 +177,87 @@ public class MainActivity extends Activity {
                 }
             }
         });
+    }
+
+    /**
+     * Exposed to JS as window.EPDPNative.
+     * saveFile(name, base64, mime): write bytes to the public Downloads folder
+     *   (MediaStore on API 29+, direct file write on 24–28).
+     * print(): print the current page (platform print CSS shows only the
+     *   document) — the system dialog offers “Save as PDF”.
+     */
+    private class NativeBridge {
+
+        @JavascriptInterface
+        public void saveFile(final String name, final String base64, final String mime) {
+            new Thread(() -> {
+                final String result = writeDownloads(name, Base64.decode(base64, Base64.DEFAULT), mime);
+                runOnUiThread(() ->
+                    Toast.makeText(MainActivity.this, result, Toast.LENGTH_LONG).show());
+            }, "epdp-save").start();
+        }
+
+        @JavascriptInterface
+        public void print() {
+            runOnUiThread(() -> printCurrentPage());
+        }
+
+        private String writeDownloads(String name, byte[] bytes, String mime) {
+            String safe = name == null || name.trim().isEmpty() ? "EPDP.docx" : name.trim();
+            try {
+                if (Build.VERSION.SDK_INT >= 29) {
+                    ContentValues cv = new ContentValues();
+                    cv.put(MediaStore.Downloads.DISPLAY_NAME, safe);
+                    cv.put(MediaStore.Downloads.MIME_TYPE,
+                            mime == null ? "application/octet-stream" : mime);
+                    Uri uri = getContentResolver().insert(
+                            MediaStore.Downloads.EXTERNAL_CONTENT_URI, cv);
+                    if (uri == null) throw new IllegalStateException("MediaStore insert failed");
+                    try (OutputStream os = getContentResolver().openOutputStream(uri)) {
+                        if (os == null) throw new IllegalStateException("stream null");
+                        os.write(bytes);
+                        os.flush();
+                    }
+                } else {
+                    File dir = Environment.getExternalStoragePublicDirectory(
+                            Environment.DIRECTORY_DOWNLOADS);
+                    if (!dir.exists() && !dir.mkdirs())
+                        throw new IllegalStateException("mkdirs failed");
+                    File out = new File(dir, safe);
+                    try (FileOutputStream fos = new FileOutputStream(out)) {
+                        fos.write(bytes);
+                        fos.flush();
+                    }
+                }
+                return String.format(Locale.US, "✓ %s → Downloads", safe);
+            } catch (Exception e) {
+                // Last resort: app-specific dir (always writable, no permission).
+                try {
+                    File dir = getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS);
+                    if (dir == null) dir = getFilesDir();
+                    File out = new File(dir, safe);
+                    try (FileOutputStream fos = new FileOutputStream(out)) {
+                        fos.write(bytes);
+                        fos.flush();
+                    }
+                    return String.format(Locale.US, "✓ %s → %s", safe, dir.getName());
+                } catch (Exception e2) {
+                    return "✗ " + safe;
+                }
+            }
+        }
+    }
+
+    /** Print the current WebView content (honours the platform @media print CSS). */
+    private void printCurrentPage() {
+        try {
+            PrintManager pm = (PrintManager) getSystemService(Context.PRINT_SERVICE);
+            if (pm == null) return;
+            PrintDocumentAdapter adapter = web.createPrintDocumentAdapter("EPDP");
+            pm.print("EPDP — كاتبك الرقمي", adapter,
+                    new PrintAttributes.Builder().build());
+        } catch (Exception ignored) {
+        }
     }
 
     private boolean isOfflineShown() {

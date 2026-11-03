@@ -6,7 +6,8 @@ import { useI18n } from "@/lib/i18n/context";
 import { allDocuments, getTemplate, type ResolvedDocument } from "@/lib/data/registry";
 import { categories } from "@/lib/data/categories";
 import { getLink } from "@/lib/data/official-links";
-import { downloadWord } from "@/lib/docx-export";
+import { downloadWord, downloadPdf } from "@/lib/docx-export";
+import { realSources } from "@/lib/data/real-sources";
 import { PageHeader } from "./page-header";
 import { catIcons, DocCard } from "./catalog";
 import { Button } from "@/components/ui/button";
@@ -14,7 +15,7 @@ import { Badge } from "@/components/ui/badge";
 import { useToast } from "@/hooks/use-toast";
 import {
   Star, Download, Copy, Check, ExternalLink, MapPin, ListChecks, Sparkles,
-  Landmark, FileText, Tag,
+  Landmark, FileText, Tag, Printer, ShieldCheck,
 } from "lucide-react";
 
 /** Full document page: template, details, official source and related forms. */
@@ -28,6 +29,7 @@ export function DocumentView({ doc }: { doc: ResolvedDocument }) {
   const category = categories.find((c) => c.id === doc.cat);
   const Icon = catIcons[doc.cat];
   const authority = doc.authority ? getLink(doc.authority) : null;
+  const realSource = realSources[doc.id];
 
   const copyText = (text: string) => {
     navigator.clipboard
@@ -75,6 +77,17 @@ export function DocumentView({ doc }: { doc: ResolvedDocument }) {
             <Badge variant="outline" className="border-border text-muted-foreground">
               {category.name[locale]}
             </Badge>
+          )}
+          {realSource && (
+            <a
+              href={realSource.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 rounded-full border border-emerald-500/50 bg-emerald-500/10 px-2.5 py-0.5 text-[11px] font-bold text-emerald-600 hover:bg-emerald-500/20 dark:text-emerald-400"
+            >
+              <ShieldCheck className="h-3 w-3" />
+              {dict.services.verifiedSource} · {realSource.site}
+            </a>
           )}
         </div>
       </PageHeader>
@@ -147,7 +160,16 @@ export function DocumentView({ doc }: { doc: ResolvedDocument }) {
                       }
                     >
                       <Download className="h-4 w-4" />
-                      {dict.services.download}
+                      {dict.services.download} (.docx)
+                    </Button>
+                    <Button
+                      size="sm"
+                      variant="outline"
+                      className="font-bold"
+                      onClick={downloadPdf}
+                    >
+                      <Printer className="h-4 w-4" />
+                      {dict.services.downloadPdf}
                     </Button>
                   </div>
                 </div>
@@ -166,6 +188,11 @@ export function DocumentView({ doc }: { doc: ResolvedDocument }) {
                 >
                   {tpl[lang]}
                 </pre>
+
+                {/* Hidden print sheet — the only thing visible to the print/PDF engine. */}
+                <div id="epdp-print" dir={lang === "ar" ? "rtl" : "ltr"} className="epdp-print">
+                  {tpl[lang]}
+                </div>
               </section>
             ) : (
               <p className="mt-6 rounded-xl border border-gold/40 bg-accent/60 p-4 text-xs leading-6 text-foreground/80">

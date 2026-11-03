@@ -5,6 +5,7 @@ import { useI18n } from "@/lib/i18n/context";
 import { categories, type CategoryId } from "@/lib/data/categories";
 import { allDocuments, getTemplate, type ResolvedDocument } from "@/lib/data/registry";
 import { getLink } from "@/lib/data/official-links";
+import { downloadWord, downloadPdf } from "@/lib/docx-export";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
@@ -22,7 +23,7 @@ import {
   Search, Star, FileText, Download, Copy, Check, ExternalLink, MapPin, ListChecks,
   Mail, Scale, BadgeCheck, FileSignature, Handshake, Stamp, Home, ArrowLeftRight,
   Briefcase, HeartHandshake, Users, HardHat, Receipt, Landmark, CreditCard, ClipboardList, X,
-  FileX, Sparkles, Coins, HeartPulse, ChevronsLeft, ChevronsRight, ChevronLeft, ChevronRight, SlidersHorizontal,
+  FileX, Sparkles, Coins, HeartPulse, ChevronsLeft, ChevronsRight, ChevronLeft, ChevronRight, SlidersHorizontal, Printer,
 } from "lucide-react";
 
 const catIcons: Record<CategoryId, React.ComponentType<{ className?: string }>> = {
@@ -63,23 +64,6 @@ function usePageSize() {
     return () => window.removeEventListener("resize", update);
   }, []);
   return size;
-}
-
-function downloadWord(title: string, content: string, rtl: boolean) {
-  const escaped = content
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;");
-  const html = `<!DOCTYPE html><html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns="http://www.w3.org/TR/REC-html40"><head><meta charset="utf-8"><title>${title}</title></head><body dir="${rtl ? "rtl" : "ltr"}" style="font-family:'Traditional Arabic','Sakkal Majalla','Times New Roman',serif;font-size:14pt;line-height:2.1;white-space:pre-wrap;">${escaped.replace(/\n/g, "<br>")}</body></html>`;
-  const blob = new Blob(["\ufeff", html], { type: "application/msword;charset=utf-8" });
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement("a");
-  a.href = url;
-  a.download = `${title.replace(/[\\/:*?"<>|]/g, "-")}.doc`;
-  document.body.appendChild(a);
-  a.click();
-  document.body.removeChild(a);
-  URL.revokeObjectURL(url);
 }
 
 function pageNumbers(current: number, total: number): (number | "…")[] {
@@ -629,6 +613,15 @@ function DocDialog({ doc, onClose }: { doc: ResolvedDocument | null; onClose: ()
                       <Download className="h-4 w-4" />
                       {dict.services.download}
                     </Button>
+                    <Button
+                      size="sm"
+                      variant="outline"
+                      className="font-bold"
+                      onClick={downloadPdf}
+                    >
+                      <Printer className="h-4 w-4" />
+                      {dict.services.downloadPdf}
+                    </Button>
                   </div>
                 </div>
 
@@ -649,6 +642,10 @@ function DocDialog({ doc, onClose }: { doc: ResolvedDocument | null; onClose: ()
                 >
                   {tpl[lang]}
                 </pre>
+                {/* Hidden print sheet — the only thing visible to the print/PDF engine. */}
+                <div id="epdp-print" dir={lang === "ar" ? "rtl" : "ltr"} className="epdp-print">
+                  {tpl[lang]}
+                </div>
               </TabsContent>
 
               <TabsContent value="details" className="mt-4 space-y-5">

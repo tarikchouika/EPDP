@@ -56,6 +56,8 @@ export const ar: Dict = {
     copy: "نسخ النص",
     copied: "تم النسخ بنجاح",
     download: "تحميل Word",
+    downloadPdf: "تحميل PDF",
+    verifiedSource: "نموذج موثق من المصدر",
     arabicVersion: "النسخة العربية",
     frenchVersion: "النسخة الفرنسية",
     requiredInfo: "البيانات المطلوبة",

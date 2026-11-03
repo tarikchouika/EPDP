@@ -100,6 +100,8 @@ export interface Dict {
     copy: string;
     copied: string;
     download: string;
+    downloadPdf: string;
+    verifiedSource: string;
     arabicVersion: string;
     frenchVersion: string;
     requiredInfo: string;

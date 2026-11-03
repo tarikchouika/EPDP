@@ -56,6 +56,8 @@ export const de: Dict = {
     copy: "Text kopieren",
     copied: "Erfolgreich kopiert",
     download: "Word herunterladen",
+    downloadPdf: "PDF herunterladen",
+    verifiedSource: "Vorlage an der Quelle geprüft",
     arabicVersion: "Arabische Version",
     frenchVersion: "Französische Version",
     requiredInfo: "Erforderliche Angaben",

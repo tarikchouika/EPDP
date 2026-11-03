@@ -56,6 +56,8 @@ export const it: Dict = {
     copy: "Copia testo",
     copied: "Copiato con successo",
     download: "Scarica Word",
+    downloadPdf: "Scarica PDF",
+    verifiedSource: "Modello verificato alla fonte",
     arabicVersion: "Versione araba",
     frenchVersion: "Versione francese",
     requiredInfo: "Informazioni richieste",

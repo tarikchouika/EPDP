@@ -4,6 +4,9 @@
 // Every legacy bilingual entry is completed at runtime with its i18n overlay
 // so `title`/`where`/`fields` always resolve in ALL 7 UI languages.
 // Completeness is enforced by scripts/validate-forms.ts.
+//
+// Real-world templates (verified against katib.ma / onebox.ma / namodaj.ma)
+// override the base templates — see real-templates.ts + real-sources.ts.
 import type { Locale } from "@/lib/i18n/types";
 import type { L } from "./categories";
 import { documents, type DocumentItem } from "./documents";
@@ -13,6 +16,7 @@ import { docI18n } from "./i18n-overlays";
 import { templates, type DocTemplate } from "./templates";
 import { templatesMore } from "./templates-more";
 import { templatesMore2 } from "./templates-more-2";
+import { realTemplates } from "./real-templates";
 // Extended catalog (katib.ma / onebox.ma / namodaj.ma coverage):
 import { formsDgi } from "./forms-dgi";
 import { formsCnss } from "./forms-cnss";
@@ -85,12 +89,17 @@ export const allDocuments: ResolvedDocument[] = [
   ...formsNaulat,
 ].map(resolveDoc);
 
-/** All templates (base + phase 2). */
-export const allTemplates: Record<string, DocTemplate> = {
+/** All templates (base + phase 2 + verified real-world sources). */
+const mergedTemplates: Record<string, DocTemplate> = {
   ...templates,
   ...templatesMore,
   ...templatesMore2,
 };
+// Real-world wording wins per language; missing languages keep the base text.
+for (const [id, t] of Object.entries(realTemplates)) {
+  mergedTemplates[id] = { ...mergedTemplates[id], ...t } as DocTemplate;
+}
+export const allTemplates: Record<string, DocTemplate> = mergedTemplates;
 
 export const getTemplate = (id?: string): DocTemplate | null =>
   id ? allTemplates[id] ?? null : null;

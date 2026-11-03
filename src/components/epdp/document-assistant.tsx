@@ -6,6 +6,7 @@ import { useI18n } from "@/lib/i18n/context";
 import { allDocuments, getTemplate, type ResolvedDocument } from "@/lib/data/registry";
 import { getPlan, type Answers, type WizardField } from "@/lib/wizard/fields";
 import { fillTemplate, validateAnswer, type FillResult } from "@/lib/wizard/fill";
+import { downloadWord as downloadWordFile, downloadPdf } from "@/lib/docx-export";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 import {
@@ -230,17 +231,7 @@ export function DocumentAssistant() {
 
   const downloadWord = () => {
     const title = docLang === "ar" ? doc!.title.ar : doc!.title.fr;
-    const escaped = finalText.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
-    const html = `<!DOCTYPE html><html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns="http://www.w3.org/TR/REC-html40"><head><meta charset="utf-8"><title>${title}</title></head><body dir="${docLang === "ar" ? "rtl" : "ltr"}" style="font-family:'Traditional Arabic','Sakkal Majalla','Times New Roman',serif;font-size:14pt;line-height:2.1;white-space:pre-wrap;">${escaped.replace(/\n/g, "<br>")}</body></html>`;
-    const blob = new Blob(["\ufeff", html], { type: "application/msword;charset=utf-8" });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = `${title.replace(/[\\/:*?"<>|]/g, "-")}.doc`;
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
+    downloadWordFile(title, finalText, docLang === "ar");
   };
 
   const answeredCount = plan.filter((p) => answers[p.key]).length;
@@ -467,7 +458,7 @@ export function DocumentAssistant() {
                       className="epdp-doc w-full rounded-xl border border-input bg-card p-4 text-[13px] leading-8 outline-none focus:border-primary focus:ring-2 focus:ring-ring/30"
                     />
                     <div className="flex flex-wrap gap-2">
-                      <Button size="sm" className="font-bold" onClick={() => window.print()}>
+                      <Button size="sm" className="font-bold" onClick={downloadPdf}>
                         <Printer className="h-4 w-4" />
                         {f.print}
                       </Button>

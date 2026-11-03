@@ -1,0 +1,666 @@
+[
+ {
+  "id": "demande-generale",
+  "templateId": "demande-generale",
+  "ar": "طلب إداري عام",
+  "fr": "Demande administrative générale",
+  "popular": true,
+  "cat": "demandes"
+ },
+ {
+  "id": "demande-acte-naissance",
+  "templateId": "demande-acte-naissance",
+  "ar": "طلب نسخة من رسم الولادة",
+  "fr": "Demande de copie d'acte de naissance",
+  "popular": true,
+  "cat": "demandes"
+ },
+ {
+  "id": "chikaya-amma",
+  "templateId": "chikaya-amma",
+  "ar": "شكاية عامة",
+  "fr": "Plainte générale",
+  "popular": true,
+  "cat": "chikayat"
+ },
+ {
+  "id": "attestation-travail",
+  "templateId": "attestation-travail",
+  "ar": "شهادة العمل",
+  "fr": "Attestation de travail",
+  "popular": true,
+  "cat": "ichhadat"
+ },
+ {
+  "id": "attestation-residence",
+  "templateId": "attestation-residence",
+  "ar": "شهادة السكنى",
+  "fr": "Attestation de résidence",
+  "popular": true,
+  "cat": "ichhadat"
+ },
+ {
+  "id": "attestation-non-travail",
+  "templateId": "attestation-non-travail",
+  "ar": "شهادة عدم العمل",
+  "fr": "Attestation de non-emploi",
+  "popular": true,
+  "cat": "ichhadat"
+ },
+ {
+  "id": "declaration-honneur",
+  "templateId": "declaration-honneur",
+  "ar": "تصريح بالشرف",
+  "fr": "Déclaration sur l'honneur",
+  "popular": true,
+  "cat": "tasarih"
+ },
+ {
+  "id": "declaration-non-emploi",
+  "templateId": "declaration-non-emploi-honneur",
+  "ar": "تصريح بالشرف بعدم العمل",
+  "fr": "Déclaration sur l'honneur de non-emploi",
+  "popular": false,
+  "cat": "tasarih"
+ },
+ {
+  "id": "iltizam-sakan",
+  "templateId": "iltizam-sakan",
+  "ar": "التزام بالسكن",
+  "fr": "Engagement de logement",
+  "popular": true,
+  "cat": "iltizamat"
+ },
+ {
+  "id": "wakala-amma",
+  "templateId": "wakala-amma",
+  "ar": "وكالة (نموذج مبسط)",
+  "fr": "Procuration (modèle simplifié)",
+  "popular": true,
+  "cat": "wakalat"
+ },
+ {
+  "id": "wakala-istilam",
+  "templateId": "wakala-istilam",
+  "ar": "تفويض لاستلام وثيقة أو مستحقات",
+  "fr": "Autorisation de retrait",
+  "popular": true,
+  "cat": "wakalat"
+ },
+ {
+  "id": "contrat-bail",
+  "templateId": "contrat-bail",
+  "ar": "عقد كراء سكني",
+  "fr": "Contrat de bail d'habitation",
+  "popular": true,
+  "cat": "uqud-kira"
+ },
+ {
+  "id": "quittance-loyer",
+  "templateId": "quittance-loyer",
+  "ar": "وصل أداء الكراء",
+  "fr": "Quittance de loyer",
+  "popular": true,
+  "cat": "uqud-kira"
+ },
+ {
+  "id": "vente-vehicule",
+  "templateId": "vente-vehicule",
+  "ar": "عقد بيع سيارة",
+  "fr": "Contrat de vente de véhicule",
+  "popular": true,
+  "cat": "uqud-bay"
+ },
+ {
+  "id": "cv",
+  "templateId": "cv",
+  "ar": "نموذج سيرة ذاتية",
+  "fr": "Modèle de CV",
+  "popular": true,
+  "cat": "amal"
+ },
+ {
+  "id": "lettre-motivation",
+  "templateId": "lettre-motivation",
+  "ar": "رسالة تحفيزية",
+  "fr": "Lettre de motivation",
+  "popular": true,
+  "cat": "amal"
+ },
+ {
+  "id": "demission",
+  "templateId": "demission",
+  "ar": "طلب استقالة",
+  "fr": "Demande de démission",
+  "popular": true,
+  "cat": "amal"
+ },
+ {
+  "id": "cdd",
+  "templateId": "cdd",
+  "ar": "عقد عمل محدد المدة (CDD)",
+  "fr": "Contrat de travail à durée déterminée (CDD)",
+  "popular": false,
+  "cat": "amal"
+ },
+ {
+  "id": "demande-stage",
+  "templateId": "demande-stage",
+  "ar": "طلب تدريب",
+  "fr": "Demande de stage",
+  "popular": false,
+  "cat": "amal"
+ },
+ {
+  "id": "autorisation-voyage",
+  "templateId": "autorisation-voyage",
+  "ar": "إذن أبوي بسفر قاصر",
+  "fr": "Autorisation parentale de voyage",
+  "popular": true,
+  "cat": "usra"
+ },
+ {
+  "id": "facture",
+  "templateId": "facture",
+  "ar": "نموذج فاتورة",
+  "fr": "Modèle de facture",
+  "popular": true,
+  "cat": "muqawalat"
+ },
+ {
+  "id": "demande-passeport",
+  "templateId": "demande-passeport",
+  "ar": "طلب الحصول على جواز السفر",
+  "fr": "Demande de passeport",
+  "popular": true,
+  "cat": "demandes"
+ },
+ {
+  "id": "demande-carte-grise",
+  "templateId": "demande-carte-grise",
+  "ar": "طلب البطاقة الرمادية (نقل الملكية)",
+  "fr": "Demande de carte grise (transfert)",
+  "popular": false,
+  "cat": "demandes"
+ },
+ {
+  "id": "demande-permis-conduire",
+  "templateId": "demande-permis-conduire",
+  "ar": "طلب رخصة السياقة",
+  "fr": "Demande de permis de conduire",
+  "popular": false,
+  "cat": "demandes"
+ },
+ {
+  "id": "demande-bourse",
+  "templateId": "demande-bourse",
+  "ar": "طلب منحة دراسية",
+  "fr": "Demande de bourse d'études",
+  "popular": true,
+  "cat": "demandes"
+ },
+ {
+  "id": "demande-diplome",
+  "templateId": "demande-diplome",
+  "ar": "طلب نسخة من دبلوم",
+  "fr": "Demande de copie de diplôme",
+  "popular": false,
+  "cat": "demandes"
+ },
+ {
+  "id": "demande-restitution",
+  "templateId": "demande-restitution",
+  "ar": "طلب استرجاع أشياء محجوزة",
+  "fr": "Demande de restitution d'objets saisis",
+  "popular": false,
+  "cat": "demandes"
+ },
+ {
+  "id": "demande-inscription-scolaire",
+  "templateId": "demande-inscription-scolaire",
+  "ar": "طلب تسجيل مدرسي",
+  "fr": "Demande d'inscription scolaire",
+  "popular": false,
+  "cat": "demandes"
+ },
+ {
+  "id": "chikaya-narsa",
+  "templateId": "chikaya-narsa",
+  "ar": "شكاية للوكالة الوطنية للسلامة الطرقية",
+  "fr": "Réclamation à l'Agence Nationale de la Sécurité Routière",
+  "popular": false,
+  "cat": "chikayat"
+ },
+ {
+  "id": "chikaya-internet",
+  "templateId": "chikaya-internet",
+  "ar": "شكاية مزود خدمات الإنترنت",
+  "fr": "Réclamation auprès d'un fournisseur d'accès",
+  "popular": false,
+  "cat": "chikayat"
+ },
+ {
+  "id": "chikaya-consommation",
+  "templateId": "chikaya-consommation",
+  "ar": "شكاية مؤسسة تجارية (حماية المستهلك)",
+  "fr": "Réclamation commerciale (protection du consommateur)",
+  "popular": false,
+  "cat": "chikayat"
+ },
+ {
+  "id": "chikaya-cheque",
+  "templateId": "chikaya-cheque",
+  "ar": "شكاية شيك بدون رصيد",
+  "fr": "Plainte pour chèque sans provision",
+  "popular": false,
+  "cat": "chikayat"
+ },
+ {
+  "id": "attestation-salaire",
+  "templateId": "attestation-salaire",
+  "ar": "شهادة الأجر",
+  "fr": "Attestation de salaire",
+  "popular": true,
+  "cat": "ichhadat"
+ },
+ {
+  "id": "attestation-prise-charge",
+  "templateId": "attestation-prise-charge",
+  "ar": "شهادة تكفل (للتأشيرة)",
+  "fr": "Attestation de prise en charge (visa)",
+  "popular": false,
+  "cat": "ichhadat"
+ },
+ {
+  "id": "attestation-hebergement",
+  "templateId": "attestation-hebergement",
+  "ar": "شهادة استضافة",
+  "fr": "Attestation d'hébergement",
+  "popular": true,
+  "cat": "ichhadat"
+ },
+ {
+  "id": "attestation-celibat",
+  "templateId": "attestation-celibat",
+  "ar": "إشهاد بالحياة الفردية (عزوبة)",
+  "fr": "Attestation de célibat",
+  "popular": false,
+  "cat": "ichhadat"
+ },
+ {
+  "id": "attestation-stage",
+  "templateId": "attestation-stage",
+  "ar": "شهادة تدريب",
+  "fr": "Attestation de stage",
+  "popular": false,
+  "cat": "ichhadat"
+ },
+ {
+  "id": "declaration-perte-cin",
+  "templateId": "declaration-perte-cin",
+  "ar": "تصريح بالشرف بضياع البطاقة الوطنية",
+  "fr": "Déclaration de perte de la CIN",
+  "popular": true,
+  "cat": "tasarih"
+ },
+ {
+  "id": "declaration-perte-doc",
+  "templateId": "declaration-perte-doc",
+  "ar": "تصريح بضياع وثيقة إدارية",
+  "fr": "Déclaration de perte d'un document",
+  "popular": false,
+  "cat": "tasarih"
+ },
+ {
+  "id": "declaration-charge-famille",
+  "templateId": "declaration-charge-famille",
+  "ar": "تصريح بالشرف بالإعالة",
+  "fr": "Déclaration de prise en charge familiale",
+  "popular": true,
+  "cat": "tasarih"
+ },
+ {
+  "id": "declaration-accident",
+  "templateId": "declaration-accident",
+  "ar": "تصريح بالشرف بظروف حادث",
+  "fr": "Déclaration des circonstances d'un accident",
+  "popular": false,
+  "cat": "tasarih"
+ },
+ {
+  "id": "declaration-changement-situation",
+  "templateId": "declaration-changement-situation",
+  "ar": "تصريح بتغيير الوضعية العائلية",
+  "fr": "Déclaration de changement de situation familiale",
+  "popular": false,
+  "cat": "tasarih"
+ },
+ {
+  "id": "iltizam-vehicule",
+  "templateId": "iltizam-vehicule",
+  "ar": "التزام تحمل مسؤولية المركبة",
+  "fr": "Engagement de responsabilité du véhicule",
+  "popular": false,
+  "cat": "iltizamat"
+ },
+ {
+  "id": "iltizam-nlhafa",
+  "templateId": "iltizam-nlhafa",
+  "ar": "التزام محل غذائي بالنظافة",
+  "fr": "Engagement d'établissement alimentaire",
+  "popular": false,
+  "cat": "iltizamat"
+ },
+ {
+  "id": "wakala-vente-vehicule",
+  "templateId": "wakala-vente-vehicule",
+  "ar": "وكالة لبيع سيارة",
+  "fr": "Procuration pour vendre un véhicule",
+  "popular": false,
+  "cat": "wakalat"
+ },
+ {
+  "id": "wakala-immobiliere",
+  "templateId": "wakala-immobiliere",
+  "ar": "وكالة عقارية",
+  "fr": "Procuration immobilière",
+  "popular": false,
+  "cat": "wakalat"
+ },
+ {
+  "id": "wakala-permis",
+  "templateId": "wakala-permis",
+  "ar": "وكالة لاستلام رخصة السياقة",
+  "fr": "Procuration pour retirer le permis",
+  "popular": false,
+  "cat": "wakalat"
+ },
+ {
+  "id": "etat-lieux",
+  "templateId": "etat-lieux",
+  "ar": "حالة الأماكن (دخول/خروج)",
+  "fr": "État des lieux (entrée/sortie)",
+  "popular": true,
+  "cat": "uqud-kira"
+ },
+ {
+  "id": "promesse-vente",
+  "templateId": "promesse-vente",
+  "ar": "عقد وعد بالبيع العقاري",
+  "fr": "Promesse de vente immobilière",
+  "popular": false,
+  "cat": "uqud-bay"
+ },
+ {
+  "id": "vente-immobilier",
+  "templateId": "vente-immobilier",
+  "ar": "عقد بيع عقار",
+  "fr": "Acte de vente immobilier",
+  "popular": false,
+  "cat": "uqud-bay"
+ },
+ {
+  "id": "vente-moto",
+  "templateId": "vente-moto",
+  "ar": "وصل بيع دراجة نارية",
+  "fr": "Vente de motocycle",
+  "popular": false,
+  "cat": "uqud-bay"
+ },
+ {
+  "id": "lettre-recommandation",
+  "templateId": "lettre-recommandation",
+  "ar": "رسالة توصية",
+  "fr": "Lettre de recommandation",
+  "popular": false,
+  "cat": "amal"
+ },
+ {
+  "id": "demande-conge",
+  "templateId": "demande-conge",
+  "ar": "طلب استفادة من رخصة",
+  "fr": "Demande de congé",
+  "popular": false,
+  "cat": "amal"
+ },
+ {
+  "id": "mise-en-demeure-stc",
+  "templateId": "mise-en-demeure-stc",
+  "ar": "إنذار أداء مستحقات نهاية العمل (STC)",
+  "fr": "Mise en demeure de paiement (STC)",
+  "popular": false,
+  "cat": "amal"
+ },
+ {
+  "id": "contrat-cdi",
+  "templateId": "contrat-cdi",
+  "ar": "عقد عمل غير محدد المدة (CDI)",
+  "fr": "Contrat de travail à durée indéterminée",
+  "popular": true,
+  "cat": "amal"
+ },
+ {
+  "id": "contrat-domestique",
+  "templateId": "contrat-domestique",
+  "ar": "عقد عمل لخادم(ة) منزلية",
+  "fr": "Contrat de travail domestique",
+  "popular": false,
+  "cat": "amal"
+ },
+ {
+  "id": "demande-revision-nafaqa",
+  "templateId": "demande-revision-nafaqa",
+  "ar": "طلب مراجعة النفقة",
+  "fr": "Demande de révision de la pension alimentaire",
+  "popular": false,
+  "cat": "usra"
+ },
+ {
+  "id": "demande-acte-deces",
+  "templateId": "demande-acte-deces",
+  "ar": "طلب نسخة من رسم الوفاة",
+  "fr": "Demande d'acte de décès",
+  "popular": false,
+  "cat": "usra"
+ },
+ {
+  "id": "pv-ag-ordinaire",
+  "templateId": "pv-ag-ordinaire",
+  "ar": "محضر جمع عام عادي",
+  "fr": "PV d'assemblée générale ordinaire",
+  "popular": false,
+  "cat": "jamaiyat"
+ },
+ {
+  "id": "demande-subvention",
+  "templateId": "demande-subvention",
+  "ar": "طلب دعم مالي لجمعية",
+  "fr": "Demande de subvention pour association",
+  "popular": false,
+  "cat": "jamaiyat"
+ },
+ {
+  "id": "statuts-cooperative",
+  "templateId": "statuts-cooperative",
+  "ar": "نظام أساسي لتعاونية",
+  "fr": "Statuts d'une coopérative",
+  "popular": false,
+  "cat": "jamaiyat"
+ },
+ {
+  "id": "iltizam-binaa",
+  "templateId": "iltizam-binaa",
+  "ar": "التزام بالبناء وفق الرخصة",
+  "fr": "Engagement de construire selon le permis",
+  "popular": false,
+  "cat": "binaa"
+ },
+ {
+  "id": "demande-regularisation",
+  "templateId": "demande-regularisation",
+  "ar": "طلب تسوية بناء غير قانوني",
+  "fr": "Demande de régularisation de construction",
+  "popular": false,
+  "cat": "binaa"
+ },
+ {
+  "id": "reconnaissance-dette",
+  "templateId": "reconnaissance-dette",
+  "ar": "إقرار بالدين",
+  "fr": "Reconnaissance de dette",
+  "popular": true,
+  "cat": "muqawalat"
+ },
+ {
+  "id": "avis-legal",
+  "templateId": "avis-legal",
+  "ar": "إعلان قانوني (تأسيس/تعديل شركة)",
+  "fr": "Avis légal (constitution/modification)",
+  "popular": false,
+  "cat": "muqawalat"
+ },
+ {
+  "id": "pointage",
+  "templateId": "pointage",
+  "ar": "ورقة حضور العمال (البوانتاج)",
+  "fr": "Feuille de pointage des ouvriers",
+  "popular": false,
+  "cat": "muqawalat"
+ },
+ {
+  "id": "declaration-auto-entrepreneur",
+  "templateId": "declaration-auto-entrepreneur",
+  "ar": "تصريح بالشرف للمفوتر الذاتي",
+  "fr": "Déclaration sur l'honneur (auto-entrepreneur)",
+  "popular": false,
+  "cat": "muqawalat"
+ },
+ {
+  "id": "fiche-paie",
+  "templateId": "fiche-paie",
+  "ar": "نموذج ورقة الأجر (Bulletin de paie)",
+  "fr": "Modèle de bulletin de paie",
+  "popular": false,
+  "cat": "muqawalat"
+ },
+ {
+  "id": "amo-ald",
+  "templateId": "amo-ald",
+  "ar": "طلب الاستفادة من ALD (مرض مزمن)",
+  "fr": "Demande ALD (maladie chronique)",
+  "popular": false,
+  "cat": "bank"
+ },
+ {
+  "id": "feuille-soins",
+  "templateId": "feuille-soins",
+  "ar": "ورقة العلاج (تصريح بالمصاريف)",
+  "fr": "Feuille de soins (déclaration)",
+  "popular": false,
+  "cat": "bank"
+ },
+ {
+  "id": "demande-pension",
+  "templateId": "demande-pension",
+  "ar": "طلب معاش الشيخوخة (CNSS)",
+  "fr": "Demande de pension de retraite (CNSS)",
+  "popular": false,
+  "cat": "bank"
+ },
+ {
+  "id": "demande-prestations-familiales",
+  "templateId": "demande-prestations-familiales",
+  "ar": "طلب تعويضات عائلية (إضافة مولود)",
+  "fr": "Demande de prestations familiales",
+  "popular": true,
+  "cat": "bank"
+ },
+ {
+  "id": "cnops-ayants-droit",
+  "templateId": "cnops-ayants-droit",
+  "ar": "طلب إضافة ذوي الحقوق (CNOPS)",
+  "fr": "Demande d'ajout d'ayants droit (CNOPS)",
+  "popular": false,
+  "cat": "bank"
+ },
+ {
+  "id": "procedure-vignette",
+  "templateId": "procedure-vignette",
+  "ar": "مسطرة أداء رسوم السيارة (الفيينيت)",
+  "fr": "Procédure de paiement de la vignette",
+  "popular": true,
+  "cat": "ijraat"
+ },
+ {
+  "id": "procedure-societe",
+  "templateId": "procedure-societe",
+  "ar": "مسطرة تأسيس شركة (السجل التجاري)",
+  "fr": "Procédure de création de société",
+  "popular": false,
+  "cat": "ijraat"
+ },
+ {
+  "id": "procedure-mre",
+  "templateId": "procedure-mre",
+  "ar": "السجل العدلي للمغاربة بالخارج (B3 عن بعد)",
+  "fr": "Casier judiciaire des MRE (B3 à distance)",
+  "popular": true,
+  "cat": "ijraat"
+ },
+ {
+  "id": "resiliation-bail",
+  "templateId": "resiliation-bail",
+  "ar": "فسخ عقد كراء بالتراضي",
+  "fr": "Résiliation amiable du bail",
+  "popular": true,
+  "cat": "naulat-fasikh"
+ },
+ {
+  "id": "resiliation-travail",
+  "templateId": "resiliation-travail",
+  "ar": "فسخ عقد عمل بالتراضي",
+  "fr": "Rupture conventionnelle du contrat",
+  "popular": false,
+  "cat": "naulat-fasikh"
+ },
+ {
+  "id": "resiliation-assurance",
+  "templateId": "resiliation-assurance",
+  "ar": "فسخ عقد تأمين",
+  "fr": "Résiliation de contrat d'assurance",
+  "popular": false,
+  "cat": "naulat-fasikh"
+ },
+ {
+  "id": "resiliation-internet",
+  "templateId": "resiliation-internet",
+  "ar": "فسخ اشتراك الإنترنت/الاتصالات",
+  "fr": "Résiliation d'abonnement internet/télécom",
+  "popular": false,
+  "cat": "naulat-fasikh"
+ },
+ {
+  "id": "tanazol-vehicule",
+  "templateId": "tanazol-vehicule",
+  "ar": "تنازل عن مركبة",
+  "fr": "Cession d'un véhicule",
+  "popular": true,
+  "cat": "naulat-fasikh"
+ },
+ {
+  "id": "tanazol-bail",
+  "templateId": "tanazol-bail",
+  "ar": "تنازل عن عقد كراء",
+  "fr": "Cession du bail",
+  "popular": false,
+  "cat": "naulat-fasikh"
+ },
+ {
+  "id": "tanazol-droits",
+  "templateId": "tanazol-droits",
+  "ar": "تنازل عن مستحقات (نفقة/طلاق)",
+  "fr": "Renonciation à des droits (pension/divorce)",
+  "popular": false,
+  "cat": "naulat-fasikh"
+ }
+]

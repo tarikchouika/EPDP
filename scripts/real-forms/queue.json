@@ -1,0 +1,86 @@
+{
+ "demande-generale": {
+  "id": "demande-generale",
+  "ar": "طلب إداري عام",
+  "fr": "Demande administrative générale",
+  "url": null,
+  "status": "notfound"
+ },
+ "demande-acte-naissance": {
+  "id": "demande-acte-naissance",
+  "ar": "طلب نسخة من رسم الولادة",
+  "fr": "Demande de copie d'acte de naissance",
+  "url": null,
+  "status": "notfound"
+ },
+ "chikaya-amma": {
+  "id": "chikaya-amma",
+  "ar": "شكاية عامة",
+  "fr": "Plainte générale",
+  "url": null,
+  "status": "notfound"
+ },
+ "attestation-travail": {
+  "id": "attestation-travail",
+  "ar": "شهادة العمل",
+  "fr": "Attestation de travail",
+  "url": null,
+  "status": "notfound"
+ },
+ "attestation-residence": {
+  "id": "attestation-residence",
+  "ar": "شهادة السكنى",
+  "fr": "Attestation de résidence",
+  "url": null,
+  "status": "notfound"
+ },
+ "attestation-non-travail": {
+  "id": "attestation-non-travail",
+  "ar": "شهادة عدم العمل",
+  "fr": "Attestation de non-emploi",
+  "url": null,
+  "status": "notfound"
+ },
+ "declaration-honneur": {
+  "id": "declaration-honneur",
+  "ar": "تصريح بالشرف",
+  "fr": "Déclaration sur l'honneur",
+  "url": null,
+  "status": "notfound"
+ },
+ "iltizam-sakan": {
+  "id": "iltizam-sakan",
+  "ar": "التزام بالسكن",
+  "fr": "Engagement de logement",
+  "url": null,
+  "status": "notfound"
+ },
+ "wakala-amma": {
+  "id": "wakala-amma",
+  "ar": "وكالة (نموذج مبسط)",
+  "fr": "Procuration (modèle simplifié)",
+  "url": null,
+  "status": "notfound"
+ },
+ "wakala-istilam": {
+  "id": "wakala-istilam",
+  "ar": "تفويض لاستلام وثيقة أو مستحقات",
+  "fr": "Autorisation de retrait",
+  "url": null,
+  "status": "notfound"
+ },
+ "contrat-bail": {
+  "id": "contrat-bail",
+  "ar": "عقد كراء سكني",
+  "fr": "Contrat de bail d'habitation",
+  "url": null,
+  "status": "notfound"
+ },
+ "quittance-loyer": {
+  "id": "quittance-loyer",
+  "ar": "وصل أداء الكراء",
+  "fr": "Quittance de loyer",
+  "url": null,
+  "status": "notfound"
+ }
+}
