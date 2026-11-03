@@ -26,13 +26,15 @@ export function Hero() {
       <div className="gold-divider absolute inset-x-0 top-0 h-1.5" aria-hidden="true" />
       <div className="relative mx-auto max-w-7xl px-4 pb-16 pt-14 sm:px-6 sm:pb-24 sm:pt-20">
         <div className="grid items-center gap-10 lg:grid-cols-[1.15fr_0.85fr]">
-          <div className="text-center lg:text-start">
+          {/* min-w-0 lets this grid item shrink below its longest word (German
+            compounds) instead of spilling past the viewport — see globals.css. */}
+        <div className="min-w-0 text-center lg:text-start">
             <span className="inline-flex items-center gap-2 rounded-full border border-gold bg-accent px-4 py-1.5 text-xs font-bold text-primary sm:text-sm">
               <Sparkles className="h-4 w-4 text-gold" />
               {dict.hero.badge}
             </span>
 
-            <h1 className="mt-5 font-display text-3xl font-bold leading-[1.25] tracking-tight sm:text-4xl lg:text-5xl">
+            <h1 className="mt-5 break-words font-display text-3xl font-bold leading-[1.25] tracking-tight hyphens-auto sm:text-4xl lg:text-5xl">
               {dict.hero.title}{" "}
               <span className="text-gradient-moroccan">{dict.hero.titleAccent}</span>
             </h1>
@@ -42,7 +44,7 @@ export function Hero() {
             </p>
 
             <form onSubmit={submit} className="mx-auto mt-7 flex max-w-xl gap-2 lg:mx-0">
-              <div className="relative flex-1">
+              <div className="relative min-w-0 flex-1">
                 <Search className="absolute start-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
                 <input
                   value={q}

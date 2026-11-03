@@ -126,6 +126,19 @@
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
   }
+
+  /* Long-word overflow protection (measured fix 2026-11-04).
+     Germanic compounds (e.g. "Verwaltungsdokumente," ≈ 356px at 30px) exceed
+     the 328px mobile content box and, combined with grid/flex min-width:auto,
+     pushed hero content to 372px on a 360px viewport where the section's
+     overflow:hidden clipped it. These rules make every text element break
+     instead of spilling — in all 7 locales, on all pages. */
+  h1, h2, h3, h4, h5, h6, p, li, a, span, dt, dd, td, th, button, label, legend, figcaption {
+    overflow-wrap: break-word;
+  }
+  h1, h2, h3, h4, h5, h6, p {
+    hyphens: auto;
+  }
   ::selection {
     background: #a8821f66;
   }
