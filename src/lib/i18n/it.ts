@@ -399,6 +399,10 @@ export const it: Dict = {
     tagline: "Il tuo scrivano pubblico digitale",
   },
 
+  meta: {
+    tabTitle: "EPDP — Il tuo scrivano pubblico digitale | Moduli e documenti amministrativi marocchini gratuiti",
+  },
+
   pages: {
     related: "Pagine correlate",
     breadcrumb: "Percorso di navigazione",

@@ -399,6 +399,10 @@ export const es: Dict = {
     tagline: "Tu escribano público digital",
   },
 
+  meta: {
+    tabTitle: "EPDP — Tu escribano público digital | Formularios y documentos administrativos marroquíes gratis",
+  },
+
   pages: {
     related: "Páginas relacionadas",
     breadcrumb: "Ruta de navegación",

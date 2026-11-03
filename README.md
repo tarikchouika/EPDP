@@ -18,7 +18,7 @@
 - **دليل 38 موقعاً رسمياً** للإدارات والخدمات الرقمية العمومية المغربية (نطاقات رسمية ومؤسسات عمومية موثقة)
 - **مساعد ذكي** بقاعدة معرفة مبنية حصراً على المصادر الرسمية — بدون توليد روابط وبدون هلوسة، مع مصدر رسمي لكل جواب
 - **7 لغات:** العربية (RTL كامل)، English، Français، Español، Italiano، Deutsch، Русский
-- **الوضعان المشع والقاتم** مع هوية بصرية مغربية (الأخضر والأحمر والذهبي وزخرفة الزليج)
+- **الوضعان المشع والقاتم** بهوية بصرية مشتقة من شعار EPDP (تركواز بترولي عميق + ذهبي عتيق + زخرفة الزليج) في الوضعين
 - **صفحات قانونية كاملة:** شروط الاستخدام، سياسة الخصوصية، سياسة الكوكيز، إخلاء المسؤولية
 - **SEO متقدم:** Metadata شاملة، JSON-LD (Organization/WebSite/Service/FAQPage)، sitemap.xml، robots.txt، hreflang
 - **بنية متعددة الصفحات:** الرئيسية، /forms (الكتالوج الكامل)، /forms/[فئة] (19 صفحة فئة مستقلة)، /documents/[وثيقة] (1180 صفحة تفصيلية)، /assistant، /links، /faq، /about، /legal — بهيدر وفوتر موحدين وهوية بصرية واحدة
@@ -66,13 +66,14 @@ mv next.config.dev.bak.ts next.config.ts
 
 ```
 src/
-├── app/                 # صفحة واحدة (layout + page + globals.css)
-├── components/epdp/     # Header, Hero, Services, DocumentAssistant, Links, FAQ, Legal, Chatbot…
+├── app/                 # ‎13 مساراً مستقلاً: /، /forms، /forms/[فئة]، /documents، /documents/[وثيقة]،
+│                        # ‎/assistant، /links، /portals، /faq، /about، /terms، /privacy، /legal
+├── components/epdp/     # Header, Footer, Hero, Catalog, Chatbot, DocumentAssistant…
 ├── lib/
-│   ├── i18n/            # 7 قواميس لغات + مزوّد اللغة (RTL/LTR)
-│   ├── data/            # الوثائق، الفئات، الروابط الرسمية، الأسئلة الشائعة، النماذج
+│   ├── i18n/            # ‎7 قواميس لغات + مزوّد اللغة (RTL/LTR + عنوان تبويب لكل لغة)
+│   ├── data/            # ‎1180 وثيقة، 19 فئة، 38 رابطاً رسمياً، الأسئلة الشائعة، النماذج
 │   └── chatbot/         # قاعدة معرفة المساعد الذكي (مضبوطة بالمصادر الرسمية)
-└── public/              # logo, robots.txt, sitemap.xml, manifest
+└── public/              # شعار EPDP (فاڤيكون + أيقونات PWA + علامة مائية)، sitemap، robots، manifest
 ```
 
 ## ⚖️ ملاحظة قانونية | Legal Note

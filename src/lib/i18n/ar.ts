@@ -399,6 +399,10 @@ export const ar: Dict = {
     tagline: "كاتبك الرقمي",
   },
 
+  meta: {
+    tabTitle: "EPDP — كاتبك الرقمي | نماذج ووثائق إدارية مغربية مجانية",
+  },
+
   pages: {
     related: "صفحات ذات صلة",
     breadcrumb: "مسار التنقل",

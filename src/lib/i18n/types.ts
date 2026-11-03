@@ -37,6 +37,11 @@ export interface Dict {
     tagline: string;
   };
 
+  meta: {
+    /** Browser tab title for this locale (AR keeps the per-route SSR titles). */
+    tabTitle: string;
+  };
+
   pages: {
     related: string;
     breadcrumb: string;

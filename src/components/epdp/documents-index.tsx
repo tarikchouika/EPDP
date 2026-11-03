@@ -43,7 +43,7 @@ export function DocumentsIndex() {
                   href={`#cat-${c.id}`}
                   className="inline-flex items-center gap-1.5 rounded-full border border-border/80 bg-card px-3.5 py-1.5 text-xs font-bold shadow-sm transition-colors hover:border-primary/50 hover:text-primary"
                 >
-                  {Icon && <Icon className="h-3.5 w-3.5 text-primary" />}
+                  {Icon && <Icon className="h-4 w-4 text-primary" />}
                   {c.name[locale]}
                   <span className="text-[10px] font-bold text-muted-foreground">{count}</span>
                 </a>

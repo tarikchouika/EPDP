@@ -2,8 +2,10 @@ node_modules/
 .next/
 .next-export/
 out/
+.wrangler/
 db/
 tool-results/
+upload/
 dev.log
 server.log
 .env

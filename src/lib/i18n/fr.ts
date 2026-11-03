@@ -399,6 +399,10 @@ export const fr: Dict = {
     tagline: "Votre écrivain public numérique",
   },
 
+  meta: {
+    tabTitle: "EPDP — Votre écrivain public numérique | Formulaires et documents administratifs marocains gratuits",
+  },
+
   pages: {
     related: "Pages liées",
     breadcrumb: "Fil d'Ariane",

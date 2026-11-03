@@ -399,6 +399,10 @@ export const en: Dict = {
     tagline: "Your digital public writer",
   },
 
+  meta: {
+    tabTitle: "EPDP — Your Digital Public Writer | Free Moroccan administrative forms & documents",
+  },
+
   pages: {
     related: "Related pages",
     breadcrumb: "Breadcrumb",

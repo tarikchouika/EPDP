@@ -399,6 +399,10 @@ export const de: Dict = {
     tagline: "Dein digitales Schreibbüro",
   },
 
+  meta: {
+    tabTitle: "EPDP — Dein digitales Schreibbüro | Kostenlose marokkanische Verwaltungsvorlagen und Dokumente",
+  },
+
   pages: {
     related: "Verwandte Seiten",
     breadcrumb: "Navigationspfad",
