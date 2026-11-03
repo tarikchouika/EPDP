@@ -32,8 +32,15 @@ jobs:
           distribution: temurin
           java-version: "17"
 
-      - name: Setup Android SDK
-        uses: android-actions/setup-android@v3
+      # ubuntu-latest runners ship a preinstalled Android SDK; we only make sure
+      # the exact platform + build-tools we need are present and licenses accepted.
+      - name: Prepare Android SDK components
+        env:
+          ANDROID_HOME: /usr/local/lib/android/sdk
+        run: |
+          yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --licenses > /dev/null || true
+          "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --install \
+            "platforms;android-34" "build-tools;34.0.0" "platform-tools" > /dev/null
 
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v4
