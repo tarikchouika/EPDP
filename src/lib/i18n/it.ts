@@ -17,6 +17,7 @@ export const it: Dict = {
     portals: "Portali ufficiali",
     docsIndex: "Indice dei documenti",
     categories: "Categorie",
+    androidApp: "App Android",
   },
 
   hero: {
@@ -305,6 +306,44 @@ export const it: Dict = {
         ],
       },
     ],
+  },
+
+  app: {
+    subtitle: "Scarica l'app ufficiale della piattaforma EPDP sul tuo Android",
+    badge: "App ufficiale · completamente gratuita",
+    intro: "Tutta la piattaforma in un'unica app: oltre 1180 moduli e documenti amministrativi marocchini, l'assistente digitale e la directory dei siti ufficiali — in un'esperienza a schermo intero.",
+    downloadTitle: "Scarica l'applicazione",
+    downloadDesc: "Scarica l'APK firmato ufficialmente dal link diretto della piattaforma. Se il download non riesce, usa il link di riserva su GitHub.",
+    downloadPrimary: "Scarica dalla piattaforma (link diretto)",
+    downloadAlt: "Link di riserva — GitHub",
+    sizeNote: "Dimensione approssimativa: 3 MB",
+    autoBuild: "L'app viene ricostruita automaticamente a ogni aggiornamento della piattaforma; questo link fornisce sempre l'ultima versione.",
+    featuresTitle: "Caratteristiche dell'app",
+    features: [
+      { t: "Schermo intero immersivo", d: "La modalità immersiva nasconde le barre di stato e navigazione; riappaiono brevemente scorrendo verso l'alto o il basso." },
+      { t: "Sempre aggiornata", d: "L'app mostra la versione live della piattaforma: nuovi documenti e moduli subito disponibili, senza aggiornamenti manuali." },
+      { t: "L'identità della piattaforma", d: "Il logo della piattaforma sull'icona e nella schermata di avvio, modalità scura e chiara, e sette lingue." },
+    ],
+    stepsTitle: "Installazione passo per passo",
+    stepsIntro: "L'app non è distribuita su Google Play, quindi si installa direttamente dal file APK ufficiale:",
+    steps: [
+      { t: "Scarica il file APK", d: "Tocca il pulsante di download qui sopra dal browser del telefono e attendi il termine (circa 3 MB)." },
+      { t: "Consenti l'installazione", d: "All'apertura del file Chrome può chiedere l'autorizzazione: apri le Impostazioni, attiva «Consenti da questa fonte» per quel browser, poi riapri il file." },
+      { t: "Supera l'avviso di Play Protect", d: "Può comparire «App bloccata» di Play Protect perché l'app non proviene dal Play Store. Tocca «Più dettagli» e scegli «Installa comunque»." },
+      { t: "Tocca Installa", d: "Completa l'installazione e attendi qualche secondo finché l'icona EPDP appare tra le tue app." },
+      { t: "Apri l'app", d: "Compare la schermata di avvio con il logo della piattaforma e poi la home — senza registrazione né pubblicità." },
+    ],
+    protectTitle: "Perché compare l'avviso di Play Protect?",
+    protectBody: "Google Play Protect mostra questo avviso per impostazione predefinita per ogni app che non proviene dal Play Store — non perché l'app sia pericolosa. La nostra app è firmata digitalmente e i suoi file sono pubblicati solo dai link noti della piattaforma e di GitHub. Finché scarichi il file da epdp.pages.dev o dal repository GitHub ufficiale, è sicura.",
+    protectStep1: "Nella schermata «App bloccata»: tocca «Più dettagli»",
+    protectStep2: "Poi tocca «Installa comunque» per continuare",
+    certTitle: "Certificato digitale di proprietà",
+    certBody: "L'app è firmata con un certificato digitale che ne attesta la proprietà e garantisce l'integrità degli aggiornamenti: le nuove versioni si installano sopra la precedente e ogni versione senza questa firma verrà rifiutata.",
+    certOwner: "Proprietario: CN=TARIK CHOUIKA",
+    certValidity: "Validità: 30 anni (fino a novembre 2056)",
+    qrTitle: "Scarica dal tuo telefono",
+    qrBody: "Inquadra questo codice con la fotocamera del telefono per aprire questa pagina sul tuo dispositivo.",
+    versionNote: "La versione si aggiorna automaticamente a ogni aggiornamento del repository.",
   },
 
   chat: {

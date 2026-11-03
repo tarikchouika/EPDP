@@ -17,6 +17,7 @@ export const es: Dict = {
     portals: "Portales oficiales",
     docsIndex: "Índice de documentos",
     categories: "Categorías",
+    androidApp: "App de Android",
   },
 
   hero: {
@@ -305,6 +306,44 @@ export const es: Dict = {
         ],
       },
     ],
+  },
+
+  app: {
+    subtitle: "Descarga la aplicación oficial de la plataforma EPDP en tu Android",
+    badge: "Aplicación oficial · totalmente gratis",
+    intro: "Toda la plataforma en una sola aplicación: más de 1180 formularios y documentos administrativos marroquíes, el asistente digital y el directorio de sitios oficiales — en una experiencia a pantalla completa.",
+    downloadTitle: "Descargar la aplicación",
+    downloadDesc: "Descarga el APK firmado oficialmente desde el enlace directo de la plataforma. Si la descarga falla, usa el enlace alternativo de GitHub.",
+    downloadPrimary: "Descargar desde la plataforma (enlace directo)",
+    downloadAlt: "Enlace alternativo — GitHub",
+    sizeNote: "Tamaño aproximado: 3 MB",
+    autoBuild: "La aplicación se reconstruye automáticamente con cada actualización de la plataforma; este enlace siempre ofrece la última versión.",
+    featuresTitle: "Características de la aplicación",
+    features: [
+      { t: "Pantalla completa inmersiva", d: "El modo inmersivo oculta las barras de estado y navegación; reaparecen brevemente al deslizar hacia arriba o hacia abajo." },
+      { t: "Siempre actualizada", d: "La aplicación muestra la versión en vivo de la plataforma: los documentos y formularios nuevos están disponibles de inmediato, sin actualizaciones manuales." },
+      { t: "La identidad de la plataforma", d: "El logotipo de la plataforma en el icono y la pantalla de inicio, los modos oscuro y claro, y siete idiomas." },
+    ],
+    stepsTitle: "Instalación paso a paso",
+    stepsIntro: "La aplicación no se distribuye en Google Play, por lo que se instala directamente desde el archivo APK oficial:",
+    steps: [
+      { t: "Descarga el archivo APK", d: "Pulsa el botón de descarga de arriba desde el navegador de tu teléfono y espera a que termine (unos 3 MB)." },
+      { t: "Permite la instalación", d: "Al abrir el archivo, Chrome puede pedir permiso: abre Ajustes, activa «Permitir desde esta fuente» para ese navegador y vuelve a abrir el archivo." },
+      { t: "Supera el aviso de Play Protect", d: "Puede aparecer «Aplicación bloqueada» de Play Protect porque la app no viene de la Play Store. Pulsa «Más detalles» y elige «Instalar de todos modos»." },
+      { t: "Pulsa Instalar", d: "Completa la instalación y espera unos segundos a que aparezca el icono de EPDP." },
+      { t: "Abre la aplicación", d: "Aparece la pantalla de inicio con el logotipo de la plataforma y luego la página principal — sin registro ni anuncios." },
+    ],
+    protectTitle: "¿Por qué aparece el aviso de Play Protect?",
+    protectBody: "Google Play Protect muestra este aviso por defecto para cualquier aplicación que no venga de la Play Store — no porque sea peligrosa. Nuestra aplicación está firmada digitalmente y sus archivos solo se publican desde los enlaces conocidos de la plataforma y de GitHub. Mientras descargues el archivo desde epdp.pages.dev o el repositorio oficial de GitHub, es seguro.",
+    protectStep1: "En la pantalla «Aplicación bloqueada»: pulsa «Más detalles»",
+    protectStep2: "Después pulsa «Instalar de todos modos» para continuar",
+    certTitle: "Certificado digital de propiedad",
+    certBody: "La aplicación está firmada con un certificado digital que acredita su propiedad y garantiza la integridad de las actualizaciones: las nuevas versiones se instalan directamente sobre la anterior y cualquier versión sin esta firma será rechazada.",
+    certOwner: "Propietario: CN=TARIK CHOUIKA",
+    certValidity: "Validez: 30 años (hasta noviembre de 2056)",
+    qrTitle: "Descarga desde tu teléfono",
+    qrBody: "Escanea este código con la cámara de tu teléfono para abrir esta página en tu dispositivo.",
+    versionNote: "La versión se actualiza automáticamente con cada actualización del repositorio.",
   },
 
   chat: {

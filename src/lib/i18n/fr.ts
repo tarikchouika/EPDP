@@ -17,6 +17,7 @@ export const fr: Dict = {
     portals: "Portails officiels",
     docsIndex: "Index des documents",
     categories: "Catégories",
+    androidApp: "Application Android",
   },
 
   hero: {
@@ -305,6 +306,44 @@ export const fr: Dict = {
         ],
       },
     ],
+  },
+
+  app: {
+    subtitle: "Téléchargez l'application officielle de la plateforme EPDP sur votre Android",
+    badge: "Application officielle · 100 % gratuite",
+    intro: "Toute la plateforme dans une seule application : plus de 1180 formulaires et documents administratifs marocains, l'assistant numérique et l'annuaire des sites officiels — dans une expérience plein écran.",
+    downloadTitle: "Télécharger l'application",
+    downloadDesc: "Téléchargez le fichier APK officiellement signé depuis le lien direct de la plateforme. Si le téléchargement échoue, utilisez le lien de secours GitHub.",
+    downloadPrimary: "Télécharger depuis la plateforme (lien direct)",
+    downloadAlt: "Lien de secours — GitHub",
+    sizeNote: "Taille approximative : 3 Mo",
+    autoBuild: "L'application est reconstruite automatiquement à chaque mise à jour de la plateforme ; ce lien fournit toujours la dernière version.",
+    featuresTitle: "Caractéristiques",
+    features: [
+      { t: "Plein écran immersif", d: "Le mode immersif masque les barres d'état et de navigation ; elles réapparaissent temporairement au balayage vers le haut ou le bas." },
+      { t: "Dernières mises à jour", d: "L'application diffuse la version en direct de la plateforme : nouveaux documents et formulaires dès leur publication, sans mise à jour manuelle." },
+      { t: "L'identité de la plateforme", d: "Le logo de la plateforme sur l'icône et l'écran de démarrage, les modes sombre et clair, et sept langues." },
+    ],
+    stepsTitle: "Installation étape par étape",
+    stepsIntro: "L'application n'étant pas distribuée sur Google Play, elle s'installe directement depuis le fichier APK officiel :",
+    steps: [
+      { t: "Téléchargez le fichier APK", d: "Appuyez sur le bouton de téléchargement ci-dessus depuis le navigateur de votre téléphone et attendez la fin du téléchargement (environ 3 Mo)." },
+      { t: "Autorisez l'installation", d: "À l'ouverture du fichier, Chrome peut demander l'autorisation : ouvrez les paramètres et activez « Autoriser depuis cette source » pour ce navigateur, puis rouvrez le fichier." },
+      { t: "Passez l'avertissement Play Protect", d: "Un écran « Application bloquée » de Play Protect peut apparaître, car l'application ne provient pas du Play Store. Appuyez sur « Plus de détails » puis choisissez « Installer quand même »." },
+      { t: "Appuyez sur Installer", d: "Terminez l'installation et patientez quelques secondes jusqu'à l'apparition de l'icône EPDP." },
+      { t: "Ouvrez l'application", d: "L'écran de démarrage s'affiche avec le logo de la plateforme, puis la page d'accueil — sans inscription ni publicité." },
+    ],
+    protectTitle: "Pourquoi cet avertissement Play Protect ?",
+    protectBody: "Google Play Protect affiche cet avertissement par défaut pour toute application ne provenant pas du Play Store — et non parce que l'application serait dangereuse. Notre application est signée numériquement et ses fichiers ne sont publiés que depuis les liens officiels de la plateforme et de GitHub. Tant que le fichier provient d'epdp.pages.dev ou du dépôt GitHub officiel, il est sûr.",
+    protectStep1: "Sur l'écran « Application bloquée » : appuyez sur « Plus de détails »",
+    protectStep2: "Puis appuyez sur « Installer quand même » pour continuer",
+    certTitle: "Certificat de propriété numérique",
+    certBody: "L'application est signée par un certificat numérique qui prouve sa propriété et garantit l'intégrité des mises à jour : les nouvelles versions s'installent directement par-dessus la précédente, et toute version non signée par ce certificat sera refusée.",
+    certOwner: "Propriétaire : CN=TARIK CHOUIKA",
+    certValidity: "Validité : 30 ans (jusqu'en novembre 2056)",
+    qrTitle: "Télécharger depuis votre téléphone",
+    qrBody: "Scannez ce code avec l'appareil photo de votre téléphone pour ouvrir cette page sur votre appareil.",
+    versionNote: "La version est mise à jour automatiquement à chaque mise à jour du dépôt.",
   },
 
   chat: {

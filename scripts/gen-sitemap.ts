@@ -31,6 +31,7 @@ const urls: string[] = [
   entry("/links", "0.8", "monthly"),
   entry("/faq", "0.6", "monthly"),
   entry("/about", "0.5", "monthly"),
+  entry("/app", "0.7", "weekly"),
   entry("/terms", "0.3", "yearly"),
   entry("/privacy", "0.3", "yearly"),
   entry("/cookies", "0.3", "yearly"),

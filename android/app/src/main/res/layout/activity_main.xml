@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/splash_bg">
+
+    <WebView
+        android:id="@+id/webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- Branded launch splash: petrol gradient + EPDP wordmark + gold divider.
+         Covers the WebView until the first page finishes painting. -->
+    <LinearLayout
+        android:id="@+id/splash"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/splash_bg"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:contentDescription="EPDP"
+            android:src="@drawable/splash_mark" />
+
+        <View
+            android:layout_width="96dp"
+            android:layout_height="3dp"
+            android:layout_marginTop="18dp"
+            android:background="@color/gold" />
+    </LinearLayout>
+</FrameLayout>

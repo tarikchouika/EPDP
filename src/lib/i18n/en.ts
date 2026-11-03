@@ -17,6 +17,7 @@ export const en: Dict = {
     portals: "Official portals",
     docsIndex: "Documents index",
     categories: "Categories",
+    androidApp: "Android app",
   },
 
   hero: {
@@ -305,6 +306,44 @@ export const en: Dict = {
         ],
       },
     ],
+  },
+
+  app: {
+    subtitle: "Download the official EPDP platform app on your Android phone",
+    badge: "Official app · completely free",
+    intro: "The whole platform in one app: over 1180 Moroccan administrative forms and documents, the digital assistant and the official-sites directory — in a full-screen experience.",
+    downloadTitle: "Download the app",
+    downloadDesc: "Get the officially signed APK from the platform's direct link. If the download fails, use the fallback GitHub link.",
+    downloadPrimary: "Download from the platform (direct link)",
+    downloadAlt: "Fallback link — GitHub",
+    sizeNote: "Approximate size: 3 MB",
+    autoBuild: "The app is rebuilt automatically on every platform update; this link always serves the latest version.",
+    featuresTitle: "App features",
+    features: [
+      { t: "Immersive full screen", d: "Immersive mode hides the status and navigation bars; they reappear briefly when you swipe up or down." },
+      { t: "Always up to date", d: "The app streams the live version of the platform, so new documents and forms are available immediately — no manual updates." },
+      { t: "The platform's identity", d: "The platform logo on the app icon and splash screen, dark and light modes, and seven languages." },
+    ],
+    stepsTitle: "Installation step by step",
+    stepsIntro: "The app is not distributed on Google Play, so it installs directly from the official APK file:",
+    steps: [
+      { t: "Download the APK file", d: "Tap the download button above from your phone's browser and wait for the download to finish (about 3 MB)." },
+      { t: "Allow installs from this source", d: "When opening the file, Chrome may ask for permission: open Settings, enable “Allow from this source” for that browser, then open the file again." },
+      { t: "Get past the Play Protect warning", d: "A “Blocked by Play Protect” screen may appear because the app is not from the Play Store. Tap “More details” and choose “Install anyway”." },
+      { t: "Tap Install", d: "Complete the installation and wait a few seconds for the EPDP icon to appear in your apps." },
+      { t: "Open the app", d: "The splash screen shows the platform logo, then the home page — no sign-up, no ads." },
+    ],
+    protectTitle: "Why does Play Protect show a warning?",
+    protectBody: "Google Play Protect shows this warning by default for any app that does not come from the Play Store — not because the app is dangerous. Our app is digitally signed and its files are published only from the platform's and GitHub's known links. As long as you downloaded the file from epdp.pages.dev or the official GitHub repository, it is safe.",
+    protectStep1: "On the “Blocked by Play Protect” screen: tap “More details”",
+    protectStep2: "Then tap “Install anyway” to continue",
+    certTitle: "Digital ownership certificate",
+    certBody: "The app is signed with a digital certificate that proves its ownership and guarantees update integrity: new versions install directly on top of the previous one, and any version not signed with this certificate will be rejected as an update.",
+    certOwner: "Owner: CN=TARIK CHOUIKA",
+    certValidity: "Validity: 30 years (until November 2056)",
+    qrTitle: "Download on your phone",
+    qrBody: "Scan this code with your phone's camera to open this download page on your device.",
+    versionNote: "The version updates automatically with every repository update.",
   },
 
   chat: {

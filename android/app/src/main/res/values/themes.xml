@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- No action bar, petrol window background so the launch is seamless
+         (theme bg == splash bg == WebView bg). Cutout mode is set in code (API 28+). -->
+    <style name="Theme.EPDP" parent="android:Theme.Material.NoActionBar">
+        <item name="android:windowBackground">@color/splash_bg</item>
+        <item name="android:statusBarColor">@color/splash_bg</item>
+        <item name="android:navigationBarColor">@color/splash_bg</item>
+    </style>
+</resources>

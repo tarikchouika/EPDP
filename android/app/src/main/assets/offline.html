@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>EPDP — لا يوجد اتصال</title>
+<style>
+  :root { --petrol:#122E3C; --mid:#1F4E6B; --cream:#F2F8F9; --gold:#A8821F; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html,body { height:100%; }
+  body {
+    font-family:"Cairo","Segoe UI",system-ui,sans-serif;
+    background:linear-gradient(180deg,var(--mid),var(--petrol));
+    color:var(--cream); display:flex; align-items:center; justify-content:center;
+    padding:32px; text-align:center;
+  }
+  .card { max-width:420px; width:100%; }
+  img { width:230px; max-width:70%; height:auto; display:block; margin:0 auto 6px; }
+  .divider { width:84px; height:3px; border-radius:2px; background:var(--gold); margin:14px auto 26px; }
+  h1 { font-size:21px; margin-bottom:10px; }
+  p  { font-size:13.5px; line-height:2; opacity:.85; margin-bottom:6px; }
+  .langs { font-size:12px; opacity:.65; margin-bottom:26px; line-height:1.9; }
+  a.retry {
+    display:inline-flex; align-items:center; gap:8px;
+    background:var(--gold); color:#fff; text-decoration:none; font-weight:700;
+    padding:13px 34px; border-radius:14px; font-size:15px;
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <svg width="230" height="95" viewBox="0 0 840 346" fill="none" aria-label="EPDP">
+      <text x="420" y="225" text-anchor="middle" font-family="Georgia,serif" font-size="150" font-weight="bold" fill="#F2F8F9" letter-spacing="8">EPDP</text>
+    </svg>
+    <div class="divider"></div>
+    <h1>لا يوجد اتصال بالإنترنت</h1>
+    <p>يحتاج التطبيق إلى اتصال بالإنترنت لعرض الوثائق والنماذج الإدارية. تحقّق من شبكتك ثم أعد المحاولة.</p>
+    <div class="langs">
+      Aucune connexion Internet — vérifiez votre réseau puis réessayez.<br>
+      No Internet connection — check your network and try again.
+    </div>
+    <a class="retry" href="epdp://retry">↻ إعادة المحاولة · Réessayer · Retry</a>
+  </div>
+</body>
+</html>

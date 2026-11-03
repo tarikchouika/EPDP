@@ -19,6 +19,7 @@ export function Footer() {
     { href: "/links", label: dict.nav.links },
     { href: "/faq", label: dict.nav.faq },
     { href: "/about", label: dict.nav.about },
+    { href: "/app", label: dict.nav.androidApp },
   ];
 
   const legalLinks = dict.legal.docs.map((d) => ({
@@ -108,7 +109,9 @@ export function Footer() {
           </nav>
         </div>
 
-        <div className="mt-10 border-t border-border/60 pt-6">
+        {/* Extra bottom clearance so the floating chatbot button (fixed, 68px
+            tall zone) never covers footer links on phones. */}
+        <div className="mt-10 border-t border-border/60 pt-6 pb-20 sm:pb-6">
           <p className="text-[11px] leading-6 text-muted-foreground/80">{dict.footer.disclaimer}</p>
           <div className="mt-4 flex flex-col items-center justify-between gap-3 sm:flex-row">
             <p className="text-xs font-semibold text-muted-foreground">

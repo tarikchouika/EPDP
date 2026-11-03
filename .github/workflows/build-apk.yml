@@ -1,0 +1,88 @@
+name: Build Android APK
+
+# Auto-builds the signed EPDP Android app on every update to main.
+#  • APK signed with the repository-owned release keystore
+#    (CN=TARIK CHOUIKA, RSA-4096, valid 30 years → 2056).
+#  • Permanent download link (always latest):
+#      https://github.com/tarikchouika/EPDP/releases/latest/download/EPDP.apk
+#  • Same APK is also published on the platform itself (fallback if GitHub is
+#    unreachable): https://epdp.pages.dev/EPDP.apk
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: apk-build
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  apk:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Java 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: "8.9"
+
+      - name: Build signed release APK
+        working-directory: android
+        run: |
+          gradle assembleRelease \
+            -PversionCode=${{ github.run_number }} \
+            -PversionName="1.0.${{ github.run_number }}" \
+            --no-daemon
+
+      - name: Collect APK + signature info
+        run: |
+          cp android/app/build/outputs/apk/release/app-release.apk EPDP.apk
+          sha256sum EPDP.apk | tee EPDP.apk.sha256
+          $JAVA_HOME_17_X64/bin/keytool -printcert -jarfile EPDP.apk | grep -E "Owner|Valid" || true
+
+      - name: Publish rolling GitHub release (permanent link)
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release delete apk-latest --yes --cleanup-tag || true
+          gh release create apk-latest EPDP.apk EPDP.apk.sha256 \
+            --title "EPDP — كاتبك الرقمي (Android)" \
+            --notes "تطبيق منصة EPDP — يُبنى تلقائياً عند كل تحديث. موقّع بشهادة CN=TARIK CHOUIKA صالحة 30 عاماً. الرابط الدائم: https://github.com/tarikchouika/EPDP/releases/latest/download/EPDP.apk" \
+            --latest
+
+      # ---- Publish the same APK on the platform (direct download fallback) ----
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
+
+      - name: Build static site
+        run: |
+          cp next.config.ts next.config.dev.bak.ts
+          cp scripts/export-next.config.ts next.config.ts
+          bunx next build
+          mv next.config.dev.bak.ts next.config.ts
+          cp -r .next-export out
+          cp EPDP.apk out/EPDP.apk
+
+      - name: Deploy site + APK to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy out --project-name=epdp --branch=main

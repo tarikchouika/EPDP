@@ -30,6 +30,7 @@ export interface Dict {
     portals: string;
     docsIndex: string;
     categories: string;
+    androidApp: string;
   };
 
   brand: {
@@ -169,6 +170,34 @@ export interface Dict {
     subtitle: string;
     updated: string;
     docs: LegalDoc[];
+  };
+
+  app: {
+    subtitle: string;
+    badge: string;
+    intro: string;
+    downloadTitle: string;
+    downloadDesc: string;
+    downloadPrimary: string;
+    downloadAlt: string;
+    sizeNote: string;
+    autoBuild: string;
+    featuresTitle: string;
+    features: { t: string; d: string }[];
+    stepsTitle: string;
+    stepsIntro: string;
+    steps: { t: string; d: string }[];
+    protectTitle: string;
+    protectBody: string;
+    protectStep1: string;
+    protectStep2: string;
+    certTitle: string;
+    certBody: string;
+    certOwner: string;
+    certValidity: string;
+    qrTitle: string;
+    qrBody: string;
+    versionNote: string;
   };
 
   chat: {

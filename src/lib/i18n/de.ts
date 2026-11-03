@@ -17,6 +17,7 @@ export const de: Dict = {
     portals: "Offizielle Portale",
     docsIndex: "Dokumentenindex",
     categories: "Kategorien",
+    androidApp: "Android-App",
   },
 
   hero: {
@@ -305,6 +306,44 @@ export const de: Dict = {
         ],
       },
     ],
+  },
+
+  app: {
+    subtitle: "Laden Sie die offizielle EPDP-App auf Ihr Android-Telefon herunter",
+    badge: "Offizielle App · völlig kostenlos",
+    intro: "Die ganze Plattform in einer App: über 1180 marokkanische Verwaltungsvordrucke und Dokumente, der digitale Assistent und das Verzeichnis offizieller Websites — im Vollbild-Erlebnis.",
+    downloadTitle: "App herunterladen",
+    downloadDesc: "Laden Sie das offiziell signierte APK über den direkten Link der Plattform herunter. Scheitert der Download, nutzen Sie den GitHub-Ersatzlink.",
+    downloadPrimary: "Von der Plattform laden (Direktlink)",
+    downloadAlt: "Ersatzlink — GitHub",
+    sizeNote: "Ungefähre Größe: 3 MB",
+    autoBuild: "Die App wird bei jeder Plattform-Aktualisierung automatisch neu gebaut; dieser Link liefert immer die neueste Version.",
+    featuresTitle: "App-Funktionen",
+    features: [
+      { t: "Immersives Vollbild", d: "Der immersive Modus blendet Status- und Navigationsleiste aus; sie erscheinen beim Wischen nach oben oder unten kurzzeitig wieder." },
+      { t: "Immer aktuell", d: "Die App zeigt die Live-Version der Plattform: neue Dokumente und Vordrucke stehen sofort bereit — ohne manuelle Updates." },
+      { t: "Die Identität der Plattform", d: "Das Plattform-Logo auf App-Symbol und Startbildschirm, Dunkel- und Hellmodus sowie sieben Sprachen." },
+    ],
+    stepsTitle: "Installation Schritt für Schritt",
+    stepsIntro: "Die App wird nicht über Google Play vertrieben und wird daher direkt aus der offiziellen APK-Datei installiert:",
+    steps: [
+      { t: "APK-Datei herunterladen", d: "Tippen Sie oben im Browser Ihres Telefons auf die Download-Schaltfläche und warten Sie, bis der Download abgeschlossen ist (ca. 3 MB)." },
+      { t: "Installation erlauben", d: "Beim Öffnen der Datei fragt Chrome eventuell um Erlaubnis: Öffnen Sie die Einstellungen, aktivieren Sie „Von dieser Quelle zulassen“ für den Browser und öffnen Sie die Datei erneut." },
+      { t: "Play-Protect-Warnung umgehen", d: "Der Hinweis „App wurde blockiert“ von Play Protect kann erscheinen, weil die App nicht aus dem Play Store stammt. Tippen Sie auf „Weitere Details“ und wählen Sie „Trotzdem installieren“." },
+      { t: "Auf Installieren tippen", d: "Schließen Sie die Installation ab und warten Sie einige Sekunden, bis das EPDP-Symbol erscheint." },
+      { t: "App öffnen", d: "Der Startbildschirm mit dem Plattform-Logo erscheint, dann die Startseite — ohne Registrierung und ohne Werbung." },
+    ],
+    protectTitle: "Warum erscheint die Play-Protect-Warnung?",
+    protectBody: "Google Play Protect zeigt diese Warnung standardmäßig für jede App an, die nicht aus dem Play Store stammt — nicht, weil die App gefährlich wäre. Unsere App ist digital signiert, und ihre Dateien werden ausschließlich über die bekannten Links der Plattform und von GitHub veröffentlicht. Solange Sie die Datei von epdp.pages.dev oder dem offiziellen GitHub-Repository laden, ist sie sicher.",
+    protectStep1: "Auf dem Bildschirm „App wurde blockiert“: tippen Sie auf „Weitere Details“",
+    protectStep2: "Dann tippen Sie auf „Trotzdem installieren“, um fortzufahren",
+    certTitle: "Digitales Eigentumszertifikat",
+    certBody: "Die App ist mit einem digitalen Zertifikat signiert, das ihr Eigentum belegt und die Integrität der Updates gewährleistet: Neue Versionen installieren sich direkt über die vorherige, und jede Version ohne diese Signatur wird als Update abgelehnt.",
+    certOwner: "Eigentümer: CN=TARIK CHOUIKA",
+    certValidity: "Gültigkeit: 30 Jahre (bis November 2056)",
+    qrTitle: "Direkt auf dem Telefon herunterladen",
+    qrBody: "Scannen Sie diesen Code mit der Kamera Ihres Telefons, um diese Seite auf Ihrem Gerät zu öffnen.",
+    versionNote: "Die Version wird bei jeder Repository-Aktualisierung automatisch erneuert.",
   },
 
   chat: {

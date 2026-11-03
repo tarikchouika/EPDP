@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- EPDP brand petrol + gold (see src/app/globals.css identity). -->
+    <color name="splash_bg">#122E3C</color>
+    <color name="petrol_mid">#1F4E6B</color>
+    <color name="gold">#A8821F</color>
+    <color name="cream">#F2F8F9</color>
+</resources>
