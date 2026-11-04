@@ -87,4 +87,60 @@ if os.path.exists(cv):
     os.rename(cv, cv + ".excluded")
     print("  quarantined cv.json → cv.json.excluded (text-box layout; keep base template)")
 
+# ────────────────────────────────────────────────────────────────────
+# 6. attestation-celibat — namodaj.ma filled example (declarant + witness 1)
+#    (witness 2 fields are already blank labels on the source page)
+# ────────────────────────────────────────────────────────────────────
+patch("attestation-celibat", [
+    ("الفقيه بن صالح في: 03/12/2009",
+     "………… في: ……………"),
+    ("السيد: خاليد الحرشي الحامل لبطاقة التعريف الوطنية رقم: I 459802 الساكن بـ: حي المصلى زنقة 90 رقم 115 الفقيه بن صالح",
+     "السيد: …………… الحامل لبطاقة التعريف الوطنية رقم: …………… الساكن بـ: ……………"),
+    ("بالتاريخ 06-05-2005 إلى تاريخ طلاقي 04-12-2007",
+     "بالتاريخ …………… إلى تاريخ طلاقي ……………"),
+    ("الاسم: الحسين العنبري رقم البطاقة الوطنية: IB 126149",
+     "الاسم: …………… رقم البطاقة الوطنية: ……………"),
+])
+
+# ────────────────────────────────────────────────────────────────────
+# 7. tanazol-vehicule — namodaj.ma CDN .doc filled example
+#    (antiword extraction; both parties + vehicle data → blanks)
+# ────────────────────────────────────────────────────────────────────
+patch("tanazol-vehicule", [
+    ("السيد : محمد حنيوي", "السيد : ……………"),
+    ("رقم : IW801268", "رقم : ……………"),
+    ("الساكن ب: دوار الخلط بني شكدال الفقيه بن صالح", "الساكن ب: ……………"),
+    ("للسيد : صالح حنيوي", "للسيد : ……………"),
+    ("رقم : IB175105", "رقم : ……………"),
+    ("نوع : FIAT PONTO", "نوع : ……………"),
+    ("رقم التسجيل :PDB72991", "رقم التسجيل :……………"),
+    ("رقم الإطار الحديدي: ZFA17600000079152", "رقم الإطار الحديدي: ……………"),
+])
+
+# ────────────────────────────────────────────────────────────────────
+# 8. demande-prestations-familiales — official CNSS form 311-1-14 (PDF
+#    hosted on namodaj CDN). Mechanical fetch-artifact repairs only:
+#    drop the site banner/footer, fix bidi-mirrored parentheses from
+#    pdftotext. No wording changes.
+# ────────────────────────────────────────────────────────────────────
+patch("demande-prestations-familiales", [
+    ("المملكة المغربية\nوثيقة ومطبوع إداري رسمي معتمد\nطلب الحصول على التعويضات العائلية - استمارة CNSS رقم CNSS - 14-1-311\nالمملكة المغربية — الصندوق الوطني للضمان الاجتماعي",
+     "المملكة المغربية — الصندوق الوطني للضمان الاجتماعي"),
+    ("\nwatika.ma — Page 1 / 1", ""),
+    (") — (CNSS", "(CNSS) —"),
+    ("المؤمن له)ها(", "المؤمن له(ها)"),
+    (") (N° Immatriculation", "(N° Immatriculation)"),
+    (") (CIN", "(CIN)"),
+    ("الموقع)ة(", "الموقع(ة)"),
+    ("المعني)ة(", "المعني(ة)"),
+    (") (CADRE RÉSERVÉ À LA CNSS", "(CADRE RÉSERVÉ À LA CNSS)"),
+    # language-purity: drop the French mirror-labels from the Arabic form —
+    # every removed line duplicates an Arabic field already present
+    ("\nRéf: 311-1-14", ""),
+    (" (N° Immatriculation)", ""),
+    (" (CIN)", ""),
+    ("Nom et Prénom en Français ....................................................\n", ""),
+    (" (CADRE RÉSERVÉ À LA CNSS)", ""),
+])
+
 print("done.")
