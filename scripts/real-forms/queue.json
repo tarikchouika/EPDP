@@ -1,219 +1,249 @@
 {
-  "demande-generale": {
-    "id": "demande-generale",
-    "ar": "طلب إداري عام",
-    "fr": "Demande administrative générale",
-    "url": "https://katib.ma/modeles/%D9%86%D9%85%D9%88%D8%B0%D8%AC-%D8%B7%D9%84%D8%A8/",
-    "status": "notfound"
-  },
-  "demande-acte-naissance": {
-    "id": "demande-acte-naissance",
-    "ar": "طلب نسخة من رسم الولادة",
-    "fr": "Demande de copie d'acte de naissance",
-    "url": "https://katib.ma/modeles/%D9%86%D8%B3%D8%AE%D8%A9-%D9%83%D8%A7%D9%85%D9%84%D8%A9-%D9%85%D9%86-%D8%B1%D8%B3%D9%85-%D8%A7%D9%84%D9%88%D9%84%D8%A7%D8%AF%D8%A9/",
-    "status": "notfound"
-  },
-  "chikaya-amma": {
-    "id": "chikaya-amma",
-    "ar": "شكاية عامة",
-    "fr": "Plainte générale",
-    "url": "https://namodaj.ma/%D8%B4%D9%83%D8%A7%D9%8A%D8%A7%D8%AA/%D8%B4%D9%83%D8%A7%D9%8A%D8%A9-%D8%B3%D9%84%D8%A7%D9%85-%D8%AA%D8%A7%D9%85-%D8%A8%D9%88%D8%AC%D9%88%D8%AF-%D9%85%D9%88%D9%84%D8%A7%D9%86%D8%A7-%D8%A7%D9%84%D8%A5%D9%85%D8%A7%D9%85-%D9%88-%D8%A8%D8%B9%D8%AF",
-    "status": "found"
-  },
-  "attestation-travail": {
-    "id": "attestation-travail",
-    "ar": "شهادة العمل",
-    "fr": "Attestation de travail",
-    "url": null,
-    "status": "notfound"
-  },
-  "attestation-residence": {
-    "id": "attestation-residence",
-    "ar": "شهادة السكنى",
-    "fr": "Attestation de résidence",
-    "url": "https://namodaj.ma/%D8%AA%D8%B5%D8%A7%D8%B1%D9%8A%D8%AD/%D8%AA%D8%B5%D8%B1%D9%8A%D8%AD-%D8%A8%D8%A7%D9%84%D8%B3%D9%83%D9%86-2",
-    "status": "found"
-  },
-  "attestation-non-travail": {
-    "id": "attestation-non-travail",
-    "ar": "شهادة عدم العمل",
-    "fr": "Attestation de non-emploi",
-    "url": "https://namodaj.ma/%D8%AA%D8%B5%D8%A7%D8%B1%D9%8A%D8%AD/%D8%AA%D8%B5%D8%B1%D9%8A%D8%AD-%D8%B9%D8%AF%D9%85-%D8%A7%D9%84%D8%B9%D9%85%D9%84",
-    "status": "found"
-  },
-  "declaration-honneur": {
-    "id": "declaration-honneur",
-    "ar": "تصريح بالشرف",
-    "fr": "Déclaration sur l'honneur",
-    "url": "https://namodaj.ma/%D8%A7%D9%84%D8%AA%D8%B2%D8%A7%D9%85%D8%A7%D8%AA/%D8%AA%D8%B5%D8%B1%D9%8A%D8%AD-%D8%A8%D8%A7%D9%84%D8%B4%D8%B1%D9%81-%D8%B5%D9%8A%D8%BA%D8%A9-%D9%82%D8%A7%D9%86%D9%88%D9%86%D9%8A%D8%A9-%D8%B4%D8%A7%D9%85%D9%84%D8%A9",
-    "status": "found"
-  },
-  "iltizam-sakan": {
-    "id": "iltizam-sakan",
-    "ar": "التزام بالسكن",
-    "fr": "Engagement de logement",
-    "url": "https://namodaj.ma/%D8%A7%D9%84%D8%AA%D8%B2%D8%A7%D9%85%D8%A7%D8%AA/%D8%A7%D9%84%D8%AA%D8%B2%D8%A7%D9%85-%D8%A8%D8%A7%D9%84%D8%B3%D9%83%D9%86",
-    "status": "found"
-  },
-  "wakala-amma": {
-    "id": "wakala-amma",
-    "ar": "وكالة (نموذج مبسط)",
-    "fr": "Procuration (modèle simplifié)",
-    "url": "https://namodaj.ma/%D9%88%D9%83%D8%A7%D9%84%D8%A7%D8%AA/%D9%88%D9%83%D8%A7%D9%84%D8%A9-%D8%B9%D8%A7%D9%85%D8%A9-%D8%B5%D9%8A%D8%BA%D8%A9-6",
-    "status": "found"
-  },
-  "wakala-istilam": {
-    "id": "wakala-istilam",
-    "ar": "تفويض لاستلام وثيقة أو مستحقات",
-    "fr": "Autorisation de retrait",
-    "url": "https://namodaj.ma/%D9%88%D9%83%D8%A7%D9%84%D8%A7%D8%AA/%D9%88%D9%83%D8%A7%D9%84%D8%A9-%D8%A8%D8%B3%D8%AD%D8%A8-%D8%A3%D9%88-%D8%A7%D8%B3%D8%AA%D9%84%D8%A7%D9%85-%D8%A3%D9%88-%D8%A7%D8%B3%D8%AA%D8%AE%D8%B1%D8%A7%D8%AC-%D9%88%D8%AB%D8%A7%D8%A6%D9%82",
-    "status": "found"
-  },
-  "contrat-bail": {
-    "id": "contrat-bail",
-    "ar": "عقد كراء سكني",
-    "fr": "Contrat de bail d'habitation",
-    "url": null,
-    "status": "notfound"
-  },
-  "quittance-loyer": {
-    "id": "quittance-loyer",
-    "ar": "وصل أداء الكراء",
-    "fr": "Quittance de loyer",
-    "url": null,
-    "status": "notfound"
-  },
-  "lettre-motivation": {
-    "id": "lettre-motivation",
-    "ar": "رسالة تحفيزية",
-    "fr": "Lettre de motivation",
-    "url": "https://namodaj.ma/%D9%86%D9%85%D8%A7%D8%B0%D8%AC-%D8%A8%D8%A7%D9%84%D9%81%D8%B1%D9%86%D8%B3%D9%8A%D8%A9/lettre-de-motivation",
-    "status": "found"
-  },
-  "attestation-hebergement": {
-    "id": "attestation-hebergement",
-    "ar": "شهادة استضافة",
-    "fr": "Attestation d'hébergement",
-    "url": "https://namodaj.ma/%D9%86%D9%85%D8%A7%D8%B0%D8%AC-%D8%A8%D8%A7%D9%84%D9%81%D8%B1%D9%86%D8%B3%D9%8A%D8%A9/attestation-d-h%C3%A9bergement",
-    "status": "found"
-  },
-  "declaration-perte-cin": {
-    "id": "declaration-perte-cin",
-    "ar": "تصريح بالشرف بضياع البطاقة الوطنية",
-    "fr": "Déclaration de perte de la CIN",
-    "url": "https://namodaj.ma/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA-%D8%A3%D8%AE%D8%B1%D9%89/%D8%AA%D8%B5%D8%B1%D9%8A%D8%AD-%D8%A8%D8%B6%D9%8A%D8%A7%D8%B9-%D8%A8%D8%B7%D8%A7%D9%82%D8%A9-%D8%A7%D9%84%D8%AA%D8%B9%D8%B1%D9%8A%D9%81",
-    "status": "found"
-  },
-  "declaration-charge-famille": {
-    "id": "declaration-charge-famille",
-    "ar": "تصريح بالشرف بالإعالة",
-    "fr": "Déclaration de prise en charge familiale",
-    "url": "https://namodaj.ma/%D8%AA%D8%B5%D8%A7%D8%B1%D9%8A%D8%AD/%D8%AA%D8%B5%D8%B1%D9%8A%D8%AD-%D8%A8%D8%A7%D9%84%D8%AA%D8%AD%D9%85%D9%84-%D8%A7%D9%84%D8%B9%D8%A7%D8%A6%D9%84%D9%8A-%D9%86%D9%85%D9%88%D8%B0%D8%AC-%D8%B1%D8%B3%D9%85%D9%8A-%D9%85%D8%B9%D8%AA%D9%85%D8%AF",
-    "status": "found"
-  },
-  "cv": {
-    "id": "cv",
-    "ar": "نموذج سيرة ذاتية",
-    "fr": "Modèle de CV",
-    "url": "https://namodaj.ma/%D8%B3%D9%8A%D8%B1%D8%A9-%D8%B0%D8%A7%D8%AA%D9%8A%D8%A9-%D8%A8%D8%A7%D9%84%D8%B9%D8%B1%D8%A8%D9%8A%D8%A9/04-cv-arabic",
-    "status": "found"
-  },
-  "demande-passeport": {
-    "id": "demande-passeport",
-    "ar": "طلب الحصول على جواز السفر",
-    "fr": "Demande de passeport",
-    "url": "https://namodaj.ma/%D8%B7%D9%84%D8%A8%D8%A7%D8%AA-%D9%88%D9%85%D8%B1%D8%A7%D8%B3%D9%84%D8%A7%D8%AA/%D8%B7%D9%84%D8%A8-%D9%82%D8%B5%D8%AF-%D8%AA%D8%AC%D8%AF%D9%8A%D8%AF-%D8%AC%D9%88%D8%A7%D8%B2-%D8%A7%D9%84%D8%B3%D9%81%D8%B1-%D9%84%D9%84%D8%AD%D8%B5%D9%88%D9%84-%D8%B9%D9%84%D9%89-%D8%A7%D9%84%D8%AA%D8%A3%D8%B4%D9%8A%D8%B1%D8%A9",
-    "status": "found"
-  },
-  "contrat-cdi": {
-    "id": "contrat-cdi",
-    "status": "fetched",
-    "checkedAt": "2026-11-04",
-    "url": "https://www.namodaj.ma/%D8%B9%D9%82%D9%88%D8%AF/%D8%B9%D9%82%D8%AF-%D8%B9%D9%85%D9%84-%D8%BA%D9%8A%D8%B1-%D9%85%D8%AD%D8%AF%D8%AF-%D8%A7%D9%84%D9%85%D8%AF%D8%A9-cdi"
-  },
-  "cdd": {
-    "id": "cdd",
-    "status": "fetched",
-    "checkedAt": "2026-11-04",
-    "url": "https://namodaj.ma/%D8%B9%D9%82%D9%88%D8%AF/%D8%B9%D9%82%D8%AF-%D8%B9%D9%85%D9%84-%D9%85%D8%AD%D8%AF%D8%AF-%D8%A7%D9%84%D9%85%D8%AF%D8%A9-%D9%86%D9%85%D9%88%D8%B0%D8%AC-%D8%B1%D8%B3%D9%85%D9%8A-%D9%85%D8%B9%D8%AA%D9%85%D8%AF"
-  },
-  "reconnaissance-dette": {
-    "id": "reconnaissance-dette",
-    "status": "fetched",
-    "checkedAt": "2026-11-04",
-    "url": "https://namodaj.ma/%D9%86%D9%85%D8%A7%D8%B0%D8%AC-%D9%85%D8%AE%D8%AA%D9%84%D9%81%D8%A9/%D8%A7%D8%B9%D8%AA%D8%B1%D8%A7%D9%81-%D8%A8%D8%AF%D9%8A%D9%86-%D9%88%D9%82%D8%B1%D8%B6-%D9%85%D8%A7%D9%84%D9%8A-%D9%85%D8%B9-%D8%AA%D8%AD%D8%AF%D9%8A%D8%AF-%D8%AC%D8%AF%D9%88%D9%84-%D8%A7%D9%84%D8%B3%D8%AF%D8%A7%D8%AF"
-  },
-  "facture": {
-    "id": "facture",
-    "status": "fetched",
-    "checkedAt": "2026-11-04",
-    "url": "https://www.namodaj.ma/%D8%A7%D9%84%D8%B4%D8%B1%D9%83%D8%A7%D8%AA-%D9%88%D8%A7%D9%84%D9%85%D9%82%D8%A7%D9%88%D9%84-%D8%A7%D9%84%D8%B0%D8%A7%D8%AA%D9%8A/%D9%86%D9%85%D9%88%D8%B0%D8%AC-%D9%81%D8%A7%D8%AA%D9%88%D8%B1%D8%A9-%D8%A7%D9%84%D9%85%D9%82%D8%A7%D9%88%D9%84-%D8%A7%D9%84%D8%B0%D8%A7%D8%AA%D9%8A-%D9%86%D9%85%D9%88%D8%B0%D8%AC-%D8%B1%D8%B3%D9%85%D9%8A-%D9%85%D8%B9%D8%AA%D9%85%D8%AF"
-  },
-  "attestation-celibat": {
-    "id": "attestation-celibat",
-    "status": "fetched",
-    "checkedAt": "2026-11-04",
-    "url": "https://namodaj.ma/%D9%88%D8%AB%D8%A7%D8%A6%D9%82/%D8%AA%D8%B5%D8%B1%D9%8A%D8%AD-%D8%A7%D9%84%D8%B9%D8%B2%D9%88%D8%A8%D8%A9"
-  },
-  "tanazol-vehicule": {
-    "id": "tanazol-vehicule",
-    "status": "fetched",
-    "checkedAt": "2026-11-04",
-    "url": "https://cdn.namodaj.ma/documents/%D8%AA%D9%86%D8%A7%D8%B2%D9%84%D8%A7%D8%AA/%D8%A8%D9%86%D8%AE%D9%84%D9%88%D9%82.doc"
-  },
-  "demande-prestations-familiales": {
-    "id": "demande-prestations-familiales",
-    "status": "fetched",
-    "checkedAt": "2026-11-04",
-    "url": "https://namodaj.ma/%D8%A7%D9%84%D8%B5%D9%86%D8%AF%D9%88%D9%82-%D8%A7%D9%84%D9%88%D8%B7%D9%86%D9%8A-%D9%84%D9%84%D8%B6%D9%85%D8%A7%D9%86-%D8%A7%D9%84%D8%A7%D8%AC%D8%AA%D9%85%D8%A7%D8%B9%D9%8A-cnss/%D8%B7%D9%84%D8%A8-%D8%A7%D9%84%D8%AD%D8%B5%D9%88%D9%84-%D8%B9%D9%84%D9%89-%D8%A7%D9%84%D8%AA%D8%B9%D9%88%D9%8A%D8%B6%D8%A7%D8%AA-%D8%A7%D9%84%D8%B9%D8%A7%D8%A6%D9%84%D9%8A%D8%A9-1"
-  },
-  "demande-bourse": {
-    "id": "demande-bourse",
-    "status": "notfound",
-    "checkedAt": "2026-11-04",
-    "note": "no matching template on namodaj/katib/onebox in batch-3 round; retry next rounds"
-  },
-  "etat-lieux": {
-    "id": "etat-lieux",
-    "status": "notfound",
-    "checkedAt": "2026-11-04",
-    "note": "no matching template on namodaj/katib/onebox in batch-3 round; retry next rounds"
-  },
-  "demande-stage": {
-    "id": "demande-stage",
-    "status": "notfound",
-    "checkedAt": "2026-11-04",
-    "note": "no matching template on namodaj/katib/onebox in batch-3 round; retry next rounds"
-  },
-  "demande-permis-conduire": {
-    "id": "demande-permis-conduire",
-    "status": "notfound",
-    "checkedAt": "2026-11-04",
-    "note": "no matching template on namodaj/katib/onebox in batch-3 round; retry next rounds"
-  },
-  "demande-carte-grise": {
-    "id": "demande-carte-grise",
-    "status": "notfound",
-    "checkedAt": "2026-11-04",
-    "note": "no matching template on namodaj/katib/onebox in batch-3 round; retry next rounds"
-  },
-  "procedure-vignette": {
-    "id": "procedure-vignette",
-    "status": "notfound",
-    "checkedAt": "2026-11-04",
-    "note": "no matching template on namodaj/katib/onebox in batch-3 round; retry next rounds"
-  },
-  "procedure-mre": {
-    "id": "procedure-mre",
-    "status": "notfound",
-    "checkedAt": "2026-11-04",
-    "note": "no matching template on namodaj/katib/onebox in batch-3 round; retry next rounds"
-  },
-  "attestation-salaire": {
-    "id": "attestation-salaire",
-    "status": "blocked",
-    "checkedAt": "2026-11-04",
-    "url": "https://onebox.ma/documents/modele-de-attestation-de-salaire-maroc",
-    "note": "onebox.ma Cloudflare-blocked (WebFetch + curl); wayback timeout — retry next round"
-  }
+ "demande-generale": {
+  "id": "demande-generale",
+  "ar": "طلب إداري عام",
+  "fr": "Demande administrative générale",
+  "url": "https://katib.ma/modeles/%D9%86%D9%85%D9%88%D8%B0%D8%AC-%D8%B7%D9%84%D8%A8/",
+  "status": "notfound"
+ },
+ "demande-acte-naissance": {
+  "id": "demande-acte-naissance",
+  "ar": "طلب نسخة من رسم الولادة",
+  "fr": "Demande de copie d'acte de naissance",
+  "url": "https://katib.ma/modeles/%D9%86%D8%B3%D8%AE%D8%A9-%D9%83%D8%A7%D9%85%D9%84%D8%A9-%D9%85%D9%86-%D8%B1%D8%B3%D9%85-%D8%A7%D9%84%D9%88%D9%84%D8%A7%D8%AF%D8%A9/",
+  "status": "notfound"
+ },
+ "chikaya-amma": {
+  "id": "chikaya-amma",
+  "ar": "شكاية عامة",
+  "fr": "Plainte générale",
+  "url": "https://namodaj.ma/%D8%B4%D9%83%D8%A7%D9%8A%D8%A7%D8%AA/%D8%B4%D9%83%D8%A7%D9%8A%D8%A9-%D8%B3%D9%84%D8%A7%D9%85-%D8%AA%D8%A7%D9%85-%D8%A8%D9%88%D8%AC%D9%88%D8%AF-%D9%85%D9%88%D9%84%D8%A7%D9%86%D8%A7-%D8%A7%D9%84%D8%A5%D9%85%D8%A7%D9%85-%D9%88-%D8%A8%D8%B9%D8%AF",
+  "status": "found"
+ },
+ "attestation-travail": {
+  "id": "attestation-travail",
+  "ar": "شهادة العمل",
+  "fr": "Attestation de travail",
+  "url": null,
+  "status": "notfound"
+ },
+ "attestation-residence": {
+  "id": "attestation-residence",
+  "ar": "شهادة السكنى",
+  "fr": "Attestation de résidence",
+  "url": "https://namodaj.ma/%D8%AA%D8%B5%D8%A7%D8%B1%D9%8A%D8%AD/%D8%AA%D8%B5%D8%B1%D9%8A%D8%AD-%D8%A8%D8%A7%D9%84%D8%B3%D9%83%D9%86-2",
+  "status": "found"
+ },
+ "attestation-non-travail": {
+  "id": "attestation-non-travail",
+  "ar": "شهادة عدم العمل",
+  "fr": "Attestation de non-emploi",
+  "url": "https://namodaj.ma/%D8%AA%D8%B5%D8%A7%D8%B1%D9%8A%D8%AD/%D8%AA%D8%B5%D8%B1%D9%8A%D8%AD-%D8%B9%D8%AF%D9%85-%D8%A7%D9%84%D8%B9%D9%85%D9%84",
+  "status": "found"
+ },
+ "declaration-honneur": {
+  "id": "declaration-honneur",
+  "ar": "تصريح بالشرف",
+  "fr": "Déclaration sur l'honneur",
+  "url": "https://namodaj.ma/%D8%A7%D9%84%D8%AA%D8%B2%D8%A7%D9%85%D8%A7%D8%AA/%D8%AA%D8%B5%D8%B1%D9%8A%D8%AD-%D8%A8%D8%A7%D9%84%D8%B4%D8%B1%D9%81-%D8%B5%D9%8A%D8%BA%D8%A9-%D9%82%D8%A7%D9%86%D9%88%D9%86%D9%8A%D8%A9-%D8%B4%D8%A7%D9%85%D9%84%D8%A9",
+  "status": "found"
+ },
+ "iltizam-sakan": {
+  "id": "iltizam-sakan",
+  "ar": "التزام بالسكن",
+  "fr": "Engagement de logement",
+  "url": "https://namodaj.ma/%D8%A7%D9%84%D8%AA%D8%B2%D8%A7%D9%85%D8%A7%D8%AA/%D8%A7%D9%84%D8%AA%D8%B2%D8%A7%D9%85-%D8%A8%D8%A7%D9%84%D8%B3%D9%83%D9%86",
+  "status": "found"
+ },
+ "wakala-amma": {
+  "id": "wakala-amma",
+  "ar": "وكالة (نموذج مبسط)",
+  "fr": "Procuration (modèle simplifié)",
+  "url": "https://namodaj.ma/%D9%88%D9%83%D8%A7%D9%84%D8%A7%D8%AA/%D9%88%D9%83%D8%A7%D9%84%D8%A9-%D8%B9%D8%A7%D9%85%D8%A9-%D8%B5%D9%8A%D8%BA%D8%A9-6",
+  "status": "found"
+ },
+ "wakala-istilam": {
+  "id": "wakala-istilam",
+  "ar": "تفويض لاستلام وثيقة أو مستحقات",
+  "fr": "Autorisation de retrait",
+  "url": "https://namodaj.ma/%D9%88%D9%83%D8%A7%D9%84%D8%A7%D8%AA/%D9%88%D9%83%D8%A7%D9%84%D8%A9-%D8%A8%D8%B3%D8%AD%D8%A8-%D8%A3%D9%88-%D8%A7%D8%B3%D8%AA%D9%84%D8%A7%D9%85-%D8%A3%D9%88-%D8%A7%D8%B3%D8%AA%D8%AE%D8%B1%D8%A7%D8%AC-%D9%88%D8%AB%D8%A7%D8%A6%D9%82",
+  "status": "found"
+ },
+ "contrat-bail": {
+  "id": "contrat-bail",
+  "ar": "عقد كراء سكني",
+  "fr": "Contrat de bail d'habitation",
+  "url": null,
+  "status": "notfound"
+ },
+ "quittance-loyer": {
+  "id": "quittance-loyer",
+  "ar": "وصل أداء الكراء",
+  "fr": "Quittance de loyer",
+  "url": null,
+  "status": "notfound"
+ },
+ "lettre-motivation": {
+  "id": "lettre-motivation",
+  "ar": "رسالة تحفيزية",
+  "fr": "Lettre de motivation",
+  "url": "https://namodaj.ma/%D9%86%D9%85%D8%A7%D8%B0%D8%AC-%D8%A8%D8%A7%D9%84%D9%81%D8%B1%D9%86%D8%B3%D9%8A%D8%A9/lettre-de-motivation",
+  "status": "found"
+ },
+ "attestation-hebergement": {
+  "id": "attestation-hebergement",
+  "ar": "شهادة استضافة",
+  "fr": "Attestation d'hébergement",
+  "url": "https://namodaj.ma/%D9%86%D9%85%D8%A7%D8%B0%D8%AC-%D8%A8%D8%A7%D9%84%D9%81%D8%B1%D9%86%D8%B3%D9%8A%D8%A9/attestation-d-h%C3%A9bergement",
+  "status": "found"
+ },
+ "declaration-perte-cin": {
+  "id": "declaration-perte-cin",
+  "ar": "تصريح بالشرف بضياع البطاقة الوطنية",
+  "fr": "Déclaration de perte de la CIN",
+  "url": "https://namodaj.ma/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA-%D8%A3%D8%AE%D8%B1%D9%89/%D8%AA%D8%B5%D8%B1%D9%8A%D8%AD-%D8%A8%D8%B6%D9%8A%D8%A7%D8%B9-%D8%A8%D8%B7%D8%A7%D9%82%D8%A9-%D8%A7%D9%84%D8%AA%D8%B9%D8%B1%D9%8A%D9%81",
+  "status": "found"
+ },
+ "declaration-charge-famille": {
+  "id": "declaration-charge-famille",
+  "ar": "تصريح بالشرف بالإعالة",
+  "fr": "Déclaration de prise en charge familiale",
+  "url": "https://namodaj.ma/%D8%AA%D8%B5%D8%A7%D8%B1%D9%8A%D8%AD/%D8%AA%D8%B5%D8%B1%D9%8A%D8%AD-%D8%A8%D8%A7%D9%84%D8%AA%D8%AD%D9%85%D9%84-%D8%A7%D9%84%D8%B9%D8%A7%D8%A6%D9%84%D9%8A-%D9%86%D9%85%D9%88%D8%B0%D8%AC-%D8%B1%D8%B3%D9%85%D9%8A-%D9%85%D8%B9%D8%AA%D9%85%D8%AF",
+  "status": "found"
+ },
+ "cv": {
+  "id": "cv",
+  "ar": "نموذج سيرة ذاتية",
+  "fr": "Modèle de CV",
+  "url": "https://namodaj.ma/%D8%B3%D9%8A%D8%B1%D8%A9-%D8%B0%D8%A7%D8%AA%D9%8A%D8%A9-%D8%A8%D8%A7%D9%84%D8%B9%D8%B1%D8%A8%D9%8A%D8%A9/04-cv-arabic",
+  "status": "excluded-visual-layout"
+ },
+ "demande-passeport": {
+  "id": "demande-passeport",
+  "ar": "طلب الحصول على جواز السفر",
+  "fr": "Demande de passeport",
+  "url": "https://namodaj.ma/%D8%B7%D9%84%D8%A8%D8%A7%D8%AA-%D9%88%D9%85%D8%B1%D8%A7%D8%B3%D9%84%D8%A7%D8%AA/%D8%B7%D9%84%D8%A8-%D9%82%D8%B5%D8%AF-%D8%AA%D8%AC%D8%AF%D9%8A%D8%AF-%D8%AC%D9%88%D8%A7%D8%B2-%D8%A7%D9%84%D8%B3%D9%81%D8%B1-%D9%84%D9%84%D8%AD%D8%B5%D9%88%D9%84-%D8%B9%D9%84%D9%89-%D8%A7%D9%84%D8%AA%D8%A3%D8%B4%D9%8A%D8%B1%D8%A9",
+  "status": "found"
+ },
+ "contrat-cdi": {
+  "id": "contrat-cdi",
+  "status": "fetched",
+  "checkedAt": "2026-11-04",
+  "url": "https://www.namodaj.ma/%D8%B9%D9%82%D9%88%D8%AF/%D8%B9%D9%82%D8%AF-%D8%B9%D9%85%D9%84-%D8%BA%D9%8A%D8%B1-%D9%85%D8%AD%D8%AF%D8%AF-%D8%A7%D9%84%D9%85%D8%AF%D8%A9-cdi"
+ },
+ "cdd": {
+  "id": "cdd",
+  "status": "fetched",
+  "checkedAt": "2026-11-04",
+  "url": "https://namodaj.ma/%D8%B9%D9%82%D9%88%D8%AF/%D8%B9%D9%82%D8%AF-%D8%B9%D9%85%D9%84-%D9%85%D8%AD%D8%AF%D8%AF-%D8%A7%D9%84%D9%85%D8%AF%D8%A9-%D9%86%D9%85%D9%88%D8%B0%D8%AC-%D8%B1%D8%B3%D9%85%D9%8A-%D9%85%D8%B9%D8%AA%D9%85%D8%AF"
+ },
+ "reconnaissance-dette": {
+  "id": "reconnaissance-dette",
+  "status": "fetched",
+  "checkedAt": "2026-11-04",
+  "url": "https://namodaj.ma/%D9%86%D9%85%D8%A7%D8%B0%D8%AC-%D9%85%D8%AE%D8%AA%D9%84%D9%81%D8%A9/%D8%A7%D8%B9%D8%AA%D8%B1%D8%A7%D9%81-%D8%A8%D8%AF%D9%8A%D9%86-%D9%88%D9%82%D8%B1%D8%B6-%D9%85%D8%A7%D9%84%D9%8A-%D9%85%D8%B9-%D8%AA%D8%AD%D8%AF%D9%8A%D8%AF-%D8%AC%D8%AF%D9%88%D9%84-%D8%A7%D9%84%D8%B3%D8%AF%D8%A7%D8%AF"
+ },
+ "facture": {
+  "id": "facture",
+  "status": "fetched",
+  "checkedAt": "2026-11-04",
+  "url": "https://www.namodaj.ma/%D8%A7%D9%84%D8%B4%D8%B1%D9%83%D8%A7%D8%AA-%D9%88%D8%A7%D9%84%D9%85%D9%82%D8%A7%D9%88%D9%84-%D8%A7%D9%84%D8%B0%D8%A7%D8%AA%D9%8A/%D9%86%D9%85%D9%88%D8%B0%D8%AC-%D9%81%D8%A7%D8%AA%D9%88%D8%B1%D8%A9-%D8%A7%D9%84%D9%85%D9%82%D8%A7%D9%88%D9%84-%D8%A7%D9%84%D8%B0%D8%A7%D8%AA%D9%8A-%D9%86%D9%85%D9%88%D8%B0%D8%AC-%D8%B1%D8%B3%D9%85%D9%8A-%D9%85%D8%B9%D8%AA%D9%85%D8%AF"
+ },
+ "attestation-celibat": {
+  "id": "attestation-celibat",
+  "status": "fetched",
+  "checkedAt": "2026-11-04",
+  "url": "https://namodaj.ma/%D9%88%D8%AB%D8%A7%D8%A6%D9%82/%D8%AA%D8%B5%D8%B1%D9%8A%D8%AD-%D8%A7%D9%84%D8%B9%D8%B2%D9%88%D8%A8%D8%A9"
+ },
+ "tanazol-vehicule": {
+  "id": "tanazol-vehicule",
+  "status": "fetched",
+  "checkedAt": "2026-11-04",
+  "url": "https://cdn.namodaj.ma/documents/%D8%AA%D9%86%D8%A7%D8%B2%D9%84%D8%A7%D8%AA/%D8%A8%D9%86%D8%AE%D9%84%D9%88%D9%82.doc"
+ },
+ "demande-prestations-familiales": {
+  "id": "demande-prestations-familiales",
+  "status": "fetched",
+  "checkedAt": "2026-11-04",
+  "url": "https://namodaj.ma/%D8%A7%D9%84%D8%B5%D9%86%D8%AF%D9%88%D9%82-%D8%A7%D9%84%D9%88%D8%B7%D9%86%D9%8A-%D9%84%D9%84%D8%B6%D9%85%D8%A7%D9%86-%D8%A7%D9%84%D8%A7%D8%AC%D8%AA%D9%85%D8%A7%D8%B9%D9%8A-cnss/%D8%B7%D9%84%D8%A8-%D8%A7%D9%84%D8%AD%D8%B5%D9%88%D9%84-%D8%B9%D9%84%D9%89-%D8%A7%D9%84%D8%AA%D8%B9%D9%88%D9%8A%D8%B6%D8%A7%D8%AA-%D8%A7%D9%84%D8%B9%D8%A7%D8%A6%D9%84%D9%8A%D8%A9-1"
+ },
+ "demande-bourse": {
+  "id": "demande-bourse",
+  "status": "notfound",
+  "checkedAt": "2026-11-04",
+  "note": "no matching template on namodaj/katib/onebox in batch-3 round; retry next rounds"
+ },
+ "etat-lieux": {
+  "id": "etat-lieux",
+  "status": "notfound",
+  "checkedAt": "2026-11-04",
+  "note": "no matching template on namodaj/katib/onebox in batch-3 round; retry next rounds"
+ },
+ "demande-stage": {
+  "id": "demande-stage",
+  "status": "fetched",
+  "checkedAt": "2026-11-04",
+  "note": "no matching template on namodaj/katib/onebox in batch-3 round; retry next rounds"
+ },
+ "demande-permis-conduire": {
+  "id": "demande-permis-conduire",
+  "status": "notfound",
+  "checkedAt": "2026-11-04",
+  "note": "no matching template on namodaj/katib/onebox in batch-3 round; retry next rounds"
+ },
+ "demande-carte-grise": {
+  "id": "demande-carte-grise",
+  "status": "notfound",
+  "checkedAt": "2026-11-04",
+  "note": "no matching template on namodaj/katib/onebox in batch-3 round; retry next rounds"
+ },
+ "procedure-vignette": {
+  "id": "procedure-vignette",
+  "status": "notfound",
+  "checkedAt": "2026-11-04",
+  "note": "no matching template on namodaj/katib/onebox in batch-3 round; retry next rounds"
+ },
+ "procedure-mre": {
+  "id": "procedure-mre",
+  "status": "fetched",
+  "checkedAt": "2026-11-04",
+  "note": "no matching template on namodaj/katib/onebox in batch-3 round; retry next rounds"
+ },
+ "attestation-salaire": {
+  "id": "attestation-salaire",
+  "status": "fetched",
+  "checkedAt": "2026-11-04",
+  "url": "https://onebox.ma/documents/modele-de-attestation-de-salaire-maroc",
+  "note": "onebox.ma Cloudflare-blocked (WebFetch + curl); wayback timeout — retry next round"
+ },
+ "wakala-vente-vehicule": {
+  "status": "fetched"
+ },
+ "wakala-permis": {
+  "status": "fetched"
+ },
+ "attestation-prise-charge": {
+  "status": "fetched"
+ },
+ "declaration-perte-doc": {
+  "status": "fetched"
+ },
+ "resiliation-internet": {
+  "status": "fetched"
+ },
+ "resiliation-travail": {
+  "status": "fetched"
+ },
+ "demande-conge": {
+  "status": "notfound"
+ },
+ "resiliation-assurance": {
+  "status": "notfound"
+ },
+ "attestation-stage": {
+  "status": "notfound"
+ },
+ "lettre-recommandation": {
+  "status": "notfound"
+ }
 }

@@ -46,8 +46,43 @@ Attestation faite le [date] à [Ville] et remise à l'intéressé pour valoir ce
 
 إمضاء: ..........................`,
   },
+  "attestation-prise-charge": {
+    ar: `تصريح بالتحمل العائلي أنا الموقع أسفله : السيد: …………… الحامل لبطاقة التعريف الوطنية رقم : …………… والساكن بـ: ……………. ألتزم وأصرح بشرفي أنني المسؤول ماديا ومعنويا عن ابني المسمى
+………………… المزداد بتاريخ: …………… الحامل لبطاقة التعريف الوطنية رقم : …………… كما أنني الكفيل بجميع مصاريف العيش وكل ما يتعلق به في الديار …………… وبهذا التزم واصرح وعليه امضي والسلام وحرر بـ: …………… في: …………… الامضاء :`,
+    fr: `ATTESTATION DE PRISE EN CHARGE
+Je soussigné : ………………………
+Titulaire de la carte d’identité nationale Nº : …………………..
+Demeurant à :………………………
+Certifie par la présente de prendre en charge les frais de séjour et de voyage aller-retour du Maroc en …………………….. ainsi que les frais entrainés par un éventuel rapatriement de :
+Mon épouse  / Mon époux  / Ma Mère / Mon père / Mon frère/  Ma sœur/  Ma Belle-mère / Mon beau-père.
+Mr / Mme/ Mlle :……………
+Née le :……………..
+Titulaire de la C.I.N. Nº :……………..
+Profession : ……………..
+Lien de parenté :…………………..
+Et mes Enfants :
+1- ……………………….. Titulaire du passeport N° :……………………….
+2- ……………….………. Titulaire du passeport N° : ………………………
+3- ……………………….. Titulaire du passeport N° : ………………..……..
+4- ……………………….. Titulaire du passeport N° : ………………..……..
+5- ……………………….. Titulaire du passeport N° : …………..……..……
+M’engage personnellement à son retour au Maroc à l’issue de son visa Touristique en ………………. Pour servir et valoir ce que de droit.
+Fait à…………………. Le…………………….
+Signature`,
+  },
   "attestation-residence": {
     ar: `تصـــريـــح نحن الموقعين أسفله: السيد(ة): …………… المزداد(ة) بتاريخ: …………… الحامل(ة) لبطاقة التعريف الوطنية رقم: …………… والساكن(ة) بـ: …………… السيد(ة): …………… المزداد(ة) بتاريخ: …………… الحامل(ة) لبطاقة التعريف الوطنية رقم: …………… والساكنة ب: نفس العنوان أعلاه. بمقتضى هذا التصريح وتحت جميع الضمانات الفعلية والقانونية الجاري بها العمل نشهد على أنفسنا شهادة الطوع والرضى أننا نسكن ب: العنوان المذكور أعلاه مند ……………. هذا ما نلتزم عليه بمحض إرادتي وبحسن نية. حرر بـ: …………… بتاريخ: …………… الإمضاءات: ……………`,
+  },
+  "attestation-salaire": {
+    fr: `A <...>, le <...>
+Nom, prénomAdresseCP – Ville
+DestinataireAdresseCP - Ville
+Objet : Demande d'attestation de salaire annuel
+Madame, Monsieur,
+Je travaille maintenant depuis X années dans votre entreprise, dans laquelle j’occupe actuellement le poste de [intitulé de votre poste]. Mon numéro de matricule est le [donnez votre numéro de matricule].
+Afin de [exposez ici brièvement la raison de votre demande], j’ai besoin d’une attestation de salaire annuel fournie par mon employeur. Je vous demande donc par la présente de bien vouloir me délivrer ce document, courant de la date du [date] au [date].
+Vous en remerciant par avance, je vous prie d’agréer, Madame, Monsieur, l’expression de ma considération distinguée.
+Signature :`,
   },
   "attestation-travail": {
     fr: `………… LE …/…./………
@@ -246,6 +281,15 @@ SIGNÉE :………………`,
   "declaration-perte-cin": {
     ar: `تصــــــريـــــــح بالضياع أنا الموقع(ة) أسفله السيد(ة): …………… الحامل(ة) لبطاقة التعريف الوطنية رقم: …………… الساكن(ة) بـ: ……………. أشهد على نفسي شهادة الطوع والرضى وأصرح أنه قد ضاعت مني البطاقة الوطنية التي تحمل رقم : …………… في ظروف غامضة . و بهذا أصرح و ألتزم و عليه أمضي. الإمضاء`,
   },
+  "declaration-perte-doc": {
+    ar: `تصريح  بالضياع
+أنا الموقع (ة)أسفله:
+السيد(ة)/  .........................، المزداد(ة) بتاريخ:........................... ، مغربي(ة)، كامل(ة) الأهلية والحامل(ة) لبطاقة التعريف الوطنية رقم: ..................... العنوان(ة) ....................................
+بموجب هذه الوثيقة وتحت كافة الضمانات الفعلية والقانونية أشهد على  نفسي وألتزم و أنا بكامل قواي العقلية  والجسدية بأن ............................................... .................... قد ضاعت مني في ظروف غامضة وخارج عن إرادتي.
+تصريح  تام وصحيح متحملا بذلك كافة المسؤوليات القانونية الناتجة عنه.
+حرر  ...............
+إمضاء: ..............`,
+  },
   "demande-acte-naissance": {
     ar: `الاسم الكامل: …………
 رقم البطاقة الوطنية: …………
@@ -358,6 +402,37 @@ SIGNÉE :………………`,
 تاريخ التوصل بالملف | ...202 / ...... / ...... : وكالة الضمان الاجتماعي ................................ :
 اسم وخاتم العون المكلف بالاستقبال ..................................................................... :`,
   },
+  "demande-stage": {
+    ar: `…………. في : …………
+الاسم الكامل: ...............
+الهاتف :......................
+بطاقة التعريف رقم:...........
+البريد الإلكتروني:............
+العنوان :........................
+إلى السيد  المحترم :
+مدير مؤسسة ..............................
+الموضوع : طلب تدريب مهني في السلك ....... مادة .........
+سلام تام بوجود مولانا الامام
+وبعد،
+       يشرفني سيدي المدير أن أتقدم إلى سيادتكم بطلبي هذا قصد الحصول على تدريب داخل مؤسستكم المحترمة في  سلك ......... تخصص ..........بهدف الانخراط في جو العمل على اعتبار أنه فرصة للاستفادة من خبرة الأطر التربوية التي تزخر بها مؤسستكم.
+      واحيطكم علما سيدي المدير أنني شاب (ة) من جنسية مغربية ، مزداد (ة) بتاريخ .............. وحامل لبطاقة التعريف الوطنية رقم ......... وحاصل (ة) على شهادة ............ 
+وفي انتظار ردكم سيدي المدير ، تقبلوا مني أسمى عبارات التقدير والاحترام.
+والسلام
+الامضاء :
+- ملحوظة : نموذج طلب خطي يكتب بخط اليد.`,
+    fr: `Lieu, date,
+Prénom NOM/Adresse/Code postal – Ville/Numéro de téléphone/Adresse E-mail/
+A l’attention du Monsieur
+le Président Directeur Général
+de la société……………..
+Objet :Demande de stage
+Madame/Monsieur,
+J'ai l'honneur de vous demander de bien vouloir m'accorder un stage conventionné d'une durée de [durée du stage] au sein de votre entreprise, à compter du [date de début] jusqu'au [date de fin].
+En effet, étant étudiant dans le secteur du [votre domaine], votre société répond parfaitement aux exigences de mes aspirations professionnelles futures. Ainsi, je serais ravi de pouvoir m'imprégner du monde professionnel en intégrant votre équipe.
+Je serai honoré de mettre mon dynamisme et ma volonté au service de votre société tout aussi bien que les connaissances que j'ai acquises tout au long de mes études.
+Dans l'attente d'une réponse favorable de votre part, veuillez agréer, Madame/Monsieur, l'expression de mes salutations distinguées.
+[Signature]`,
+  },
   "demission": {
     ar: `الحمد لله وحده ………… في : …………
 من السيدة: …………، مغربية، كاملة الأهلية
@@ -428,6 +503,31 @@ Dans l’espoir que mon profil retiendra toute votre attention, je vous prie de 
 
 [Ta signature]`,
   },
+  "procedure-mre": {
+    ar: `نسخة من بطاقة السوابق العدلية أو بطاقة الأوصاف بالنسبة للمغاربة المقيمين بالخارج
+تتضمن نسخة بطاقة السوابق العدلية على محتويات السجل العدلي للمعني بالأمر وما إذا كانت له سوابق عدلية، ويتقدم بطلبها عند الاقتضاء من الدائرة الأمنية القريبة لمحل سكنى المعني بالأمر. تطلب لإبرام عقد الزواج التوظيف اجتياز بعض المباريات ....
+صاحب الطلب
+المعني بالأمر
+الوثائق المطلوبة
+نسخة من بطاقة التعريف الوطنية ؛
+نسخة مصادق عليها من شهادة التسجيل بإحدى قنصليات المملكة .
+التكلفة
+لا شيء
+المصلحة المكلفة باستلام الوثائق المطلوبة
+مصلحة بطاقة التعريف الوطنية بالقنصلية التابعة لمحل إقامة المعني بالأمر .
+المصلحة المكلفة بتقديم الخدمة
+مصلحة بطاقة التعريف الوطنية بالقنصلية التابعة لمحل إقامة المعني بالأمر .
+أجل الحصول علي الخدمة
+يومان
+مدة صلاحية الوثيقة
+ثلاثة أشهر
+في حالة تعذر الحصول على الخدمة
+مؤسسة الوسيط
+لأجل الاتصال
+المصالح المركزية بالإدارة العامة للأمن الوطني .
+مصدر المعلومات (الإدارة المعنية)
+وزارة الداخلية`,
+  },
   "quittance-loyer": {
     ar: `وصل أداء واجب الكراء
 رقم الوصل: …………
@@ -470,6 +570,25 @@ Dans l’espoir que mon profil retiendra toute votre attention, je vous prie de 
 
 إمضاء:
 صاحب الملك:    المكتري:`,
+  },
+  "resiliation-internet": {
+    ar: `………… في: من السيدة: العنوان: …………… إلى السيد: مدير الوكالة التجارية للاتصالات المغرب بـ: …………… الموضوع :طلب فسخ عقدة الهاتف الثابت …………… سلام تام بوجود مولانا الإمام وبعد :
+علاقة بالموضوع المشار إليه أعلاه ،يشرفني سيدي المدير أن أرفع لكم طلبي هذا راجية منكم أن ينال قبولكم ملتمسة فيه قطع الاتصال بالهاتف الثابت بالمنزل الكائن بالعنوان أعلاه . وفي انتظار ذلك تقبلوا سيدي فائق الاحترام والتقدير. والســــــــــــــــــــــــــلام الإمضاء:`,
+    fr: `A [Ville], le .. …… ..
+Objet : résiliation d'un abonnement Internet (engagement terminé)
+Madame, Monsieur,
+Par la présente, je vous informe de ma volonté de mettre fin à l'abonnement à la fibre optique [ou Adsl] que j'ai souscrit auprès de votre société sous la référence [……………….].
+En effet, la période d'engagement de 24 mois étant achevée, je suis libre de résilier mon contrat à tout moment et sans frais .
+Je vous remercie de me faire parvenir une facture de clôture et la confirmation écrite de la bonne prise en compte de ma demande de résiliation.
+Je vous expédierai dans les 15 jours la box internet et tous les accessoires qui m'ont été prêtés comme précisé dans les conditions générales de vente.
+[facultatif, mais par sécurité :]
+Aussi, je vous demande de bien vouloir suspendre tout prélèvement automatique sur mon compte bancaire, je m'acquitterai des sommes restantes par chèque bancaire (ou virement).
+Dans l'attente de vous lire, je vous prie d'agréer, Madame, Monsieur, à mes salutations respectueuses.
+signé`,
+  },
+  "resiliation-travail": {
+    ar: `فسخ عقدة عمل نحن الموقعان أسفله: - الطرف الأول: شركة …………… مقرها ……………. - الطرف الثاني: السيد(ة): …………… الحامل(ة) لبطاقة التعريف الوطنية رقم …………… والساكن(ة) بـ: …………… .
+بمقتضى هذا العقد وتحت جميع الضمانات القانونية والفعلية الجاري بها العمل فسخ الطرفان عقدة العمل القائمة بينهما بموجب العقد المبرم بينهما بتاريخ …………… لإدارة الشركة المذكورة أعلاه. إمضاء الطرف الأول: إمضاء الطرف الثاني:`,
   },
   "tanazol-vehicule": {
     ar: `تنازل
@@ -554,5 +673,32 @@ Dans l’espoir que mon profil retiendra toute votre attention, je vous prie de 
 حرر   بـ...........  في: .....................
 
 الإمضاء: ........................`,
+  },
+  "wakala-permis": {
+    ar: `وكــــالـــــــة - أنا الموقع أسفله: السيد(ة): …………… المزداد(ة) بتاريخ: …………… الحامل(ة) للبطاقـة التعريـف الوطنيـة رقـم ……………. والساكن بـ: ……………. بمقتضى هذه الوكالة و تحت جميع الضمانات القانونية والفعلية الجاري بها العمل أعين كوكيل عني السيد: …………… الحامل لبطاقة التعريف الوطنية رقم …………… . وذلك لينوب عني ويقوم مقامي ويتكلم دوني فيما تصح فيه النيابة شرعا وقانونا فيما يتعلق بإجراءات سحب رخصة السياقة الخاصة بي وتمثيلي أمام الإدارات العمومية وشبه العمومية . توكيـــلا مفوضـــا فيمــــا ذكــــــر الإمضاء: ……………`,
+  },
+  "wakala-vente-vehicule": {
+    ar: `وكــالــة سياقة وبيع السيارة
+أنا الموقع أسفله:
+* السيد: .................................................................................................
+اشهد وأصرح أنني وكلت واستنابت بحول الله وقوته السيد: ...................................
+وكلته لينوب عني ويقوم مقامي ويتكلم دوني في سياقـة وبيع السيارة الموصوفة أدنــاه:
+- اسم الصانع:
+- المسجلة تحت رقم:
+- الصنف:
+- النوع:
+- الوقود المستعمل:
+- الرقم في سلسلة الصنف:
+- عدد الاساطين:
+- القوة الجبائية:
+- مجموع وزنها مع حمولتها:
+- وزنها فارغة:
+وكلته في بيع هذه السيارة وذلك لمن يرى بالثمن الذي يراه مناسبا وقبض الثمن والإبراء بعده والتوقيع مكاني على العقد والوثائق الإدارية وأداء جميع الواجبات المستحقة في هذا الصدد. وان يقوم على العموم بما هو ضروري في هذا الشأن.
+وكالــــة صحيحـــة تامــــة، وكلت من خلالـــه المذكور أعلاه، للقيـــام بمـا سلـف ذكـــره طواعيــة منــي بــدون إكراه من أي أحــــــد مع تحمله للمسؤولية المدنية في استعمال السيارة المذكورة.
+وقد حررت له هذا التوكيل للإدلاء به ولكل غاية مفيدة قصد بيع السيارة المشار إليها أعلاه.
+وهذا توكيل تام مفوضا خاصا فيما ذكر.
+وحرر في حسن نية بتاريخ............
+الإمضـــاء:
+الموكـل:                    الوكيـل:`,
   },
 };
