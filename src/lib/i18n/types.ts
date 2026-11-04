@@ -245,6 +245,7 @@ export interface Dict {
     editSavedMsg: string;
     docLang: string;
     docLangAr: string;
+    autoTranslated: string;
     docLangFr: string;
     optional: string;
     skip: string;

@@ -395,6 +395,7 @@ export const it: Dict = {
     editSavedMsg: "Modifica salvata. La bozza è stata aggiornata.",
     docLang: "Lingua del documento",
     docLangAr: "Arabo",
+    autoTranslated: "{n} delle tue risposte sono state tradotte automaticamente nella lingua del documento (modificabili prima del download).",
     docLangFr: "Francese",
     optional: "Facoltativo",
     skip: "Salta",

@@ -395,6 +395,7 @@ export const fr: Dict = {
     editSavedMsg: "Modification enregistrée. La version préliminaire est mise à jour.",
     docLang: "Langue du document",
     docLangAr: "Arabe",
+    autoTranslated: "{n} de vos réponses ont été traduites automatiquement dans la langue du document (modifiables avant le téléchargement).",
     docLangFr: "Français",
     optional: "Facultatif",
     skip: "Passer",

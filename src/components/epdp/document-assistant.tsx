@@ -6,6 +6,7 @@ import { useI18n } from "@/lib/i18n/context";
 import { allDocuments, getTemplate, type ResolvedDocument } from "@/lib/data/registry";
 import { getPlan, type Answers, type WizardField } from "@/lib/wizard/fields";
 import { fillTemplate, validateAnswer, type FillResult } from "@/lib/wizard/fill";
+import { translateAnswers, translatedCount, type DocLang } from "@/lib/wizard/translate";
 import { downloadWord as downloadWordFile, downloadPdf } from "@/lib/docx-export";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
@@ -35,9 +36,11 @@ export function DocumentAssistant() {
   const [messages, setMessages] = useState<Msg[]>([]);
   const [input, setInput] = useState("");
   const [editingKey, setEditingKey] = useState<string | null>(null);
-  const [docLang, setDocLang] = useState<"ar" | "fr">("ar");
+  const [docLang, setDocLang] = useState<DocLang>("ar");
   const [result, setResult] = useState<FillResult | null>(null);
   const [finalText, setFinalText] = useState("");
+  /** How many answers were auto-translated (0 → hide the notice). */
+  const [translated, setTranslated] = useState(0);
 
   const listRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
@@ -85,6 +88,7 @@ export function DocumentAssistant() {
       setAnswers({});
       setResult(null);
       setFinalText("");
+      setTranslated(0);
       setEditingKey(null);
       setPhase("collect");
       setMessages([]);
@@ -93,7 +97,8 @@ export function DocumentAssistant() {
         f.startMsg.replace("{title}", title).replace("{n}", String(p.length))
       );
       botSay(`${p[0].label[locale]}${p[0].required ? "" : ` (${f.optional})`}`);
-      setDocLang("ar");
+      // default document language = the user's UI language (ar → ar, else fr)
+      setDocLang(locale === "ar" ? "ar" : "fr");
       setTimeout(() => inputRef.current?.focus(), 200);
     },
     [locale, f.startMsg, f.optional, botSay]
@@ -123,12 +128,16 @@ export function DocumentAssistant() {
     [plan, locale, f.optional, botSay]
   );
 
-  /** Generate the document from answers. */
+  /** Generate the document from answers (translated into the doc language). */
   const generate = useCallback(
-    (lang: "ar" | "fr", ans: Answers) => {
+    (lang: DocLang, ans: Answers) => {
       const tpl = doc ? getTemplate(doc.templateId) : null;
       if (!tpl) return null;
-      const r = fillTemplate(tpl[lang], ans);
+      // offline translation layer: answers typed in one language are
+      // converted to the document language before filling
+      const t = translateAnswers(ans, lang);
+      setTranslated(translatedCount(ans, t));
+      const r = fillTemplate(tpl[lang], t, { lang });
       setResult(r);
       setFinalText(r.filled);
       setPhase("review");
@@ -215,10 +224,12 @@ export function DocumentAssistant() {
     toast({ description: f.regenerate });
   };
 
-  const switchLang = (lang: "ar" | "fr") => {
+  const switchLang = (lang: DocLang) => {
     if (lang === docLang) return;
     setDocLang(lang);
-    const r = fillTemplate(getTemplate(doc!.templateId)![lang], answers);
+    const t = translateAnswers(answers, lang);
+    setTranslated(translatedCount(answers, t));
+    const r = fillTemplate(getTemplate(doc!.templateId)![lang], t, { lang });
     setResult(r);
     setFinalText(r.filled);
   };
@@ -236,6 +247,7 @@ export function DocumentAssistant() {
 
   const answeredCount = plan.filter((p) => answers[p.key]).length;
   const progress = plan.length ? Math.round((answeredCount / plan.length) * 100) : 0;
+  const autoTranslated = translated > 0 && docLang !== locale;
 
   return (
     <div className="py-10 sm:py-14">
@@ -439,6 +451,16 @@ export function DocumentAssistant() {
                     </Button>
                   )}
                 </div>
+
+                {/* auto-translation notice */}
+                {autoTranslated && (phase === "review" || phase === "done") && (
+                  <p
+                    dir={locale === "ar" ? "rtl" : "ltr"}
+                    className="rounded-lg border border-gold/40 bg-accent/60 px-3 py-2 text-[11px] font-semibold leading-5 text-foreground/80"
+                  >
+                    {f.autoTranslated.replace("{n}", String(translated))}
+                  </p>
+                )}
 
                 {phase === "review" ? (
                   <pre

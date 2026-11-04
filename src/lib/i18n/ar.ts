@@ -395,6 +395,7 @@ export const ar: Dict = {
     editSavedMsg: "تم التعديل. تم تحديث المسودة.",
     docLang: "لغة الوثيقة",
     docLangAr: "عربية",
+    autoTranslated: "تمت ترجمة {n} من بياناتك تلقائيًا إلى لغة الوثيقة (تبقى قابلة للتعديل قبل التحميل).",
     docLangFr: "فرنسية",
     optional: "اختياري",
     skip: "تخطي",

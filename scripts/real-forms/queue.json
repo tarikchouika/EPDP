@@ -3,22 +3,22 @@
   "id": "demande-generale",
   "ar": "طلب إداري عام",
   "fr": "Demande administrative générale",
-  "url": null,
+  "url": "https://katib.ma/modeles/%D9%86%D9%85%D9%88%D8%B0%D8%AC-%D8%B7%D9%84%D8%A8/",
   "status": "notfound"
  },
  "demande-acte-naissance": {
   "id": "demande-acte-naissance",
   "ar": "طلب نسخة من رسم الولادة",
   "fr": "Demande de copie d'acte de naissance",
-  "url": null,
+  "url": "https://katib.ma/modeles/%D9%86%D8%B3%D8%AE%D8%A9-%D9%83%D8%A7%D9%85%D9%84%D8%A9-%D9%85%D9%86-%D8%B1%D8%B3%D9%85-%D8%A7%D9%84%D9%88%D9%84%D8%A7%D8%AF%D8%A9/",
   "status": "notfound"
  },
  "chikaya-amma": {
   "id": "chikaya-amma",
   "ar": "شكاية عامة",
   "fr": "Plainte générale",
-  "url": null,
-  "status": "notfound"
+  "url": "https://namodaj.ma/%D8%B4%D9%83%D8%A7%D9%8A%D8%A7%D8%AA/%D8%B4%D9%83%D8%A7%D9%8A%D8%A9-%D8%B3%D9%84%D8%A7%D9%85-%D8%AA%D8%A7%D9%85-%D8%A8%D9%88%D8%AC%D9%88%D8%AF-%D9%85%D9%88%D9%84%D8%A7%D9%86%D8%A7-%D8%A7%D9%84%D8%A5%D9%85%D8%A7%D9%85-%D9%88-%D8%A8%D8%B9%D8%AF",
+  "status": "found"
  },
  "attestation-travail": {
   "id": "attestation-travail",
@@ -31,43 +31,43 @@
   "id": "attestation-residence",
   "ar": "شهادة السكنى",
   "fr": "Attestation de résidence",
-  "url": null,
-  "status": "notfound"
+  "url": "https://namodaj.ma/%D8%AA%D8%B5%D8%A7%D8%B1%D9%8A%D8%AD/%D8%AA%D8%B5%D8%B1%D9%8A%D8%AD-%D8%A8%D8%A7%D9%84%D8%B3%D9%83%D9%86-2",
+  "status": "found"
  },
  "attestation-non-travail": {
   "id": "attestation-non-travail",
   "ar": "شهادة عدم العمل",
   "fr": "Attestation de non-emploi",
-  "url": null,
-  "status": "notfound"
+  "url": "https://namodaj.ma/%D8%AA%D8%B5%D8%A7%D8%B1%D9%8A%D8%AD/%D8%AA%D8%B5%D8%B1%D9%8A%D8%AD-%D8%B9%D8%AF%D9%85-%D8%A7%D9%84%D8%B9%D9%85%D9%84",
+  "status": "found"
  },
  "declaration-honneur": {
   "id": "declaration-honneur",
   "ar": "تصريح بالشرف",
   "fr": "Déclaration sur l'honneur",
-  "url": null,
-  "status": "notfound"
+  "url": "https://namodaj.ma/%D8%A7%D9%84%D8%AA%D8%B2%D8%A7%D9%85%D8%A7%D8%AA/%D8%AA%D8%B5%D8%B1%D9%8A%D8%AD-%D8%A8%D8%A7%D9%84%D8%B4%D8%B1%D9%81-%D8%B5%D9%8A%D8%BA%D8%A9-%D9%82%D8%A7%D9%86%D9%88%D9%86%D9%8A%D8%A9-%D8%B4%D8%A7%D9%85%D9%84%D8%A9",
+  "status": "found"
  },
  "iltizam-sakan": {
   "id": "iltizam-sakan",
   "ar": "التزام بالسكن",
   "fr": "Engagement de logement",
-  "url": null,
-  "status": "notfound"
+  "url": "https://namodaj.ma/%D8%A7%D9%84%D8%AA%D8%B2%D8%A7%D9%85%D8%A7%D8%AA/%D8%A7%D9%84%D8%AA%D8%B2%D8%A7%D9%85-%D8%A8%D8%A7%D9%84%D8%B3%D9%83%D9%86",
+  "status": "found"
  },
  "wakala-amma": {
   "id": "wakala-amma",
   "ar": "وكالة (نموذج مبسط)",
   "fr": "Procuration (modèle simplifié)",
-  "url": null,
-  "status": "notfound"
+  "url": "https://namodaj.ma/%D9%88%D9%83%D8%A7%D9%84%D8%A7%D8%AA/%D9%88%D9%83%D8%A7%D9%84%D8%A9-%D8%B9%D8%A7%D9%85%D8%A9-%D8%B5%D9%8A%D8%BA%D8%A9-6",
+  "status": "found"
  },
  "wakala-istilam": {
   "id": "wakala-istilam",
   "ar": "تفويض لاستلام وثيقة أو مستحقات",
   "fr": "Autorisation de retrait",
-  "url": null,
-  "status": "notfound"
+  "url": "https://namodaj.ma/%D9%88%D9%83%D8%A7%D9%84%D8%A7%D8%AA/%D9%88%D9%83%D8%A7%D9%84%D8%A9-%D8%A8%D8%B3%D8%AD%D8%A8-%D8%A3%D9%88-%D8%A7%D8%B3%D8%AA%D9%84%D8%A7%D9%85-%D8%A3%D9%88-%D8%A7%D8%B3%D8%AA%D8%AE%D8%B1%D8%A7%D8%AC-%D9%88%D8%AB%D8%A7%D8%A6%D9%82",
+  "status": "found"
  },
  "contrat-bail": {
   "id": "contrat-bail",
@@ -82,5 +82,47 @@
   "fr": "Quittance de loyer",
   "url": null,
   "status": "notfound"
+ },
+ "lettre-motivation": {
+  "id": "lettre-motivation",
+  "ar": "رسالة تحفيزية",
+  "fr": "Lettre de motivation",
+  "url": "https://namodaj.ma/%D9%86%D9%85%D8%A7%D8%B0%D8%AC-%D8%A8%D8%A7%D9%84%D9%81%D8%B1%D9%86%D8%B3%D9%8A%D8%A9/lettre-de-motivation",
+  "status": "found"
+ },
+ "attestation-hebergement": {
+  "id": "attestation-hebergement",
+  "ar": "شهادة استضافة",
+  "fr": "Attestation d'hébergement",
+  "url": "https://namodaj.ma/%D9%86%D9%85%D8%A7%D8%B0%D8%AC-%D8%A8%D8%A7%D9%84%D9%81%D8%B1%D9%86%D8%B3%D9%8A%D8%A9/attestation-d-h%C3%A9bergement",
+  "status": "found"
+ },
+ "declaration-perte-cin": {
+  "id": "declaration-perte-cin",
+  "ar": "تصريح بالشرف بضياع البطاقة الوطنية",
+  "fr": "Déclaration de perte de la CIN",
+  "url": "https://namodaj.ma/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA-%D8%A3%D8%AE%D8%B1%D9%89/%D8%AA%D8%B5%D8%B1%D9%8A%D8%AD-%D8%A8%D8%B6%D9%8A%D8%A7%D8%B9-%D8%A8%D8%B7%D8%A7%D9%82%D8%A9-%D8%A7%D9%84%D8%AA%D8%B9%D8%B1%D9%8A%D9%81",
+  "status": "found"
+ },
+ "declaration-charge-famille": {
+  "id": "declaration-charge-famille",
+  "ar": "تصريح بالشرف بالإعالة",
+  "fr": "Déclaration de prise en charge familiale",
+  "url": "https://namodaj.ma/%D8%AA%D8%B5%D8%A7%D8%B1%D9%8A%D8%AD/%D8%AA%D8%B5%D8%B1%D9%8A%D8%AD-%D8%A8%D8%A7%D9%84%D8%AA%D8%AD%D9%85%D9%84-%D8%A7%D9%84%D8%B9%D8%A7%D8%A6%D9%84%D9%8A-%D9%86%D9%85%D9%88%D8%B0%D8%AC-%D8%B1%D8%B3%D9%85%D9%8A-%D9%85%D8%B9%D8%AA%D9%85%D8%AF",
+  "status": "found"
+ },
+ "cv": {
+  "id": "cv",
+  "ar": "نموذج سيرة ذاتية",
+  "fr": "Modèle de CV",
+  "url": "https://namodaj.ma/%D8%B3%D9%8A%D8%B1%D8%A9-%D8%B0%D8%A7%D8%AA%D9%8A%D8%A9-%D8%A8%D8%A7%D9%84%D8%B9%D8%B1%D8%A8%D9%8A%D8%A9/04-cv-arabic",
+  "status": "found"
+ },
+ "demande-passeport": {
+  "id": "demande-passeport",
+  "ar": "طلب الحصول على جواز السفر",
+  "fr": "Demande de passeport",
+  "url": "https://namodaj.ma/%D8%B7%D9%84%D8%A8%D8%A7%D8%AA-%D9%88%D9%85%D8%B1%D8%A7%D8%B3%D9%84%D8%A7%D8%AA/%D8%B7%D9%84%D8%A8-%D9%82%D8%B5%D8%AF-%D8%AA%D8%AC%D8%AF%D9%8A%D8%AF-%D8%AC%D9%88%D8%A7%D8%B2-%D8%A7%D9%84%D8%B3%D9%81%D8%B1-%D9%84%D9%84%D8%AD%D8%B5%D9%88%D9%84-%D8%B9%D9%84%D9%89-%D8%A7%D9%84%D8%AA%D8%A3%D8%B4%D9%8A%D8%B1%D8%A9",
+  "status": "found"
  }
 }

@@ -395,6 +395,7 @@ export const de: Dict = {
     editSavedMsg: "Änderung gespeichert. Der Entwurf wurde aktualisiert.",
     docLang: "Dokumentsprache",
     docLangAr: "Arabisch",
+    autoTranslated: "{n} Ihrer Angaben wurden automatisch in die Dokumentsprache übersetzt (vor dem Download änderbar).",
     docLangFr: "Französisch",
     optional: "Optional",
     skip: "Überspringen",

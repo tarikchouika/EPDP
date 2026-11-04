@@ -395,6 +395,7 @@ export const en: Dict = {
     editSavedMsg: "Edit saved. The draft has been updated.",
     docLang: "Document language",
     docLangAr: "Arabic",
+    autoTranslated: "{n} of your answers were auto-translated into the document language (still editable before download).",
     docLangFr: "French",
     optional: "Optional",
     skip: "Skip",

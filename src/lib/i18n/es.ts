@@ -395,6 +395,7 @@ export const es: Dict = {
     editSavedMsg: "Modificación guardada. El borrador se ha actualizado.",
     docLang: "Idioma del documento",
     docLangAr: "Árabe",
+    autoTranslated: "{n} de sus respuestas se tradujeron automáticamente al idioma del documento (editables antes de descargar).",
     docLangFr: "Francés",
     optional: "Opcional",
     skip: "Omitir",
